@@ -6,9 +6,21 @@ import "../styles/toolsBarStyle.css";
 export default function ToolsBar({ hemisphereSelected, onHemisphereSelect, fovSelected, onFovSelected }) {
   return (
     <section className="toolsBarContainer">
-      <section className="hemisphereSelector">
-        <button>Hermisferio Norte</button>
-        <button>Hemisferio Sur</button>
+      <section className="hemisphereSelectorContainer">
+        <Link
+          to="/south"
+          className={`hemisphereSelector ${hemisphereSelected === "S" ? "activeSelector" : ""}`}
+          onClick={() => onHemisphereSelect("S")}
+        >
+          Hemisferio Norte
+        </Link>
+        <Link
+          to="/south"
+          className={`hemisphereSelector ${hemisphereSelected === "S" ? "activeSelector" : ""}`}
+          onClick={() => onHemisphereSelect("S")}
+        >
+          Hemisferio Sur
+        </Link>
       </section>
       
       <section className="fovSelector">
