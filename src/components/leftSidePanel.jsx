@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useContext } from "react";
 import FovTable from "./fovTable.jsx";
 import { DataContext } from '../app.jsx';
-import "../styles/fovTable.css";
+import "../styles/leftSidePanelStyle.css";
 
 const fovLabels = {
   "< 0.7 deg": "0° - 0.7°",
