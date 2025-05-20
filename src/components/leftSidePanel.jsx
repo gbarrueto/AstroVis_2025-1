@@ -20,7 +20,7 @@ const fovColors = {
 };
 
 
-export default function LeftPanel({ topObjectsByFov }) {
+export default function LeftPanel({ selected }) {
   const {
     loading,
     topPorFovNorth,
@@ -30,7 +30,7 @@ export default function LeftPanel({ topObjectsByFov }) {
   return (
     <aside className="leftPanel">
       
-      <!-- Title -->
+      {/* Title */}
       <div id="pageTitleContainer">
         <h1 id="pageTextTitle">
           Objetos de <span className="highlightText">Espacio Profundo</span> más 
@@ -40,7 +40,7 @@ export default function LeftPanel({ topObjectsByFov }) {
       </div>
       
       
-      <!-- Table -->
+      {/* Table */}
       <FovTable
         topObjectsByFov={
           selected === "N" ? topPorFovNorth : topPorFovSouth

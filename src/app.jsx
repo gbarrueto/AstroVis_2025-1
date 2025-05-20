@@ -7,6 +7,7 @@ import PageRouter from "./components/router.jsx";
 import Toggler from './components/hemisphereToggler.jsx';
 import Seo from './components/seo.jsx';
 import ToolsBar from './components/toolsBar.jsx';
+import LeftPanel from './components/leftSidePanel.jsx';
 
 export const DataContext = createContext(null);
 
@@ -40,7 +41,7 @@ export default function Home() {
         <Seo />
         <main role="main" className="wrapper">
           <div className="content">
-            <Toggler selected={hemisphere} onSelect={setHemisphere} />
+            <LeftPanel selected={hemisphere} />
             <PageRouter />
             <ToolsBar hemisphereSelected={hemisphere} onHemispehereSelected={setHemisphere} fovSelected={fov} onFovSelected={setFov} />
           </div>
