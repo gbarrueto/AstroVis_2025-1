@@ -34,14 +34,9 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
   return (
     <div className={`modal-panel ${closing ? "closing" : ""}`} style={modalStyle}>
       <h3>{objectData.object}</h3>
-      <p><strong>Frecuencia:</strong> {objectData.frecuencia.toFixed(2)}</p>
-      <p><strong>FOV:</strong> {objectData.fovCategory}</p>
-      <p><strong>RA:</strong> {objectData.theta.toFixed(2)}°</p>
-      <p><strong>Dec:</strong> {objectData.r.toFixed(2)}°</p>
-      <p>ID: {objectData.id}</p>
 
         <img
-          src={`../../public/img/${objectData.id}.jpg`}
+          src={`https://gbarrueto.github.io/infovis-assets/img/${objectData.id}.jpg`}
           alt={objectData.object}
           className="modal-image"
         />
