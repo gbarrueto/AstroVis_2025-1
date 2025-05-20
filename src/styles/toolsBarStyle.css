@@ -5,6 +5,7 @@
   width: 20%;
   text-align: center;
   height: fit-content;
+  margin: 1em 0;
 }
 
 .hemisphereSelectorContainer {
@@ -14,6 +15,7 @@
 }
 
 .hemisphereSelector {
+  flex: 1;
   padding: 10px;
   font-size: 0.9em;
   text-wrap: wrap;

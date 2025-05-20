@@ -8,14 +8,14 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
     <section className="toolsBarContainer">
       <section className="hemisphereSelectorContainer">
         <Link
-          to="/north"
+          to="/north?fov=0.7"
           className={`hemisphereSelector ${hemisphereSelected === "N" ? "activeSelector" : ""}`}
           onClick={() => onHemisphereSelected("N")}
         >
           Hemisferio Norte
         </Link>
         <Link
-          to="/south"
+          to="/south?fov=1.5"
           className={`hemisphereSelector ${hemisphereSelected === "S" ? "activeSelector" : ""}`}
           onClick={() => onHemisphereSelected("S")}
         >
