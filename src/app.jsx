@@ -42,7 +42,7 @@ export default function Home() {
           <div className="content">
             <LeftPanel selected={hemisphere} />
             <PageRouter />
-            <ToolsBar hemisphereSelected={hemisphere} onHemispehereSelected={setHemisphere} fovSelected={fov} onFovSelected={setFov} />
+            <ToolsBar hemisphereSelected={hemisphere} onHemisphereSelected={setHemisphere} fovSelected={fov} onFovSelected={setFov} />
           </div>
         </main>
       </Router>

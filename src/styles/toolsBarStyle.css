@@ -4,10 +4,30 @@
   z-index: 1000;
   width: 20%;
   text-align: center;
+  height: fit-content;
 }
 
 .hemisphereSelectorContainer {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+}
+
+.hemisphereSelector {
+  padding: 10px;
+  font-size: 0.9em;
+  text-wrap: wrap;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: #04dbf1;
+  transition: .2s ease;
+}
+
+.hemisphereSelector:hover:not(.activeSelector) {
+  background-color: rgba(73, 54, 113, 0.5);
+}
+
+.activeSelector {
+  background-color: #8e4713
 }

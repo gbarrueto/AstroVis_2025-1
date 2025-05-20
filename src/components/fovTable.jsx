@@ -18,7 +18,7 @@ const fovColors = {
 
 const FovTable = ({ topObjectsByFov }) => {
   return (
-    <>
+    <div className="tableWrapper">
       <section id="topTitleContainer">
         <h3 style={{ color: "#c7a4ff" }}>Top por campo visual</h3>
       </section>
@@ -54,7 +54,7 @@ const FovTable = ({ topObjectsByFov }) => {
           ))}
         </aside>
       </section>
-    </>
+    </div>
   );
 };
 

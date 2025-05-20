@@ -3,21 +3,21 @@ import { Link } from "wouter";
 import { DataContext } from '../app.jsx';
 import "../styles/toolsBarStyle.css";
 
-export default function ToolsBar({ hemisphereSelected, onHemisphereSelect, fovSelected, onFovSelected }) {
+export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fovSelected, onFovSelected }) {
   return (
     <section className="toolsBarContainer">
       <section className="hemisphereSelectorContainer">
         <Link
-          to="/south"
-          className={`hemisphereSelector ${hemisphereSelected === "S" ? "activeSelector" : ""}`}
-          onClick={() => onHemisphereSelect("S")}
+          to="/north"
+          className={`hemisphereSelector ${hemisphereSelected === "N" ? "activeSelector" : ""}`}
+          onClick={() => onHemisphereSelected("N")}
         >
           Hemisferio Norte
         </Link>
         <Link
           to="/south"
           className={`hemisphereSelector ${hemisphereSelected === "S" ? "activeSelector" : ""}`}
-          onClick={() => onHemisphereSelect("S")}
+          onClick={() => onHemisphereSelected("S")}
         >
           Hemisferio Sur
         </Link>
