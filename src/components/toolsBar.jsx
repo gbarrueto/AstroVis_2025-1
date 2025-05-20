@@ -1,13 +1,14 @@
 import { useState, useContext } from "react";
 import { Link } from "wouter";
 import { DataContext } from '../app.jsx';
+import "../styles/toolsBarStyle.css";
 
 export default function ToolsBar({ hemisphereSelected, onHemisphereSelect, fovSelected, onFovSelected }) {
   return (
     <section className="toolsBarContainer">
       <section className="hemisphereSelector">
-        <button>Norte</button>
-        <button>Sur</button>
+        <button>Hermisferio Norte</button>
+        <button>Hemisferio Sur</button>
       </section>
       
       <section className="fovSelector">
