@@ -14,7 +14,7 @@ import SouthHemisphere from "../pages/southHemisphere";
 export default () => (
     <Switch>
       <Route path="/" component={NorthHemisphere} />
-      <Route path="/north" component={NorthHemisphere} />
-      <Route path="/south" component={SouthHemisphere} />
+      <Route path="/north/:fov" component={NorthHemisphere} />
+      <Route path="/south/:fov" component={SouthHemisphere} />
     </Switch>
 );
