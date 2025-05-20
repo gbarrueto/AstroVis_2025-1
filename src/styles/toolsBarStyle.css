@@ -8,6 +8,7 @@
   margin: 1em 0;
 }
 
+/* HEMISPHERE SELECTOR */
 .hemisphereSelectorContainer {
   display: flex;
   width: 100%;
@@ -32,4 +33,19 @@
 
 .activeSelector {
   background-color: #8e4713
+}
+
+
+/* FOV SELECTOR */
+.fovSelectorContainer {
+  display: flex;
+}
+
+.fovSelector {
+  flex: 1;
+  text-decoration: none;
+}
+
+.activeFovSelector {
+  background-color: aqua;
 }
