@@ -4,7 +4,6 @@ import { Router } from "wouter";
 
 import "./styles/styles.css";
 import PageRouter from "./components/router.jsx";
-import Toggler from './components/hemisphereToggler.jsx';
 import Seo from './components/seo.jsx';
 import ToolsBar from './components/toolsBar.jsx';
 import LeftPanel from './components/leftSidePanel.jsx';
