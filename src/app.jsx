@@ -1,6 +1,6 @@
 // Home.jsx
-import React, { useState, createContext } from "react";
-import { Router } from "wouter";
+import React, { useState, createContext, useEffect } from "react";
+import { Router, useLocation } from "wouter";
 
 import "./styles/styles.css";
 import PageRouter from "./components/router.jsx";
@@ -11,6 +11,8 @@ import LeftPanel from './components/leftSidePanel.jsx';
 export const DataContext = createContext(null);
 
 export default function Home() {
+  const [location, setLocation] = useLocation();
+  
   const [hemisphere, setHemisphere] = useState("N");
   const [fov, setFov] = useState('0.7');
   const [loading, setLoading] = useState(true);
@@ -33,6 +35,10 @@ export default function Home() {
     isModalOpen, setIsModalOpen,
     selectedObject, setSelectedObject
   };
+  
+  useEffect(() => {
+    setLocation(`/${hemisphere}/${fov}`)
+  }, [])
 
   return (
     <DataContext.Provider value={context}>
