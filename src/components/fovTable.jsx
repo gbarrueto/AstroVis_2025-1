@@ -24,12 +24,6 @@ const FovTable = ({ topObjectsByFov }) => {
       </section>
       
       <section id="fovTopContainer">
-        <img
-          id="fovImage"
-          src="https://cdn.glitch.global/cb3f22ad-672b-4e1c-92d9-14f890d789bf/fovBar.png?v=1745534453710"
-          alt="FoV bar"
-        />
-
         <aside id="tablesWrapper">
           {Object.entries(topObjectsByFov).map(([fovLabel, objects], index) => (
             <section key={fovLabel} id={`deg${index}`} className="tableContainer">
