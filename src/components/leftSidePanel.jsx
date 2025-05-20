@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useContext } from "react";
 import FovTable from "./fovTable.jsx";
 import { DataContext } from '../app.jsx';
 import "../styles/fovTable.css";
@@ -20,6 +21,12 @@ const fovColors = {
 
 
 export default function LeftPanel({ topObjectsByFov }) {
+  const {
+    loading,
+    topPorFovNorth,
+    topPorFovSouth,
+  } = useContext(DataContext);
+  
   return (
     <aside className="leftPanel">
       
@@ -34,6 +41,11 @@ export default function LeftPanel({ topObjectsByFov }) {
       
       
       <!-- Table -->
+      <FovTable
+        topObjectsByFov={
+          selected === "N" ? topPorFovNorth : topPorFovSouth
+        }
+      />
       
       
     </aside>
