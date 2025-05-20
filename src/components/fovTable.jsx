@@ -44,7 +44,7 @@ const FovTable = ({ topObjectsByFov }) => {
                     <tr key={i}>
                       <td style={{ color: fovColors[fovLabel] }}>{obj.object}</td>
                       <td style={{ color: fovColors[fovLabel] }}>
-                        {obj.frecuencia.toFixed(2)}
+                        {obj.frecuencia.toFixed(2)}%
                       </td>
                     </tr>
                   ))}
