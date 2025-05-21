@@ -44,7 +44,7 @@
 .fovSelector {
   flex: 1;
   text-decoration: none;
-  background-color: black;
+  color: #04dbf1;
 }
 
 .fovSelector:hover:not(.activeFovSelector) {

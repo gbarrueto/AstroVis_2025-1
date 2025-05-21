@@ -8,8 +8,13 @@ body {
   overflow: hidden;
 }
 
+main.wrapper {
+  background: url(https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/StarsBk.jpg?v=1747819884331);
+  background-size: 100%;
+}
+
 /* Contenedor principal del gráfico y modal */
-.wrapper {
+div.wrapper {
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -29,16 +34,15 @@ body {
   width: 100%;
   max-width: 100vw;
   flex-grow: 1;
-  /* background-color: black; */
+  background-color: #000000b2;
   height: inherit;
-  background: url(https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/StarsBk.jpg?v=1747819884331)
 }
 
 /* Contenedor del gráfico */
 .skyChart {
   aspect-ratio: 1 / 1;
   height: calc(100vh - 60px); /* Mantén la altura consistente */
-  /* background-color: #000000; */
+  /* background-color: #000000b2; */
   border-radius: 10px;
   position: relative; /* Asegura que el gráfico se mantenga en su lugar */
 }
