@@ -12,6 +12,13 @@ const fovImages = {
   "70": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/Selected-70.png?v=1747852261877",
 };
 
+const gearImages = {
+  "07": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear%20-%20menor%20a%200.7%C2%B0%20%20-%20mayor%20a%20500mm.jpeg?v=1747852727807",
+  "15": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear-0.7%C2%B0%20a%20.5%C2%B0%20-%20300mm.png?v=1747852720434",
+  "35": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear-1.5%C2%B0%20a%203.5%C2%B0-135mm.png?v=1747852710023",
+  "70": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear-3.5%C2%B0%20a%207%C2%B0-70mm.png?v=1747852704063"
+}
+
 
 export default function RightPanel({ hemisphereSelected, setHemisphereSelected, fovSelected, setFovSelected }) {
   const {
@@ -50,7 +57,7 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
         
         <div className="extraInfo equipmentInfo">
           <img
-            src="https://pbs.twimg.com/media/GrUDO75WQAAC5TB?format=jpg&name=large"
+            src={gearImages[hoveredFov || fovSelected]}
             className="extraInfoImage"
           />
         </div>
