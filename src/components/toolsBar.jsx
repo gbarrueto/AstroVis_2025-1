@@ -1,13 +1,8 @@
 import { useState, useContext } from "react";
 import { Link } from "wouter";
-import { Context } from '../app.jsx';
 import "../styles/toolsBarStyle.css";
 
-export default function ToolsBar({ hemisphereSelected, fovSelected }) {
-  const {
-    onHemisphereSelected,
-    onFovSelected
-  } = useContext(Context);
+export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fovSelected, onFovSelected }) {
   
   return (
     <section className="toolsBarContainer">

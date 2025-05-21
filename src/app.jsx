@@ -35,8 +35,6 @@ export default function Home() {
     // Estados del Modal
     isModalOpen, setIsModalOpen,
     selectedObject, setSelectedObject,
-    hemisphere, setHemisphere,
-    fov, setFov
   };
   
   
@@ -52,7 +50,7 @@ export default function Home() {
             <div className="content">
               <LeftPanel selected={hemisphere} />
               <PageRouter />
-              <RightPanel hemisphereSelected={hemisphere} fovSelected={fov} />
+              <RightPanel hemisphereSelected={hemisphere} setHemisphereSelected={setHemisphere} fovSelected={fov} setFovSelected={setFov} />
             </div>
           </main>
         </Router>

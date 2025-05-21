@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useContext } from "react";
 import FovTable from "./fovTable.jsx";
-import { DataContext } from '../app.jsx';
+import { Context } from '../app.jsx';
 import "../styles/leftSidePanelStyle.css";
 
 const fovLabels = {
@@ -25,7 +25,7 @@ export default function LeftPanel({ selected }) {
     loading,
     topPorFovNorth,
     topPorFovSouth,
-  } = useContext(DataContext);
+  } = useContext(Context);
   
   return (
     <aside className="leftPanel">

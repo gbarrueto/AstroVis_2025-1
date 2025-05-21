@@ -4,14 +4,14 @@ import "../styles/hemisphereToggler.css";
 import { LuMenu } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 import FovTable from "./fovTable";
-import { DataContext } from '../app.jsx';
+import { Context } from '../app.jsx';
 
 export default function Toggler({ selected, onSelect }) {
   const {
     loading,
     topPorFovNorth,
     topPorFovSouth,
-  } = useContext(DataContext);
+  } = useContext(Context);
   
   const [hideToggler, setHideToggler] = useState(false);
 
