@@ -36,11 +36,11 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
       />
       
       {/* Extra info Images */}
-      <section className="extraInfo">
-        <div className="fovInfo">
+      <section className="extraInfoContainer">
+        <div className="extraInfo fovInfo">
         </div>
         
-        <div className="equipmentInfo">
+        <div className="extraInfo equipmentInfo">
         </div>
       </section>
       

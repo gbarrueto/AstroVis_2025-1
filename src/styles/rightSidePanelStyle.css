@@ -1,13 +1,25 @@
 .rightPanel {
   width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.extraInfo {
+.extraInfoContainer {
   display: flex;
   width: 100%;
   height: 20%;
 }
 
+.extraInfo {
+  padding: 0.5em;
+  border: 1px solid white;
+}
+
 .fovInfo {
+  flex: 1;
+}
+
+.equipmentInfo {
   flex: 1;
 }
