@@ -50,7 +50,7 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
             onMouseLeave={handleMouseLeave}
             style={fovSelected === fov ? { backgroundColor: fovColors[fov] } : {}}
           >
-            {fov === "07" ? "0.7" : fov === "15" ? "1.5" : fov === "35" ? "3.5" : "7.0"}
+            {fov === "07" ? "0.7" : fov === "15" ? "1.5" : fov === "35" ? "3.5" : "7"}
           </Link>
         ))}
         

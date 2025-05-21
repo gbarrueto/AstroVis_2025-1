@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/fovTable.css";
+import { Context } from "../app.jsx";
 
 const fovLabels = {
   "< 0.7 deg": "0° - 0.7°",
@@ -16,18 +17,30 @@ const fovColors = {
   ">= 3.5 AND < 7 deg": "#ff6ec7", // violeta fuerte
 };
 
+const tableTitleByFov = {
+  "07": "0° - 0.7°",
+  "15": "0.7° - 1.5°",
+  "35": "1.5° - 3.5°",
+  "70": "3.5° - 7°"
+}
+
 const FovTable = ({ objectsByHemisphereFov, fovSelected }) => {
+  const {
+    listasPorFovNorth,
+    listasPorFovSouth
+  } = useContext(Context);
+  
   return (
     <div className="tableWrapper">
       <section id="topTitleContainer">
-        <h3 style={{ color: "#c7a4ff" }}>Campo visual {`${fovSelected[0]}.${fovSelected[1]}`}°</h3>
+        <h3 style={{ color: "#c7a4ff" }}>Campo visual {tableTitleByFov[fovSelected]}</h3>
       </section>
       
       <section id="fovTopContainer">
         <aside id="tablesWrapper">
           {Object.entries(objectsByHemisphereFov).map(([fovLabel, objects], index) => (
-            <section key={fovLabel} id={`deg${index}`} className="tableContainer"> {/*Edi pon los campos visuales como intervalos*/}
-              <table className="objectsTable">/* que me asusto */
+            <section key={fovLabel} id={`deg${index}`} className="tableContainer"> 
+              <table className="objectsTable">
                 { 
                   index === 0 ? (
                     <thead>
