@@ -12,12 +12,7 @@ const fovColors = {
 
 
 export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fovSelected, onFovSelected }) {
-  
-  useEffect(() => {
-    const activeFovSelector = document.getElementsByClassName('activeFovSelector')[0];
-    activeFovSelector.style.backgroundColor = fovColors[fovSelected];
-  }, [fovSelected])
-  
+
   return (
     <section className="toolsBarContainer">
       <section className="hemisphereSelectorContainer">
@@ -39,28 +34,28 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
         
         <Link
           to={`/${hemisphereSelected}/0.7`}
-          className={`fovSelector ${fovSelected === "0.7" ? "activeFovSelector" : "resetFov"}`}
+          className={`fovSelector ${fovSelected === "0.7" ? "activeFovSelector" : ""}`}
           onClick={() => onFovSelected("0.7")}
         > 0.7
         </Link>
         
         <Link
           to={`/${hemisphereSelected}/1.5`}
-          className={`fovSelector ${fovSelected === "1.5" ? "activeFovSelector" : "resetFov"}`}
+          className={`fovSelector ${fovSelected === "1.5" ? "activeFovSelector" : ""}`}
           onClick={() => onFovSelected("1.5")}
         > 1.5
         </Link>
         
         <Link
           to={`/${hemisphereSelected}/3.5`}
-          className={`fovSelector ${fovSelected === "3.5" ? "activeFovSelector" : "resetFov"}`}
+          className={`fovSelector ${fovSelected === "3.5" ? "activeFovSelector" : ""}`}
           onClick={() => onFovSelected("3.5")}
         > 3.5
         </Link>
         
         <Link
           to={`/${hemisphereSelected}/7.0`}
-          className={`fovSelector ${fovSelected === "7.0" ? "activeFovSelector" : "resetFov"}`}
+          className={`fovSelector ${fovSelected === "7.0" ? "activeFovSelector" : ""}`}
           onClick={() => onFovSelected("7.0")}
         > 1.5
         </Link>
