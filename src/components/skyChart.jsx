@@ -28,6 +28,8 @@ const SkyChart = ({ hemisphere }) => {
     setIsModalOpen, // Estado del modal
     selectedObject,
     setSelectedObject, // Objeto seleccionado
+    objectsByHemisphereFov,
+    setObjectsByHemisphereFov
   } = useContext(Context);
 
   // Efecto para cargar los datos al montar el componente

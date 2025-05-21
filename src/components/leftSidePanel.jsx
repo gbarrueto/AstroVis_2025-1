@@ -25,6 +25,8 @@ export default function LeftPanel({ hemisphereSelected }) {
     loading,
     topPorFovNorth,
     topPorFovSouth,
+    objectsByHemisphereFov,
+    setObjectsByHemisphereFov
   } = useContext(Context);
   
   return (
@@ -42,7 +44,7 @@ export default function LeftPanel({ hemisphereSelected }) {
       
       {/* Table */}
       <FovTable
-        topObjectsByFov={
+        objectsByHemisphereFov={
           hemisphereSelected === "N" ? topPorFovNorth : topPorFovSouth
         }
       />

@@ -16,7 +16,7 @@ const fovColors = {
   ">= 3.5 AND < 7 deg": "#ff6ec7", // violeta fuerte
 };
 
-const FovTable = ({ topObjectsByFov }) => {
+const FovTable = ({ objectsByHemisphereFov }) => {
   return (
     <div className="tableWrapper">
       <section id="topTitleContainer">
@@ -25,7 +25,7 @@ const FovTable = ({ topObjectsByFov }) => {
       
       <section id="fovTopContainer">
         <aside id="tablesWrapper">
-          {Object.entries(topObjectsByFov).map(([fovLabel, objects], index) => (
+          {Object.entries(objectsByHemisphereFov).map(([fovLabel, objects], index) => (
             <section key={fovLabel} id={`deg${index}`} className="tableContainer">
               <p>{fovLabels[fovLabel]}</p>
               <table className="objectsTable">

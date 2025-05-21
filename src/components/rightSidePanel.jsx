@@ -39,14 +39,6 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
       
       <ToolsBar hemisphereSelected={hemisphereSelected} onHemisphereSelected={setHemisphereSelected} fovSelected={fovSelected} onFovSelected={setFovSelected} setHoveredFov={setHoveredFov} />
       
-      <section className="objectInfoContainer">
-        <Modal
-          isOpen={isModalOpen} // Determina si el modal está abierto
-          objectData={selectedObject} // Pasa el objeto seleccionado al modal
-          onClose={() => setIsModalOpen(false)} // Cierra el modal
-        />
-      </section>
-      
       {/* Extra info Images */}
       <section className="extraInfoContainer">
         <div className="extraInfo fovInfo">
@@ -62,6 +54,14 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
             className="extraInfoImage"
           />
         </div>
+      </section>
+      
+      <section className="objectInfoContainer">
+        <Modal
+          isOpen={isModalOpen} // Determina si el modal está abierto
+          objectData={selectedObject} // Pasa el objeto seleccionado al modal
+          onClose={() => setIsModalOpen(false)} // Cierra el modal
+        />
       </section>
       
     </aside>
