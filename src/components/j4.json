@@ -141,7 +141,7 @@
         "fov": ">= 3.5 AND < 7 deg",
         "neighbours": [],
         "hemisphere": "N",
-        "repr_name": "Cúmulo de galaxias en Virgo"
+        "repr_name": "Pléyades campo amplio"
     },
     {
         "id": 93,
@@ -234,7 +234,7 @@
         "fov": ">= 3.5 AND < 7 deg",
         "neighbours": [],
         "hemisphere": "N",
-        "repr_name": "M90"
+        "repr_name": "Cumulo de galaxias en Virgo"
     },
     {
         "id": 108,
