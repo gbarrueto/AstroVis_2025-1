@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import ToolsBar from './toolsBar';
 import Modal from './modal';
 import { Context } from "../app.jsx";
@@ -31,11 +31,13 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
     setSelectedObject, // Objeto seleccionado
   } = useContext(Context);
   
+  const [hoveredFov, setHoveredFov] = useState(null);
+  
   
   return (
     <aside className="rightPanel">
       
-      <ToolsBar hemisphereSelected={hemisphereSelected} onHemisphereSelected={setHemisphereSelected} fovSelected={fovSelected} onFovSelected={setFovSelected} />
+      <ToolsBar hemisphereSelected={hemisphereSelected} onHemisphereSelected={setHemisphereSelected} fovSelected={fovSelected} onFovSelected={setFovSelected} setHoveredFov={setHoveredFov} />
       
       <Modal
         isOpen={isModalOpen} // Determina si el modal está abierto

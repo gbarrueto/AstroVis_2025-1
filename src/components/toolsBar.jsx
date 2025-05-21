@@ -11,8 +11,16 @@ const fovColors = {
 };
 
 
-export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fovSelected, onFovSelected }) {
+export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fovSelected, onFovSelected, setHoveredFov }) {
 
+  function handleMouseEnter() {
+    
+  }
+  
+  function handleMouseLeave() {
+    
+  }
+  
   return (
     <section className="toolsBarContainer">
       <section className="hemisphereSelectorContainer">
@@ -31,6 +39,20 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
       </section>
       
       <section className="fovSelectorContainer">
+        
+        {["07", "15", "35", "70"].map((fov) => (
+          <Link
+            key={fov}
+            to={`/${hemisphereSelected}/${fov}`}
+            className={`fovSelector ${fovSelected === fov ? "activeFovSelector" : ""}`}
+            onClick={() => onFovSelected(fov)}
+            onMouseEnter={() => handleMouseEnter(fov)}
+            onMouseLeave={handleMouseLeave}
+            style={fovSelected === fov ? { backgroundColor: fovColors[fov] } : {}}
+          >
+            {fov === "07" ? "0.7" : fov === "15" ? "1.5" : fov === "35" ? "3.5" : "7.0"}
+          </Link>
+        ))}
         
         <Link
           to={`/${hemisphereSelected}/07`}
