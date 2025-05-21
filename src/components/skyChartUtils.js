@@ -162,6 +162,7 @@ export const estrellaPolarTrace = {
 };
 
 // TODO: SigmaOctantisTrace (Equivalente a la estrella polar pero en el sur)
+// son 4 estrellas así que si haces esto pideme las coordenadas. #Gonza
 
 export const sigmaOctantisTrace = {
   

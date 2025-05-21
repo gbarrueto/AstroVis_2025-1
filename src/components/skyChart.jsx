@@ -58,7 +58,10 @@ const SkyChart = ({ hemisphere }) => {
   ]);
 
   // Manejador del clic en los puntos del gráfico para mostrar el modal
+  
   // TODO: Modificar funcion para que la estrella polar no muestre el modal
+  // puede ser una condicion basada en "event" y que handlePontClick no haga nada cuando "event" sea la polar
+  
   const handlePointClick = (event, dataList) => {
     const pointIndex = event.points[0]?.pointIndex;
     const allObjects = Object.values(dataList).flat();
