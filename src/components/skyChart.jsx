@@ -9,7 +9,7 @@ import {
   layout,
   estrellaPolarTrace,
 } from "./skyChartUtils";
-import { DataContext } from "../app.jsx";
+import { Context } from "../app.jsx";
 
 const SkyChart = ({ hemisphere }) => {
   // Acceder al contexto de los estados globales y del Modal
@@ -28,7 +28,7 @@ const SkyChart = ({ hemisphere }) => {
     setIsModalOpen, // Estado del modal
     selectedObject,
     setSelectedObject, // Objeto seleccionado
-  } = useContext(DataContext);
+  } = useContext(Context);
 
   // Efecto para cargar los datos al montar el componente
   useEffect(() => {

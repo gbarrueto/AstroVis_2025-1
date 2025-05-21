@@ -9,8 +9,7 @@ import ToolsBar from './components/toolsBar.jsx';
 import LeftPanel from './components/leftSidePanel.jsx';
 import RightPanel from './components/rightSidePanel.jsx';
 
-export const DataContext = createContext(null);
-export const SelectorsContext = createContext(null);
+export const Context = createContext(null);
 
 export default function Home() {
   const [location, setLocation] = useLocation();
@@ -35,32 +34,28 @@ export default function Home() {
     listasPorFovSouth, setListasPorFovSouth,
     // Estados del Modal
     isModalOpen, setIsModalOpen,
-    selectedObject, setSelectedObject
-  };
-  
-  const selectorsContext = {
+    selectedObject, setSelectedObject,
     hemisphere, setHemisphere,
     fov, setFov
   };
+  
   
   useEffect(() => {
     setLocation(`/${hemisphere}/${fov}`)
   }, [])
 
   return (
-    <DataContext.Provider value={context}>
-      <SelectorsContext.Provider value={selectorsContext}>
+    <Context.Provider value={context}>
         <Router>
           <Seo />
           <main role="main" className="wrapper">
             <div className="content">
               <LeftPanel selected={hemisphere} />
               <PageRouter />
-              <RightPanel />
+              <RightPanel hemisphereSelected={hemisphere} fovSelected={fov} />
             </div>
           </main>
         </Router>
-      </SelectorsContext.Provider>
-    </DataContext.Provider>
+    </Context.Provider>
   );
 }

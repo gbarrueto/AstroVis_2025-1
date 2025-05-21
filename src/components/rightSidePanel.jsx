@@ -1,11 +1,11 @@
 import ToolsBar from './toolsBar.jsx';
 import '../styles/rightSidePanelStyle.css';
 
-export default function RightPanel() {
+export default function RightPanel({ hemisphereSelected, fovSelected }) {
   return (
     <aside className="rightPanel">
       
-      <ToolsBar />
+      <ToolsBar hemisphereSelected={hemisphereSelected} fovSelected={fovSelected} />
       
     </aside>
   )
