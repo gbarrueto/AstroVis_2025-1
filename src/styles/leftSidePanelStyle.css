@@ -14,7 +14,7 @@
   /* justify-content: center; */
   /* padding: 10px; */
   margin: 1em 0;
-  gap: 0.5em;
+  /* gap: 0.5em; */
 }
 #pageTitleContainer > * {
   margin: 0;
@@ -23,12 +23,12 @@
 #pageTextTitle {
   color: #a8e6ff; /* Nebulosa lila suave, etéreo pero legible */
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 #pageSubTextTitle {
   color: #e0b3ff; /* Gris azulado, tipo niebla cósmica */
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .highlightText {
