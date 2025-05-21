@@ -44,32 +44,31 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
       </section>
       
       <section id="fovTopContainer">
-        <aside id="tablesWrapper">
-          <table className="objectsTable">
-            <thead>
-              <tr>
-                <th>Objeto</th>
-                <th>Frecuencia</th>
+        <table className="objectsTable">
+          <thead>
+            <tr>
+              <th>Objeto</th>
+              <th>Frecuencia</th>
+            </tr>
+          </thead> 
+          <tbody>
+            {hemisphereSelected === 'N' ? (listasPorFovNorth[fovListEntries[fovSelected]] ? listasPorFovNorth[fovListEntries[fovSelected]].map((obj, i) => (
+              <tr key={i}>
+                <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
+                <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
+                  {obj.frecuencia.toFixed(2)}%
+                </td>
               </tr>
-            </thead> 
-            <tbody>
-              {hemisphereSelected === 'N' ? (listasPorFovNorth[fovListEntries[fovSelected]] ? listasPorFovNorth[fovListEntries[fovSelected]].map((obj, i) => (
-                <tr key={i}>
-                  <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
-                  <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
-                    {obj.frecuencia.toFixed(2)}%
-                  </td>
-                </tr>
-              )) : <></>) : (listasPorFovSouth[fovListEntries[fovSelected]] ? listasPorFovSouth[fovListEntries[fovSelected]].map((obj, i) => (
-                <tr key={i}>
-                  <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
-                  <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
-                    {obj.frecuencia.toFixed(2)}%
-                  </td>
-                </tr>
-              )) : <></>)}
-            </tbody>
-          </table>
+            )) : <></>) : (listasPorFovSouth[fovListEntries[fovSelected]] ? listasPorFovSouth[fovListEntries[fovSelected]].map((obj, i) => (
+              <tr key={i}>
+                <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
+                <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
+                  {obj.frecuencia.toFixed(2)}%
+                </td>
+              </tr>
+            )) : <></>)}
+          </tbody>
+        </table>
           {/* 
           Object.entries(objectsByHemisphereFov).map(([fovLabel, objects], index) => (
             <section key={fovLabel} id={`deg${index}`} className="tableContainer"> 
@@ -98,7 +97,6 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
             </section>
           ))
           */}
-        </aside>
       </section>
     </div>
   );

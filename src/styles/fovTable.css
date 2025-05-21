@@ -1,7 +1,8 @@
 /* FovTable.css */
 
 .tableWrapper {
-  height: 50%;
+  flex: 1;
+  padding: 2em 0;
 }
 
 #topTitleContainer {
@@ -16,7 +17,6 @@
   gap: 8px;
   width: 100%;
   height: 50%;
-  overflow: scroll;
 }
 
 #fovImage {
