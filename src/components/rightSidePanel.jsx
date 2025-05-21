@@ -12,6 +12,13 @@ const fovImages = {
   "70": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/Selected-70.png?v=1747852261877",
 };
 
+const zoomFovImages = {
+  "07": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/_0.7%C2%B0.png?v=1747852068533",
+  "15": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/0.7%C2%B0%20a%201.5%C2%B0.png?v=1747852092188",
+  "35": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/1.5%C2%B0%20a%203.5%C2%B0.png?v=1747852095693",
+  "70": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/3.5%C2%B0%20a%207.0%C2%B0.png?v=1747852107423"
+}
+
 const gearImages = {
   "07": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear%20-%20menor%20a%200.7%C2%B0%20%20-%20mayor%20a%20500mm.jpeg?v=1747852727807",
   "15": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear-0.7%C2%B0%20a%20.5%C2%B0%20-%20300mm.png?v=1747852720434",
@@ -52,6 +59,8 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
           <img 
             src={fovImages[hoveredFov || fovSelected]}
             className="extraInfoImage"
+            onMouseOver={e => {e.currentTarget.src = zoomFovImages[fovSelected]}}
+            onMouseOut={e => {e.currentTarget.src = fovImages[hoveredFov || fovSelected]}}
           />
         </div>
         
