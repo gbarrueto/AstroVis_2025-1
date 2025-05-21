@@ -9,6 +9,7 @@ import ToolsBar from './components/toolsBar.jsx';
 import LeftPanel from './components/leftSidePanel.jsx';
 
 export const DataContext = createContext(null);
+export const SelectorsContext = createContext(null);
 
 export default function Home() {
   const [location, setLocation] = useLocation();
@@ -36,12 +37,19 @@ export default function Home() {
     selectedObject, setSelectedObject
   };
   
+  const selectorsContext = {
+    hemisphere, setHemisphere,
+    fov, setFov
+  };
+  
   useEffect(() => {
     setLocation(`/${hemisphere}/${fov}`)
   }, [])
 
   return (
     <DataContext.Provider value={context}>
+      <SelectorsContext.Provider value={selectorsContext}>
+      </SelectorsContext.Provider>
       <Router>
         <Seo />
         <main role="main" className="wrapper">
