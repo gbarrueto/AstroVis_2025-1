@@ -16,6 +16,11 @@
   border: 1px solid white;
 }
 
+.extraInfoImage {
+  object-fit: contain;
+  width: 100%;
+}
+
 .fovInfo {
   flex: 1;
 }

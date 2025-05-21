@@ -38,9 +38,17 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
       {/* Extra info Images */}
       <section className="extraInfoContainer">
         <div className="extraInfo fovInfo">
+          <img 
+            src="https://preview.redd.it/suisei-archives-a-new-sui-themed-exhibition-starting-in-jp-v0-buh863ijkx0f1.jpeg?auto=webp&s=6f7ac2e0089de61eb0c2812a4297f00f18c10d4f"
+            className="extraInfoImage"
+          />
         </div>
         
         <div className="extraInfo equipmentInfo">
+          <img
+            src="https://pbs.twimg.com/media/GrUDO75WQAAC5TB?format=jpg&name=large"
+            className="extraInfoImage"
+          />
         </div>
       </section>
       
