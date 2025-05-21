@@ -5,6 +5,14 @@ import { Context } from "../app.jsx";
 import '../styles/rightSidePanelStyle.css';
 
 
+const fovImages = {
+  "07": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/Selected-07.png?v=1747819677785",
+  "15": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/Selected-15.png?v=1747819827997",
+  "35": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/Selected-35.png?v=1747819840105",
+  "70": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/Selected-70.png?v=1747819844227",
+};
+
+
 export default function RightPanel({ hemisphereSelected, setHemisphereSelected, fovSelected, setFovSelected }) {
   const {
     loading,
@@ -39,7 +47,7 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
       <section className="extraInfoContainer">
         <div className="extraInfo fovInfo">
           <img 
-            src="https://preview.redd.it/suisei-archives-a-new-sui-themed-exhibition-starting-in-jp-v0-buh863ijkx0f1.jpeg?auto=webp&s=6f7ac2e0089de61eb0c2812a4297f00f18c10d4f"
+            src={fovImages[fovSelected]}
             className="extraInfoImage"
           />
         </div>

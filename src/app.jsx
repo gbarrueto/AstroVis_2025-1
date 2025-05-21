@@ -9,7 +9,9 @@ import ToolsBar from './components/toolsBar.jsx';
 import LeftPanel from './components/leftSidePanel.jsx';
 import RightPanel from './components/rightSidePanel.jsx';
 
+
 export const Context = createContext(null);
+
 
 export default function Home() {
   const [location, setLocation] = useLocation();
