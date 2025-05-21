@@ -2,6 +2,15 @@ import { useState, useContext } from "react";
 import { Link } from "wouter";
 import "../styles/toolsBarStyle.css";
 
+
+const fovColors = {
+  "0.7": "#1f78b4", // azul fuerte
+  "1.5": "#33a02c", // verde accesible
+  "3.5": "#ff7f00", // naranja accesible
+  "7.0": "#ff6ec7", // violeta fuerte
+};
+
+
 export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fovSelected, onFovSelected }) {
   
   return (
