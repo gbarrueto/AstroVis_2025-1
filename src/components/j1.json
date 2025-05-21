@@ -546,7 +546,7 @@
         "fov": "< 0.7 deg",
         "neighbours": [],
         "hemisphere": "N",
-        "repr_name": "Galaxia de Andr\u00f3meda"
+        "repr_name": "Nucleo de la Galaxia de Andr\u00f3meda"
     },
     {
         "id": 55,
@@ -667,7 +667,7 @@
             "ngc 2244 satellite cluster"
         ],
         "hemisphere": "N",
-        "repr_name": "Nebulosa Roseta"
+        "repr_name": "Centro de la Nebulosa Roseta"
     },
     {
         "id": 71,
