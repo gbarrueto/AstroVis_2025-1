@@ -34,7 +34,8 @@ const fovListEntries = {
 const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) => {
   const {
     listasPorFovNorth,
-    listasPorFovSouth
+    listasPorFovSouth,
+    selectedObject
   } = useContext(Context);
   
   return (
