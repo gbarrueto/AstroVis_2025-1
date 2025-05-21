@@ -5,6 +5,11 @@
   justify-content: space-between;
 }
 
+.objectInfoContainer {
+  min-height: 50%;
+  width: 100%;
+}
+
 .extraInfoContainer {
   display: flex;
   width: 100%;
