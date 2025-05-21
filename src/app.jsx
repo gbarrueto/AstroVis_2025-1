@@ -7,6 +7,7 @@ import PageRouter from "./components/router.jsx";
 import Seo from './components/seo.jsx';
 import ToolsBar from './components/toolsBar.jsx';
 import LeftPanel from './components/leftSidePanel.jsx';
+import RightPanel from './components/rightSidePanel.jsx';
 
 export const DataContext = createContext(null);
 export const SelectorsContext = createContext(null);
@@ -49,17 +50,17 @@ export default function Home() {
   return (
     <DataContext.Provider value={context}>
       <SelectorsContext.Provider value={selectorsContext}>
+        <Router>
+          <Seo />
+          <main role="main" className="wrapper">
+            <div className="content">
+              <LeftPanel selected={hemisphere} />
+              <PageRouter />
+              <RightPanel />
+            </div>
+          </main>
+        </Router>
       </SelectorsContext.Provider>
-      <Router>
-        <Seo />
-        <main role="main" className="wrapper">
-          <div className="content">
-            <LeftPanel selected={hemisphere} />
-            <PageRouter />
-            <ToolsBar hemisphereSelected={hemisphere} onHemisphereSelected={setHemisphere} fovSelected={fov} onFovSelected={setFov} />
-          </div>
-        </main>
-      </Router>
     </DataContext.Provider>
   );
 }
