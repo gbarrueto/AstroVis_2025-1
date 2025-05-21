@@ -49,7 +49,3 @@
 .fovSelector:hover:not(.activeFovSelector) {
   background-color: rgba(73, 54, 113, 0.5);
 }
-
-.activeFovSelector {
-  background-color: aqua;
-}

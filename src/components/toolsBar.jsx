@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Link } from "wouter";
 import "../styles/toolsBarStyle.css";
 
@@ -12,6 +12,10 @@ const fovColors = {
 
 
 export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fovSelected, onFovSelected }) {
+  
+  useEffect(() => {
+    document.getElementsByClassName()
+  }, [fovSelected])
   
   return (
     <section className="toolsBarContainer">
