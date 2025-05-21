@@ -19,6 +19,7 @@ export const fovColors = {
   ">= 3.5 AND < 7 deg": "#ff6ec7",
 };
 
+// DEPRECATED
 //export const raToDegrees = (raStr) => {
 //  if (!raStr) return 0;
 //  const [h, m = 0, s = 0] = raStr.split(" ").map(parseFloat);
@@ -68,16 +69,16 @@ export const cargar = async () => {
   return { norte: listasNorte, sur: listasSur };
 };
 
-// DEPRECATED
-//export const obtenerTopPorFOV = (listasPorFov) => {
-//  const topPorFov = {};
-//  for (const [fov, lista] of Object.entries(listasPorFov)) {
-//    const sorted = [...lista].sort((a, b) => b.frecuencia - a.frecuencia);
-//    topPorFov[fov] = sorted.slice(0, 3);
-//  }
-//  return topPorFov;
-//};
-
+export const obtenerTopPorFOV = (listasPorFov) => {
+  const topPorFov = {};
+  for (const [fov, lista] of Object.entries(listasPorFov)) {
+    const sorted = [...lista].sort((a, b) => b.frecuencia - a.frecuencia);
+    topPorFov[fov] = sorted.slice(0, 3);
+  }
+  return topPorFov;
+};
+// TODO: Modificar para que los objetos elegidos a destacar no sea solo por el nombre.
+// de esa manera objetos con el mismo nombre, pero que no estan en el top, no sean destacados
 export const procesar = (data, topDestacados) => {
   const topNames = topDestacados.map((t) => t.object);
 
@@ -99,7 +100,7 @@ export const procesar = (data, topDestacados) => {
     text: data.map((d) => d.object),
     textfont: {
       color: data.map((d) =>
-        topNames.includes(d.object) ? d.color : "rgba(0,0,0,0)"
+        topNames.includes(d.object) ? d.color : "rgba(0,0,0,0)" // Cambiar esto
       ),
       size: 10,
     },
@@ -159,3 +160,9 @@ export const estrellaPolarTrace = {
   },
   hoveron: false,
 };
+
+// TODO: SigmaOctantisTrace (Equivalente a la estrella polar pero en el sur)
+
+export const sigmaOctantisTrace = {
+  
+}

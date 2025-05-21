@@ -7,7 +7,7 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
   const [closing, setClosing] = useState(false);
   const [playingSound, setPlayingSound] = useState(false);
   
-  const sound = new Audio('https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/ceeday-huh-sound-effect.mp3?v=1747859135599')
+  const [sound, setSound] = useState(new Audio('https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/y2mate_5gbydy1.mp3?v=1747860004222'));
   sound.loop = true;
   
   // Controla la aparición/desaparición con animación
@@ -43,7 +43,7 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
       setPlayingSound(true);
     }
     else {
-      sound.stop();
+      sound.pause();
       setPlayingSound(false)
     }
   }

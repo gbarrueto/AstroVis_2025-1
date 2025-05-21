@@ -4,6 +4,7 @@ import Plot from "react-plotly.js";
 import Modal from "./modal";
 import {
   cargar,
+  obtenerTopPorFOV,
   procesar,
   layout,
   estrellaPolarTrace,
@@ -36,8 +37,8 @@ const SkyChart = ({ hemisphere }) => {
     const graficar = async () => {
       try {
         const { norte, sur } = await cargar();
-        //setTopPorFovNorth(obtenerTopPorFOV(norte));
-        //setTopPorFovSouth(obtenerTopPorFOV(sur));
+        setTopPorFovNorth(obtenerTopPorFOV(norte));
+        setTopPorFovSouth(obtenerTopPorFOV(sur));
         setListasPorFovNorth(norte);
         setListasPorFovSouth(sur);
       } catch (err) {
