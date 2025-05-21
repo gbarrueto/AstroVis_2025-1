@@ -49,7 +49,7 @@ export default function Home() {
           <Seo />
           <main role="main" className="wrapper">
             <div className="content">
-              <LeftPanel hemisphereSelected={hemisphere} />
+              <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
               <PageRouter />
               <RightPanel hemisphereSelected={hemisphere} setHemisphereSelected={setHemisphere} fovSelected={fov} setFovSelected={setFov} />
             </div>

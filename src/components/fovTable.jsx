@@ -16,19 +16,18 @@ const fovColors = {
   ">= 3.5 AND < 7 deg": "#ff6ec7", // violeta fuerte
 };
 
-const FovTable = ({ objectsByHemisphereFov }) => {
+const FovTable = ({ objectsByHemisphereFov, fovSelected }) => {
   return (
     <div className="tableWrapper">
       <section id="topTitleContainer">
-        <h3 style={{ color: "#c7a4ff" }}>Top por campo visual</h3>
+        <h3 style={{ color: "#c7a4ff" }}>Campo visual {`${fovSelected[0]}.${fovSelected[1]}`}°</h3>
       </section>
       
       <section id="fovTopContainer">
         <aside id="tablesWrapper">
           {Object.entries(objectsByHemisphereFov).map(([fovLabel, objects], index) => (
-            <section key={fovLabel} id={`deg${index}`} className="tableContainer">
-              <p>{fovLabels[fovLabel]}</p>
-              <table className="objectsTable">
+            <section key={fovLabel} id={`deg${index}`} className="tableContainer"> {/*Edi pon los campos visuales como intervalos*/}
+              <table className="objectsTable">/* que me asusto */
                 { 
                   index === 0 ? (
                     <thead>
