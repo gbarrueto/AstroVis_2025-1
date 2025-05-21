@@ -5,6 +5,7 @@ body {
   padding: 0;
   height: 100vh;
   overflow: hidden;
+  background-image: src('https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/StarsBk.jpg?v=1747819884331')
 }
 
 /* Contenedor principal del gráfico y modal */
