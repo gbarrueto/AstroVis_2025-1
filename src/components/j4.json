@@ -34,7 +34,7 @@
             "sh2-276"
         ],
         "hemisphere": "S",
-        "repr_name": "Nebulosas de Orion y Cabeza de Caballo"
+        "repr_name": "Constelación de Orion"
     },
     {
         "id": 56,
@@ -72,7 +72,7 @@
             "pk 084+01.1"
         ],
         "hemisphere": "N",
-        "repr_name": "NGC7039"
+        "repr_name": "Constelación del cisne"
     },
     {
         "id": 73,
@@ -165,7 +165,7 @@
             "sh2-201"
         ],
         "hemisphere": "N",
-        "repr_name": "NGC957"
+        "repr_name": "Constelacion de Cassiopea"
     },
     {
         "id": 99,

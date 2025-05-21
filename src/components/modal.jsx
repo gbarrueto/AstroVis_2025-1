@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { IoPlay } from "react-icons/io5";
+import { IoPlay, IoPause } from "react-icons/io5";
 import "../styles/modal.css";
 
 const Modal = ({ isOpen, objectData, onClose, objImage }) => {
   const [shouldRender, setShouldRender] = useState(false);
   const [closing, setClosing] = useState(false);
+  const [playingSound, setPlayingSound] = useState(false);
+  
+  const sound = new Audio('https://www.myinstants.com/en/instant/huh-ceeday-65118/?utm_source=copy&utm_medium=share')
 
   // Controla la aparición/desaparición con animación
   useEffect(() => {
@@ -33,16 +36,14 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
   };
   
   
-  function playSound() {
-    
-  }
-  
-  function stopSound() {
-    
-  }
-  
-  function handleSoundButton() {
-    
+  function handleSoundButtonClick() {
+    if (playingSound) {
+      sound.play();
+    }
+    else {
+      sound.stop();
+    }
+    setPlayingSound(!playingSound);
   }
   
 
@@ -57,8 +58,10 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
       />
       
       <button
-        onClick={playSound}
-        ><IoPlay />
+        onClick={handleSoundButtonClick}
+        >{ !playingSound ? <IoPlay />
+        : <IoPause />
+         }
       </button>
 
 
