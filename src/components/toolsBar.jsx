@@ -36,6 +36,7 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
           to={`/${hemisphereSelected}/0.7`}
           className={`fovSelector ${fovSelected === "0.7" ? "activeFovSelector" : ""}`}
           onClick={() => onFovSelected("0.7")}
+          style={ fovSelected === '0.7' ? { backgroundColor: fovColors[fovSelected] } : {}}
         > 0.7
         </Link>
         
@@ -43,6 +44,7 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
           to={`/${hemisphereSelected}/1.5`}
           className={`fovSelector ${fovSelected === "1.5" ? "activeFovSelector" : ""}`}
           onClick={() => onFovSelected("1.5")}
+          style={ fovSelected === '1.5' ? { backgroundColor: fovColors[fovSelected] } : {}}
         > 1.5
         </Link>
         
@@ -50,6 +52,7 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
           to={`/${hemisphereSelected}/3.5`}
           className={`fovSelector ${fovSelected === "3.5" ? "activeFovSelector" : ""}`}
           onClick={() => onFovSelected("3.5")}
+          style={ fovSelected === '3.5' ? { backgroundColor: fovColors[fovSelected] } : {}}
         > 3.5
         </Link>
         
@@ -57,6 +60,7 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
           to={`/${hemisphereSelected}/7.0`}
           className={`fovSelector ${fovSelected === "7.0" ? "activeFovSelector" : ""}`}
           onClick={() => onFovSelected("7.0")}
+          style={ fovSelected === '7.0' ? { backgroundColor: fovColors[fovSelected] } : {}}
         > 1.5
         </Link>
         
