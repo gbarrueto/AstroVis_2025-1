@@ -24,6 +24,7 @@ export default function Home() {
   const [topPorFovSouth, setTopPorFovSouth] = useState({});
   const [listasPorFovNorth, setListasPorFovNorth] = useState({});
   const [listasPorFovSouth, setListasPorFovSouth] = useState({});
+  const [objectsByHemisphereFov, setObjectsByHemisphereFov] = useState({})
 
   // Añadir estados de Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,6 +39,7 @@ export default function Home() {
     // Estados del Modal
     isModalOpen, setIsModalOpen,
     selectedObject, setSelectedObject,
+    objectsByHemisphereFov, setObjectsByHemisphereFov
   };
   
 
@@ -47,7 +49,7 @@ export default function Home() {
           <Seo />
           <main role="main" className="wrapper">
             <div className="content">
-              <LeftPanel selected={hemisphere} />
+              <LeftPanel hemisphereSelected={hemisphere} />
               <PageRouter />
               <RightPanel hemisphereSelected={hemisphere} setHemisphereSelected={setHemisphere} fovSelected={fov} setFovSelected={setFov} />
             </div>

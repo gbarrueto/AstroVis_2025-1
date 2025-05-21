@@ -20,7 +20,7 @@ const fovColors = {
 };
 
 
-export default function LeftPanel({ selected }) {
+export default function LeftPanel({ hemisphereSelected }) {
   const {
     loading,
     topPorFovNorth,
@@ -43,7 +43,7 @@ export default function LeftPanel({ selected }) {
       {/* Table */}
       <FovTable
         topObjectsByFov={
-          selected === "N" ? topPorFovNorth : topPorFovSouth
+          hemisphereSelected === "N" ? topPorFovNorth : topPorFovSouth
         }
       />
       
