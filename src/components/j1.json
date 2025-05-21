@@ -176,7 +176,7 @@
             "sh2-162"
         ],
         "hemisphere": "N",
-        "repr_name": "Nebulosa de la Burbuja (campo bajo)"
+        "repr_name": "Nebulosa de la Burbuja"
     },
     {
         "id": 11,
@@ -546,7 +546,7 @@
         "fov": "< 0.7 deg",
         "neighbours": [],
         "hemisphere": "N",
-        "repr_name": "Galaxia de Andr\u00f3meda (campo bajo)"
+        "repr_name": "Galaxia de Andr\u00f3meda"
     },
     {
         "id": 55,

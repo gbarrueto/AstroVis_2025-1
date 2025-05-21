@@ -34,7 +34,7 @@
             "sh2-276"
         ],
         "hemisphere": "S",
-        "repr_name": "IC426"
+        "repr_name": "Nebulosas de Orion y Cabeza de Caballo"
     },
     {
         "id": 56,
@@ -182,7 +182,7 @@
             "ic 4701"
         ],
         "hemisphere": "S",
-        "repr_name": "Nube estelar de Sagitario"
+        "repr_name": "Centro de la Via Láctea"
     },
     {
         "id": 100,
@@ -247,6 +247,6 @@
         "fov": ">= 3.5 AND < 7 deg",
         "neighbours": [],
         "hemisphere": "N",
-        "repr_name": "Pl\u00e9yades (campo amplio)"
+        "repr_name": "Pl\u00e9yades"
     }
 ]

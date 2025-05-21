@@ -51,7 +51,7 @@
             "ldn 1640"
         ],
         "hemisphere": "S",
-        "repr_name": "Nebulosa de Ori\u00f3n (campo medio-bajo)"
+        "repr_name": "Nebulosa de Ori\u00f3n"
     },
     {
         "id": 27,
@@ -116,7 +116,7 @@
         "fov": ">= 0.7 AND < 1.5 deg",
         "neighbours": [],
         "hemisphere": "N",
-        "repr_name": "Nebulosa de la Burbuja (campo medio-bajo)"
+        "repr_name": "Nebulosa de la Burbuja"
     },
     {
         "id": 36,
