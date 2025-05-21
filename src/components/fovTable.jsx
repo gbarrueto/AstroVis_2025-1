@@ -24,7 +24,14 @@ const tableTitleByFov = {
   "70": "3.5° - 7°"
 }
 
-const FovTable = ({ objectsByHemisphereFov, fovSelected }) => {
+const fovListEntries = {
+  "07": "< 0.7 deg",
+  "15": ">= 0.7 AND < 1.5 deg",
+  "35": ">= 1.5 AND < 3.5 deg",
+  "70": ">= 3.5 AND < 7 deg"
+}
+
+const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) => {
   const {
     listasPorFovNorth,
     listasPorFovSouth
@@ -38,7 +45,33 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected }) => {
       
       <section id="fovTopContainer">
         <aside id="tablesWrapper">
-          {Object.entries(objectsByHemisphereFov).map(([fovLabel, objects], index) => (
+          <table className="objectsTable">
+            <thead>
+              <tr>
+                <th>Objeto</th>
+                <th>Frecuencia</th>
+              </tr>
+            </thead> 
+            <tbody>
+              {hemisphereSelected === 'N' ? listasPorFovNorth[fovListEntries[fovSelected]].map((obj, i) => (
+                <tr key={i}>
+                  <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
+                  <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
+                    {obj.frecuencia.toFixed(2)}%
+                  </td>
+                </tr>
+              )) : listasPorFovSouth[fovListEntries[fovSelected]].map((obj, i) => (
+                <tr key={i}>
+                  <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
+                  <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
+                    {obj.frecuencia.toFixed(2)}%
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {/* 
+          Object.entries(objectsByHemisphereFov).map(([fovLabel, objects], index) => (
             <section key={fovLabel} id={`deg${index}`} className="tableContainer"> 
               <table className="objectsTable">
                 { 
@@ -63,7 +96,8 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected }) => {
                 </tbody>
               </table>
             </section>
-          ))}
+          ))
+          */}
         </aside>
       </section>
     </div>

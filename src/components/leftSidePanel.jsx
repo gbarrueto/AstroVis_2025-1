@@ -48,6 +48,7 @@ export default function LeftPanel({ hemisphereSelected, fovSelected }) {
           hemisphereSelected === "N" ? topPorFovNorth : topPorFovSouth
         }
         fovSelected={fovSelected}
+        hemisphereSelected={hemisphereSelected}
       />
       
       
