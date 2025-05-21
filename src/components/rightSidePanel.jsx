@@ -49,7 +49,7 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
       <section className="extraInfoContainer">
         <div className="extraInfo fovInfo">
           <img 
-            src={fovImages[fovSelected]}
+            src={fovImages[hoveredFov || fovSelected]}
             className="extraInfoImage"
           />
         </div>

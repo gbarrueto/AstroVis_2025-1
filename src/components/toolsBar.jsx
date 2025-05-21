@@ -13,12 +13,12 @@ const fovColors = {
 
 export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fovSelected, onFovSelected, setHoveredFov }) {
 
-  function handleMouseEnter() {
-    
+  function handleMouseEnter(fov) {
+    setHoveredFov?.(fov);
   }
   
   function handleMouseLeave() {
-    
+    setHoveredFov?.(null);
   }
   
   return (
@@ -53,38 +53,6 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
             {fov === "07" ? "0.7" : fov === "15" ? "1.5" : fov === "35" ? "3.5" : "7.0"}
           </Link>
         ))}
-        
-        <Link
-          to={`/${hemisphereSelected}/07`}
-          className={`fovSelector ${fovSelected === "07" ? "activeFovSelector" : ""}`}
-          onClick={() => onFovSelected("07")}
-          style={ fovSelected === '07' ? { backgroundColor: fovColors[fovSelected] } : {}}
-        > 0.7
-        </Link>
-        
-        <Link
-          to={`/${hemisphereSelected}/15`}
-          className={`fovSelector ${fovSelected === "15" ? "activeFovSelector" : ""}`}
-          onClick={() => onFovSelected("15")}
-          style={ fovSelected === '15' ? { backgroundColor: fovColors[fovSelected] } : {}}
-        > 1.5
-        </Link>
-        
-        <Link
-          to={`/${hemisphereSelected}/35`}
-          className={`fovSelector ${fovSelected === "35" ? "activeFovSelector" : ""}`}
-          onClick={() => onFovSelected("35")}
-          style={ fovSelected === '35' ? { backgroundColor: fovColors[fovSelected] } : {}}
-        > 3.5
-        </Link>
-        
-        <Link
-          to={`/${hemisphereSelected}/70`}
-          className={`fovSelector ${fovSelected === "70" ? "activeFovSelector" : ""}`}
-          onClick={() => onFovSelected("70")}
-          style={ fovSelected === '70' ? { backgroundColor: fovColors[fovSelected] } : {}}
-        > 7.0
-        </Link>
         
       </section>
     </section>
