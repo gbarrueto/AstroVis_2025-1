@@ -1,8 +1,9 @@
 /* FovTable.css */
 
 .tableWrapper {
-  flex: 1;
+  /* flex: 1; */
   padding: 2em 0;
+  height: 80%;
 }
 
 #topTitleContainer {
@@ -16,7 +17,7 @@
   flex-direction: row;
   gap: 8px;
   width: 100%;
-  height: 50%;
+  height: 90%;
 }
 
 #fovImage {
@@ -50,6 +51,7 @@
 .objectsTable {
   color: white;
   width: 100%;
+  height: 100%;
   border-spacing: 0;
   text-align: left;
   display: block;
@@ -60,19 +62,32 @@
   width: 100%;
 }
 
+.objectsTable thead tr {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  border-bottom: 2px solid #6b1e9c;
+}
+
 .objectsTable thead th {
   color: #ffffff;
   font-weight: bold;
   font-size: 16px;
-  border-bottom: 2px solid #6b1e9c;
 }
 
 .objectsTable thead th:last-child {
   text-align: end;
 }
 
-.objectsTable tbody tr {
+.objectsTable tbody {
   display: block;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.objectsTable tbody tr {
+  display: flex;
+  justify-content: space-between;
 }
 
 .objectsTable tbody td {
