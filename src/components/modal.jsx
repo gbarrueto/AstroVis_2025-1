@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { IoPlay } from "react-icons/io5";
 import "../styles/modal.css";
 
 const Modal = ({ isOpen, objectData, onClose, objImage }) => {
@@ -30,16 +31,35 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
     backgroundColor,
     color: textColor,
   };
+  
+  
+  function playSound() {
+    
+  }
+  
+  function stopSound() {
+    
+  }
+  
+  function handleSoundButton() {
+    
+  }
+  
 
   return (
     <div className={`modal-panel ${closing ? "closing" : ""}`} style={modalStyle}>
       <h3>{objectData.object}</h3>
 
-        <img
-          src={`https://gbarrueto.github.io/infovis-assets/img/${objectData.id}.jpg`}
-          alt={objectData.object}
-          className="modal-image"
-        />
+      <img
+        src={`https://gbarrueto.github.io/infovis-assets/img/${objectData.id}.jpg`}
+        alt={objectData.object}
+        className="modal-image"
+      />
+      
+      <button
+        onClick={playSound}
+        ><IoPlay />
+      </button>
 
 
       <button onClick={onClose}>Cerrar</button>
