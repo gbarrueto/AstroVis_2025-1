@@ -35,6 +35,15 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
         onClose={() => setIsModalOpen(false)} // Cierra el modal
       />
       
+      {/* Extra info Images */}
+      <section className="extraInfo">
+        <div className="fovInfo">
+        </div>
+        
+        <div className="equipmentInfo">
+        </div>
+      </section>
+      
     </aside>
   )
 }

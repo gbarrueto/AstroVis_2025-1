@@ -97,11 +97,6 @@ const SkyChart = ({ hemisphere }) => {
         )}
       </div>
       {/* Modal que se controla desde DataContext */}
-      <Modal
-        isOpen={isModalOpen} // Determina si el modal está abierto
-        objectData={selectedObject} // Pasa el objeto seleccionado al modal
-        onClose={() => setIsModalOpen(false)} // Cierra el modal
-      />
     </div>
   );
 };
