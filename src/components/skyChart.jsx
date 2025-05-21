@@ -4,7 +4,6 @@ import Plot from "react-plotly.js";
 import Modal from "./modal";
 import {
   cargar,
-  obtenerTopPorFOV,
   procesar,
   layout,
   estrellaPolarTrace,
@@ -37,8 +36,8 @@ const SkyChart = ({ hemisphere }) => {
     const graficar = async () => {
       try {
         const { norte, sur } = await cargar();
-        setTopPorFovNorth(obtenerTopPorFOV(norte));
-        setTopPorFovSouth(obtenerTopPorFOV(sur));
+        //setTopPorFovNorth(obtenerTopPorFOV(norte));
+        //setTopPorFovSouth(obtenerTopPorFOV(sur));
         setListasPorFovNorth(norte);
         setListasPorFovSouth(sur);
       } catch (err) {
@@ -58,6 +57,7 @@ const SkyChart = ({ hemisphere }) => {
   ]);
 
   // Manejador del clic en los puntos del gráfico para mostrar el modal
+  // TODO: Modificar funcion para que la estrella polar no muestre el modal
   const handlePointClick = (event, dataList) => {
     const pointIndex = event.points[0]?.pointIndex;
     const allObjects = Object.values(dataList).flat();

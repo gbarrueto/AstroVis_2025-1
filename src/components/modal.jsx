@@ -7,8 +7,9 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
   const [closing, setClosing] = useState(false);
   const [playingSound, setPlayingSound] = useState(false);
   
-  const sound = new Audio('https://www.myinstants.com/en/instant/huh-ceeday-65118/?utm_source=copy&utm_medium=share')
-
+  const sound = new Audio('https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/ceeday-huh-sound-effect.mp3?v=1747859135599')
+  sound.loop = true;
+  
   // Controla la aparición/desaparición con animación
   useEffect(() => {
     if (isOpen && objectData) {
@@ -37,13 +38,14 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
   
   
   function handleSoundButtonClick() {
-    if (playingSound) {
+    if (!playingSound) {
       sound.play();
+      setPlayingSound(true);
     }
     else {
       sound.stop();
+      setPlayingSound(false)
     }
-    setPlayingSound(!playingSound);
   }
   
 

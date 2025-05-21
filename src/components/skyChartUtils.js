@@ -68,14 +68,15 @@ export const cargar = async () => {
   return { norte: listasNorte, sur: listasSur };
 };
 
-export const obtenerTopPorFOV = (listasPorFov) => {
-  const topPorFov = {};
-  for (const [fov, lista] of Object.entries(listasPorFov)) {
-    const sorted = [...lista].sort((a, b) => b.frecuencia - a.frecuencia);
-    topPorFov[fov] = sorted.slice(0, 3);
-  }
-  return topPorFov;
-};
+// DEPRECATED
+//export const obtenerTopPorFOV = (listasPorFov) => {
+//  const topPorFov = {};
+//  for (const [fov, lista] of Object.entries(listasPorFov)) {
+//    const sorted = [...lista].sort((a, b) => b.frecuencia - a.frecuencia);
+//    topPorFov[fov] = sorted.slice(0, 3);
+//  }
+//  return topPorFov;
+//};
 
 export const procesar = (data, topDestacados) => {
   const topNames = topDestacados.map((t) => t.object);
