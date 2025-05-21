@@ -1,6 +1,6 @@
 // Home.jsx
 import React, { useState, createContext, useEffect } from "react";
-import { Router, useLocation } from "wouter";
+import { Router, useLocation, useRoute } from "wouter";
 
 import "./styles/styles.css";
 import PageRouter from "./components/router.jsx";
@@ -13,9 +13,10 @@ export const Context = createContext(null);
 
 export default function Home() {
   const [location, setLocation] = useLocation();
+  const [match, params] = useRoute("/:hemisphere/:fov");
   
-  const [hemisphere, setHemisphere] = useState("N");
-  const [fov, setFov] = useState('0.7');
+  const [hemisphere, setHemisphere] = useState(match ? params.hemisphere : 'N');
+  const [fov, setFov] = useState(match ? params.fov : '07');
   const [loading, setLoading] = useState(true);
   const [topPorFovNorth, setTopPorFovNorth] = useState({});
   const [topPorFovSouth, setTopPorFovSouth] = useState({});
@@ -37,10 +38,6 @@ export default function Home() {
     selectedObject, setSelectedObject,
   };
   
-  
-  useEffect(() => {
-    setLocation(`/${hemisphere}/${fov}`)
-  }, [])
 
   return (
     <Context.Provider value={context}>
