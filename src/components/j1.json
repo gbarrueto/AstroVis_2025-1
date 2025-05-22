@@ -559,7 +559,7 @@
         "fov": "< 0.7 deg",
         "neighbours": [],
         "hemisphere": "S",
-        "repr_name": "Nebulosa de Ori\u00f3n"
+        "repr_name": "Nebulosa del hombre corriendo"
     },
     {
         "id": 58,
@@ -572,7 +572,7 @@
         "fov": "< 0.7 deg",
         "neighbours": [],
         "hemisphere": "S",
-        "repr_name": "NGC1097"
+        "repr_name": "Galaxia NGC1097"
     },
     {
         "id": 60,
