@@ -1,15 +1,23 @@
 // src/pages/northHemisphere.jsx
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRoute } from "wouter";
 import SkyChart from "../components/skyChart";
 
 
 export default function NorthHemisphere() {
   const [match, params] = useRoute("/N/:fov");
+  const [fovSelected, setFovSelected] = useState("");
   
   useEffect(() => {
-    console.log(`north page fov: ${params ? params.fov : null}`);
-  }, [])
+    if (params) {
+      setFovSelected(params.fov);
+      console.log(`north page fov: ${params.fov}`);
+    }
+    else {
+      console.log(`north page fov: ${null}`);
+    }
+    
+  }, [params])
   
-  return <SkyChart hemisphere="N" />;
+  return <SkyChart hemisphere="N" fov={fovSelected} />;
 }

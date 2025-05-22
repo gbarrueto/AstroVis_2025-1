@@ -11,7 +11,16 @@ import {
 } from "./skyChartUtils";
 import { Context } from "../app.jsx";
 
-const SkyChart = ({ hemisphere }) => {
+
+const fovListEntries = {
+  "07": "< 0.7 deg",
+  "15": ">= 0.7 AND < 1.5 deg",
+  "35": ">= 1.5 AND < 3.5 deg",
+  "70": ">= 3.5 AND < 7 deg"
+}
+
+
+const SkyChart = ({ hemisphere, fov }) => {
   // Acceder al contexto de los estados globales y del Modal
   const {
     loading,
@@ -94,12 +103,12 @@ const SkyChart = ({ hemisphere }) => {
   return (
     <div className="wrapper">
       <div className="skyChart">
-        {loading ? (
+        {loading || !fov ? (
           <p>Loading...</p>
         ) : hemisphere === "N" ? (
-          renderChart(listasPorFovNorth, topPorFovNorth, true) // Gráfico del hemisferio norte
+          renderChart(listasPorFovNorth[fovListEntries[fov]], topPorFovNorth, true) // Gráfico del hemisferio norte
         ) : (
-          renderChart(listasPorFovSouth, topPorFovSouth) // Gráfico del hemisferio sur
+          renderChart(listasPorFovSouth[fovListEntries[fov]], topPorFovSouth) // Gráfico del hemisferio sur
         )}
       </div>
       {/* Modal que se controla desde DataContext */}
