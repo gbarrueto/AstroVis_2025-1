@@ -1,4 +1,4 @@
-/* Animación de entrada */
+/* Animaciones */
 @keyframes slideFadeIn {
   from {
     opacity: 0;
@@ -21,17 +21,14 @@
   }
 }
 
-/* Contenedor del modal */
+/* Modal */
 .modal-panel {
-  /* No se sobreescribe background-color ni color: viene desde React */
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
   border-radius: 10px;
   width: 40vh;
-  /* position: fixed; */
   top: 50%;
   right: 40px;
-  /* transform: translateY(-50%); */
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -46,18 +43,47 @@
   animation: slideFadeOut 0.3s ease-out forwards;
 }
 
-/* Título */
-.modal-panel h3 {
+/* Header con botón de cerrar */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-header h3 {
   margin: 0;
   font-size: 1.3em;
   font-weight: 600;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 4px;
+}
+
+/* Botón de cerrar */
+.close-button {
+  background: transparent;
+  border: none;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: inherit;
+  cursor: pointer;
+  padding: 0 8px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: rgba(255, 50, 50, 0.6); /* rojo translúcido */
 }
 
 /* Texto */
 .modal-panel p {
   margin: 0;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.modal-description {
+  margin-top: 1em;
   font-size: 0.95em;
   line-height: 1.4;
 }
@@ -70,10 +96,17 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Botón de cerrar */
+.modal-image.rotate-image {
+  transform: rotate(90deg);
+  max-height: 40vh;
+  max-width: 70vh;
+  object-fit: cover;
+}
+
+/* Botones genéricos */
 .modal-panel button {
   background-color: rgba(255, 255, 255, 0.15);
-  color: inherit; /* usa el color dinámico asignado desde React */
+  color: inherit;
   border: none;
   padding: 8px 16px;
   border-radius: 20px;
@@ -87,18 +120,4 @@
 
 .modal-panel button:hover {
   background-color: rgba(255, 255, 255, 0.3);
-}
-
-.modal-description {
-  margin-top: 1em;
-  font-size: 0.95em;
-  line-height: 1.4;
-}
-
-/* Esta es la clase importante, UTILIZA GALAXIA REMOLINO COMO EJEMPLO PARA ESTILIZAR */
-.modal-image.rotate-image {
-  transform: rotate(90deg);
-  max-height: 40vh;
-  max-width: 70vh; /* para que quepa horizontalmente cuando está girada */
-  object-fit: cover;
 }

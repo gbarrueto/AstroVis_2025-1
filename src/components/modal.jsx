@@ -59,34 +59,44 @@ const Modal = ({ isOpen, objectData, onClose }) => {
       }`}
       style={modalStyle}
     >
-      <h3>{objectData.object}</h3>
+      {loadingImage ? (
+        <p className="loading-text">Cargando..</p>
+      ) : (
+        <>
+          <div className="modal-header">
+            <h3>{objectData.object}</h3>
+            <button className="close-button" onClick={onClose}>
+              ×
+            </button>
+          </div>
 
-      {loadingImage && <p className="loading-text">Cargando imagen...</p>}
+          <img
+            src={`https://gbarrueto.github.io/infovis-assets/img/${objectData.id}.jpg`}
+            alt={objectData.object}
+            className={`modal-image ${rotateImage ? "rotate-image" : ""}`}
+          />
 
+          <p className="modal-description">
+            {objectData.description || "Descripción no disponible."}
+          </p>
+
+          <button onClick={handleSoundButtonClick}>
+            {!playingSound ? <IoPlay /> : <IoPause />}
+          </button>
+        </>
+      )}
+
+      {/* Imagen se carga incluso cuando loading, pero invisible al usuario */}
       <img
         src={`https://gbarrueto.github.io/infovis-assets/img/${objectData.id}.jpg`}
-        alt={objectData.object}
-        className={`modal-image ${rotateImage ? "rotate-image" : ""}`}
+        alt=""
+        style={{ display: "none" }}
         onLoad={(e) => {
           const img = e.target;
           setLoadingImage(false);
-          if (img.naturalHeight > img.naturalWidth) {
-            setRotateImage(true);
-          } else {
-            setRotateImage(false);
-          }
+          setRotateImage(img.naturalHeight > img.naturalWidth);
         }}
       />
-
-      <p className="modal-description">
-        {objectData.description || "Descripción no disponible."}
-      </p>
-
-      <button onClick={handleSoundButtonClick}>
-        {!playingSound ? <IoPlay /> : <IoPause />}
-      </button>
-
-      <button onClick={onClose}>Cerrar</button>
     </div>
   );
 };

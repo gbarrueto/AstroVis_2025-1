@@ -97,8 +97,9 @@ export const obtenerTopPorFOV = (listasPorFov) => {
 };
 
 // :(
-export const procesar = (data, topDestacados) => {
+export const procesar = (selectedObject, data, topDestacados) => {
   const topIds = new Set(topDestacados.map((t) => t.id)); // usar id en lugar de nombre
+  console.log(selectedObject)
 
   return {
     type: "scatterpolar",
@@ -108,7 +109,7 @@ export const procesar = (data, topDestacados) => {
     marker: {
       size: data.map((d) => Math.max(Math.pow(d.frecuencia, 1.2) * 100, 6)),
       sizemode: "area",
-      color: data.map((d) => d.color),
+      color: data.map((d) => { selectedObject && d === selectedObject ? '#00ff' : d.color}),
       opacity: 0.8,
       line: {
         width: 0,
