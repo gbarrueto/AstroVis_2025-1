@@ -3,15 +3,19 @@ import { IoPlay, IoPause } from "react-icons/io5";
 import "../styles/modal.css";
 
 const Modal = ({ isOpen, objectData, onClose, objImage }) => {
-  console.log(objectData)
+  console.log(objectData);
   const [shouldRender, setShouldRender] = useState(false);
   const [closing, setClosing] = useState(false);
   const [playingSound, setPlayingSound] = useState(false);
-  
+
   /* CAMBIAR POR LINK DE SONIDO CORRESPONDIENTE */
-  const [sound, setSound] = useState(new Audio('https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/y2mate_5gbydy1.mp3?v=1747860004222'));
+  const [sound, setSound] = useState(
+    new Audio(
+      "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/y2mate_5gbydy1.mp3?v=1747860004222"
+    )
+  );
   sound.loop = true;
-  
+
   // Controla la aparición/desaparición con animación
   useEffect(() => {
     if (isOpen && objectData) {
@@ -19,7 +23,7 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
       setClosing(false);
     } else if (shouldRender) {
       // debug
-      console.log(objectData)
+      console.log(objectData);
       // Comienza animación de salida
       setClosing(true);
       const timeout = setTimeout(() => {
@@ -39,22 +43,22 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
     backgroundColor,
     color: textColor,
   };
-  
-  
+
   function handleSoundButtonClick() {
     if (!playingSound) {
       sound.play();
       setPlayingSound(true);
-    }
-    else {
+    } else {
       sound.pause();
-      setPlayingSound(false)
+      setPlayingSound(false);
     }
   }
-  
 
   return (
-    <div className={`modal-panel ${closing ? "closing" : ""}`} style={modalStyle}>
+    <div
+      className={`modal-panel ${closing ? "closing" : ""}`}
+      style={modalStyle}
+    >
       <h3>{objectData.object}</h3>
 
       <img
@@ -62,19 +66,17 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
         alt={objectData.object}
         className="modal-image"
       />
-      
-      <p className="modal-description">{objectData.description || "Descripción no disponible."}</p>
 
-      
-      <button
-        onClick={handleSoundButtonClick}
-        >{ !playingSound ? <IoPlay />
-        : <IoPause />
-         }
-      </button>
+      <p className="modal-description">
+        {objectData.description || "Descripción no disponible."}
+      </p>
 
-
-      <button onClick={onClose}>Cerrar</button>
+      <div className="modal-buttons">
+        <button onClick={handleSoundButtonClick}>
+          {!playingSound ? <IoPlay /> : <IoPause />}
+        </button>
+        <button onClick={onClose}>Cerrar</button>
+      </div>
     </div>
   );
 };
