@@ -56,7 +56,7 @@ export const cargar = async () => {
         fovCategory: fovLabel,
         color: fovColors[fovLabel],
         id: obj.id,
-        description: obj.description
+        description: obj.description,
       };
 
       if (obj.hemisphere === "N") objetosNorte.push(transformed);
@@ -74,7 +74,6 @@ export const obtenerTopPorFOV = (listasPorFov) => {
   const topPorFov = {};
 
   for (const [fovKey, objetos] of Object.entries(listasPorFov)) {
-
     // Ordenar por frecuencia descendente
     const ordenados = objetos.sort((a, b) => b.frecuencia - a.frecuencia);
 
@@ -97,7 +96,12 @@ export const obtenerTopPorFOV = (listasPorFov) => {
 };
 
 // :(
-export const procesar = (selectedObject, hoveredTableObject, data, topDestacados) => {
+export const procesar = (
+  selectedObject,
+  hoveredTableObject,
+  data,
+  topDestacados
+) => {
   const topIds = new Set(topDestacados.map((t) => t.id)); // usar id en lugar de nombre
 
   return {
@@ -106,14 +110,17 @@ export const procesar = (selectedObject, hoveredTableObject, data, topDestacados
     r: data.map((d) => d.r),
     theta: data.map((d) => d.theta),
     marker: {
-      size: data.map((d) => Math.max(Math.pow(d.frecuencia, 1.2) * 100, 6)),
+      size: data.map((d) => {
+        const baseSize = Math.max(Math.pow(d.frecuencia, 1.2) * 100, 1);
+        return d.fovCategory === "< 0.7 deg" ? baseSize : baseSize * 5; // ajusta 1.5 a tu gusto
+      }),
       sizemode: "area",
       color: data.map((d) =>
         d.id === hoveredTableObject?.id
-          ? 'yellow'
+          ? "yellow"
           : d.id === selectedObject?.id
-              ? 'aqua'
-              : d.color
+          ? "aqua"
+          : d.color
       ),
       opacity: 0.8,
       line: {
@@ -123,9 +130,7 @@ export const procesar = (selectedObject, hoveredTableObject, data, topDestacados
     },
     text: data.map((d) => d.object),
     textfont: {
-      color: data.map((d) =>
-        topIds.has(d.id) ? d.color : "rgba(0,0,0,0)"
-      ),
+      color: data.map((d) => (topIds.has(d.id) ? d.color : "rgba(0,0,0,0)")),
       size: 10,
     },
     textposition: "top center",
@@ -149,7 +154,7 @@ export const layout = {
       ticktext: ["0h", "6h", "12h", "18h"],
       tickfont: { color: "yellow" },
       showline: true,
-     gridcolor: "#888888",
+      gridcolor: "#888888",
       gridwidth: 0,
     },
   },
@@ -185,7 +190,6 @@ export const estrellaPolarTrace = {
   },
   hoveron: false,
 };
-
 
 export const cruzPolarTrace = {
   type: "scatterpolar",

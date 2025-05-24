@@ -23,7 +23,7 @@
 
 /* Modal */
 .modal-panel {
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
   border-radius: 10px;
   width: 40vh;
@@ -34,9 +34,10 @@
   flex-direction: column;
   gap: 14px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", sans-serif; */
   animation: slideFadeIn 0.4s ease-out;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .modal-panel.closing {
@@ -45,30 +46,30 @@
 
 /* Header con botón de cerrar */
 .modal-header {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 4px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
 }
 
 .modal-header h3 {
-  margin: 0;
+  /* margin: 0;
   font-size: 1.3em;
-  font-weight: 600;
+  font-weight: 600; */
 }
 
 .close-button {
-  background-color: rgba(255, 50, 50, 0.15); /* fondo rojo suave */
+  /* background-color: rgba(255, 50, 50, 0.15);
   border: none;
   border-radius: 8px;
   font-size: 1.2em;
   font-weight: bold;
-  color: rgba(255, 50, 50, 0.9); /* rojo más fuerte */
+  color: rgba(255, 50, 50, 0.9);
   cursor: pointer;
   padding: 4px 10px;
   margin-bottom: 5px;
-  line-height: 1;
+  line-height: 1; */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -81,34 +82,34 @@
 
 /* Texto */
 .modal-panel p {
-  margin: 0;
+  /* margin: 0;
   font-size: 0.95em;
-  line-height: 1.4;
+  line-height: 1.4; */
 }
 
 .modal-description {
-  margin-top: 1em;
+  /* margin-top: 1em;
   font-size: 0.95em;
-  line-height: 1.4;
+  line-height: 1.4; */
 }
 
 /* Imagen */
 .modal-image {
-  width: 100%;
+  /* width: 100%;
   border-radius: 6px;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
 }
 
 .modal-image.rotate-image {
-  transform: rotate(90deg);
+  /* transform: rotate(90deg);
   max-height: 40vh;
   max-width: 70vh;
-  object-fit: cover;
+  object-fit: cover; */
 }
 
 .modal-panel button:not(.close-button) {
-  background-color: rgba(255, 255, 255, 0.15);
+  /* background-color: rgba(255, 255, 255, 0.15);
   color: inherit;
   border: none;
   padding: 8px 16px;
@@ -118,7 +119,7 @@
   font-size: 0.9em;
   font-weight: 500;
   transition: background-color 0.3s ease;
-  margin-top: 8px;
+  margin-top: 8px; */
 }
 
 .modal-panel button:not(.close-button):hover {

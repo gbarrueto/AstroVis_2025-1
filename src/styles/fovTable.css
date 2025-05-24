@@ -108,3 +108,21 @@
 .objectsTable tbody td:last-child {
   text-align: end;
 }
+
+/* Scrollbar personalizada para la tabla */
+.objectsTable tbody::-webkit-scrollbar {
+  width: 6px; /* delgada */
+}
+
+.objectsTable tbody::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.objectsTable tbody::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 110, 199, 0.4); /* rosado translúcido */
+  border-radius: 10px;
+}
+
+.objectsTable tbody::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 110, 199, 0.7); /* rosado más fuerte al pasar */
+}
