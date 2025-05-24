@@ -70,34 +70,6 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
             )) : <></>)}
           </tbody>
         </table>
-          {/* 
-          Object.entries(objectsByHemisphereFov).map(([fovLabel, objects], index) => (
-            <section key={fovLabel} id={`deg${index}`} className="tableContainer"> 
-              <table className="objectsTable">
-                { 
-                  index === 0 ? (
-                    <thead>
-                      <tr>
-                        <th>Objeto</th>
-                        <th>Frecuencia</th>
-                      </tr>
-                    </thead> 
-                  ) : null
-                }
-                <tbody>
-                  {objects.map((obj, i) => (
-                    <tr key={i}>
-                      <td style={{ color: fovColors[fovLabel] }}>{obj.object}</td>
-                      <td style={{ color: fovColors[fovLabel] }}>
-                        {obj.frecuencia.toFixed(2)}%
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </section>
-          ))
-          */}
       </section>
     </div>
   );
