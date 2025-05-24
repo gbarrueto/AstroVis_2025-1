@@ -71,16 +71,33 @@ export const cargar = async () => {
 
 export const obtenerTopPorFOV = (listasPorFov) => {
   const topPorFov = {};
-  for (const [fov, lista] of Object.entries(listasPorFov)) {
-    const sorted = [...lista].sort((a, b) => b.frecuencia - a.frecuencia);
-    topPorFov[fov] = sorted.slice(0, 3);
+
+  for (const [fovKey, objetos] of Object.entries(listasPorFov)) {
+
+    // Ordenar por frecuencia descendente
+    const ordenados = objetos.sort((a, b) => b.frecuencia - a.frecuencia);
+
+    // Mantener solo los primeros 3 con nombres únicos
+    const vistos = new Set();
+    const topUnicos = [];
+
+    for (const obj of ordenados) {
+      if (!vistos.has(obj.object)) {
+        vistos.add(obj.object);
+        topUnicos.push(obj);
+      }
+      if (topUnicos.length === 3) break;
+    }
+
+    topPorFov[fovKey] = topUnicos;
   }
+
   return topPorFov;
 };
-// TODO: Modificar para que los objetos elegidos a destacar no sea en base a su nombre (que trucho pancito)
-// de manera que objetos con el mismo nombre, pero que no estan en el top, no sean destacados
+
+// :(
 export const procesar = (data, topDestacados) => {
-  const topNames = topDestacados.map((t) => t.object);
+  const topIds = new Set(topDestacados.map((t) => t.id)); // usar id en lugar de nombre
 
   return {
     type: "scatterpolar",
@@ -100,7 +117,7 @@ export const procesar = (data, topDestacados) => {
     text: data.map((d) => d.object),
     textfont: {
       color: data.map((d) =>
-        topNames.includes(d.object) ? d.color : "rgba(0,0,0,0)" // Cambiar esto
+        topIds.has(d.id) ? d.color : "rgba(0,0,0,0)"
       ),
       size: 10,
     },
