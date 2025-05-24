@@ -7,8 +7,7 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
   const [shouldRender, setShouldRender] = useState(false);
   const [closing, setClosing] = useState(false);
   const [playingSound, setPlayingSound] = useState(false);
-  const [rotateImage, setRotateImage] = useState(false);
-  
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   /* CAMBIAR POR LINK DE SONIDO CORRESPONDIENTE */
   const [sound, setSound] = useState(
@@ -23,9 +22,8 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
     if (isOpen && objectData) {
       setShouldRender(true);
       setClosing(false);
+      setImageLoaded(false); // Resetear carga al abrir nuevo modal
     } else if (shouldRender) {
-      // debug
-      console.log(objectData);
       // Comienza animación de salida
       setClosing(true);
       const timeout = setTimeout(() => {
@@ -56,24 +54,25 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
     }
   }
 
+  // Mostrar "Cargando..." hasta que la imagen cargue
+  if (!imageLoaded) {
+    return (
+      <div className="modal-panel" style={modalStyle}>
+        <p>Cargando...</p>
+      </div>
+    );
+  }
+
   return (
-    <div
-      className={`modal-panel ${closing ? "closing" : ""}`}
-      style={modalStyle}
-    >
+    <div className={`modal-panel ${closing ? "closing" : ""}`} style={modalStyle}>
       <h3>{objectData.object}</h3>
 
       <img
         src={`https://gbarrueto.github.io/infovis-assets/img/${objectData.id}.jpg`}
         alt={objectData.object}
-        className={`modal-image ${rotateImage ? "rotate-image" : ""}`}
-        onLoad={(e) => {
-          const img = e.target;
-          if (img.naturalHeight > img.naturalWidth) {
-            setRotateImage(true);
-          } else {
-            setRotateImage(false);
-          }
+        className="modal-image"
+        onLoad={() => {
+          setImageLoaded(true);
         }}
       />
 
