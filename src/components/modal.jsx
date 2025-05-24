@@ -3,6 +3,7 @@ import { IoPlay, IoPause } from "react-icons/io5";
 import "../styles/modal.css";
 
 const Modal = ({ isOpen, objectData, onClose, objImage }) => {
+  console.log(objectData)
   const [shouldRender, setShouldRender] = useState(false);
   const [closing, setClosing] = useState(false);
   const [playingSound, setPlayingSound] = useState(false);
@@ -17,6 +18,8 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
       setShouldRender(true);
       setClosing(false);
     } else if (shouldRender) {
+      // debug
+      console.log(objectData)
       // Comienza animación de salida
       setClosing(true);
       const timeout = setTimeout(() => {
@@ -59,6 +62,9 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
         alt={objectData.object}
         className="modal-image"
       />
+      
+      <p className="modal-description">{objectData.description || "Descripción no disponible."}</p>
+
       
       <button
         onClick={handleSoundButtonClick}

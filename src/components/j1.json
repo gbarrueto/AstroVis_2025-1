@@ -1,763 +1,818 @@
 [
-    {
-        "id": 0,
-        "object": "m 51",
-        "frequency": 2.52,
-        "coords": [
-            "202.469575",
-            "47.195258"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 5195",
-            "ic 4277",
-            "ic 4278",
-            "ic 4263"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Galaxia del remolino"
-    },
-    {
-        "id": 1,
-        "object": "m 16",
-        "frequency": 1.94,
-        "coords": [
-            "274.7",
-            "-13.807"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "sh2-49"
-        ],
-        "hemisphere": "S",
-        "repr_name": "Pilares de la creaci\u00f3n"
-    },
-    {
-        "id": 2,
-        "object": "m 27",
-        "frequency": 1.87,
-        "coords": [
-            "299.901579",
-            "22.721042"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "pk 060-03.1"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa de Dumbell"
-    },
-    {
-        "id": 3,
-        "object": "m 81",
-        "frequency": 1.35,
-        "coords": [
-            "148.888221",
-            "69.065295"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "m 82"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Galaxia de Bode y Cigarro"
-    },
-    {
-        "id": 4,
-        "object": "m 101",
-        "frequency": 1.31,
-        "coords": [
-            "210.802429",
-            "54.34875"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 5461",
-            "ngc 5471",
-            "ngc 5455",
-            "ngc 5477",
-            "ngc 5451",
-            "ngc 5462",
-            "ngc 5453",
-            "ngc 5449",
-            "ngc 5450",
-            "ngc 5447"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Galaxia del Molinillo"
-    },
-    {
-        "id": 5,
-        "object": "m 33",
-        "frequency": 1.16,
-        "coords": [
-            "23.4621",
-            "30.659942"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 595",
-            "ngc 604"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Galaxia del Tri\u00e1ngulo"
-    },
-    {
-        "id": 6,
-        "object": "m 1",
-        "frequency": 1.1,
-        "coords": [
-            "83.63308",
-            "22.0145"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "sh2-244"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa del cangrejo"
-    },
-    {
-        "id": 7,
-        "object": "m 13",
-        "frequency": 1.09,
-        "coords": [
-            "250.423475",
-            "36.461319"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ic 4617",
-            "ngc 6207"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Gran c\u00famulo de H\u00e9rcules"
-    },
-    {
-        "id": 8,
-        "object": "m 42",
-        "frequency": 1.05,
-        "coords": [
-            "83.8221",
-            "-5.3911"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "mairan's nebula"
-        ],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa de Ori\u00f3n"
-    },
-    {
-        "id": 9,
-        "object": "m 65",
-        "frequency": 0.97,
-        "coords": [
-            "169.733154",
-            "13.092211"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 3628"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Tr\u00edo de Leo"
-    },
-    {
-        "id": 10,
-        "object": "ngc 7635",
-        "frequency": 0.94,
-        "coords": [
-            "350.2012",
-            "61.2017"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "sh2-162"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa de la Burbuja"
-    },
-    {
-        "id": 11,
-        "object": "m 63",
-        "frequency": 0.82,
-        "coords": [
-            "198.955537",
-            "42.029289"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Galaxia del Girasol"
-    },
-    {
-        "id": 12,
-        "object": "ngc 6888",
-        "frequency": 0.82,
-        "coords": [
-            "303.029",
-            "38.355"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Creciente"
-    },
-    {
-        "id": 14,
-        "object": "m 20",
-        "frequency": 0.77,
-        "coords": [
-            "270.675",
-            "-22.972"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 6526"
-        ],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa de la Trifida"
-    },
-    {
-        "id": 15,
-        "object": "m 57",
-        "frequency": 0.72,
-        "coords": [
-            "283.396163",
-            "33.029175"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ic 1296"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa del Anillo"
-    },
-    {
-        "id": 16,
-        "object": "m 17",
-        "frequency": 0.6,
-        "coords": [
-            "275.196",
-            "-16.172"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa Omega"
-    },
-    {
-        "id": 19,
-        "object": "m 104",
-        "frequency": 0.55,
-        "coords": [
-            "189.997633",
-            "-11.623054"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Galaxia Sombrero"
-    },
-    {
-        "id": 20,
-        "object": "m 106",
-        "frequency": 0.54,
-        "coords": [
-            "184.740083",
-            "47.303719"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 4248"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Galaxia M106"
-    },
-    {
-        "id": 21,
-        "object": "ic 5146",
-        "frequency": 0.44,
-        "coords": [
-            "328.35",
-            "47.267"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Cocoon"
-    },
-    {
-        "id": 22,
-        "object": "m 8",
-        "frequency": 0.42,
-        "coords": [
-            "270.904 ",
-            "-24.378  "
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 6530"
-        ],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa de la Laguna"
-    },
-    {
-        "id": 23,
-        "object": "ngc 7293",
-        "frequency": 0.42,
-        "coords": [
-            "337.410588",
-            "-20.837122"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa H\u00e9lice"
-    },
-    {
-        "id": 24,
-        "object": "ngc 7023",
-        "frequency": 0.4,
-        "coords": [
-            "315.4037",
-            "68.1633"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Iris"
-    },
-    {
-        "id": 25,
-        "object": "m 97",
-        "frequency": 0.4,
-        "coords": [
-            "168.698754",
-            "55.019089"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa de la Lechuza"
-    },
-    {
-        "id": 26,
-        "object": "m 64",
-        "frequency": 0.4,
-        "coords": [
-            "194.182067",
-            "21.682658"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Galaxia Ojo Negro"
-    },
-    {
-        "id": 29,
-        "object": "m 76",
-        "frequency": 0.34,
-        "coords": [
-            "25.583117",
-            "51.575319"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Peque\u00f1a nebulosa de Dumbell"
-    },
-    {
-        "id": 31,
-        "object": "ngc 281",
-        "frequency": 0.32,
-        "coords": [
-            "13.1046",
-            "56.565"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ic 1590"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Pacman"
-    },
-    {
-        "id": 32,
-        "object": "m 83",
-        "frequency": 0.31,
-        "coords": [
-            "204.253829",
-            "-29.865761"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Galaxia del Molinillo Austral"
-    },
-    {
-        "id": 33,
-        "object": "ngc 6960",
-        "frequency": 0.31,
-        "coords": [
-            "311.4083",
-            "30.7083"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Filamentosa"
-    },
-    {
-        "id": 34,
-        "object": "m 3",
-        "frequency": 0.29,
-        "coords": [
-            "205.54842",
-            "28.37728"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Cumulo Globular M3"
-    },
-    {
-        "id": 37,
-        "object": "ngc 253",
-        "frequency": 0.26,
-        "coords": [
-            "11.888058",
-            "-25.2888"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Galaxia del Escultor"
-    },
-    {
-        "id": 38,
-        "object": "ic 1805",
-        "frequency": 0.25,
-        "coords": [
-            "38.175",
-            "61.45"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa del Coraz\u00f3n"
-    },
-    {
-        "id": 43,
-        "object": "ic 434",
-        "frequency": 0.24,
-        "coords": [
-            "85.2",
-            "-2.5"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 2024",
-            "ngc 2023",
-            "horsehead nebula"
-        ],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa cabeza de caballo"
-    },
-    {
-        "id": 44,
-        "object": "ngc 2359",
-        "frequency": 0.24,
-        "coords": [
-            "109.625",
-            "-13.23"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa Casco de Thor"
-    },
-    {
-        "id": 46,
-        "object": "ngc 6946",
-        "frequency": 0.23,
-        "coords": [
-            "308.71805",
-            "60.153678"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Galaxia de los fuegos artificiales"
-    },
-    {
-        "id": 47,
-        "object": "ngc 7335",
-        "frequency": 0.23,
-        "coords": [
-            "339.267092",
-            "34.415919"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 7331",
-            "ngc 7337",
-            "ngc 7319",
-            "ngc 7318"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Quinteto de Stephan"
-    },
-    {
-        "id": 52,
-        "object": "ngc 7380",
-        "frequency": 0.22,
-        "coords": [
-            "341.837",
-            "58.132"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa del Mago"
-    },
-    {
-        "id": 53,
-        "object": "ic 5070",
-        "frequency": 0.22,
-        "coords": [
-            "312.75",
-            "44.37"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Norteamericana y pel\u00edcano"
-    },
-    {
-        "id": 54,
-        "object": "m 31",
-        "frequency": 0.22,
-        "coords": [
-            "10.684708",
-            "41.26875"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nucleo de la Galaxia de Andr\u00f3meda"
-    },
-    {
-        "id": 55,
-        "object": "ngc 1975",
-        "frequency": 0.22,
-        "coords": [
-            "83.8254",
-            "-4.6847"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa del hombre corriendo"
-    },
-    {
-        "id": 58,
-        "object": "ngc 1097",
-        "frequency": 0.21,
-        "coords": [
-            "41.579413",
-            "-30.274911"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Galaxia NGC1097"
-    },
-    {
-        "id": 60,
-        "object": "m 78",
-        "frequency": 0.2,
-        "coords": [
-            "86.6948",
-            "0.014"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Gaspar\u00edn"
-    },
-    {
-        "id": 63,
-        "object": "m 74",
-        "frequency": 0.19,
-        "coords": [
-            "24.17405",
-            "15.783461"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Galaxia del abanico"
-    },
-    {
-        "id": 64,
-        "object": "ngc 4565",
-        "frequency": 0.19,
-        "coords": [
-            "188.922746",
-            "26.285497"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 4565 a"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Galaxia de la Aguja"
-    },
-    {
-        "id": 65,
-        "object": "m 94",
-        "frequency": 0.19,
-        "coords": [
-            "192.72145",
-            "41.120153"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Galaxia Ojo de Cocodrilo"
-    },
-    {
-        "id": 66,
-        "object": "ngc 891",
-        "frequency": 0.19,
-        "coords": [
-            "35.637112",
-            "42.348319"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Galaxia Astilla de plata"
-    },
-    {
-        "id": 68,
-        "object": "ngc 2264",
-        "frequency": 0.18,
-        "coords": [
-            "100.242",
-            "9.895"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Cumulo arbol de navidad"
-    },
-    {
-        "id": 69,
-        "object": "ngc 2244",
-        "frequency": 0.18,
-        "coords": [
-            "97.979",
-            "4.942"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [
-            "ngc 2244 satellite cluster"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Centro de la Nebulosa Roseta"
-    },
-    {
-        "id": 71,
-        "object": "ic 405",
-        "frequency": 0.17,
-        "coords": [
-            "79.35",
-            "34.38"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa de la estrella llameante"
-    },
-    {
-        "id": 76,
-        "object": "m 92",
-        "frequency": 0.15,
-        "coords": [
-            "259.28079",
-            "43.13594"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Cúmulo globular M92"
-    },
-    {
-        "id": 77,
-        "object": "ngc 4631",
-        "frequency": 0.15,
-        "coords": [
-            "190.533371",
-            "32.541511"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Galaxia de la ballena"
-    },
-    {
-        "id": 79,
-        "object": "ngc 5128",
-        "frequency": 0.14,
-        "coords": [
-            "201.365063",
-            "-43.019113"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Galaxia Centauro A"
-    },
-    {
-        "id": 80,
-        "object": "m 109",
-        "frequency": 0.14,
-        "coords": [
-            "179.399933",
-            "53.374519"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Galaxia de la aspiradora"
-    },
-    {
-        "id": 81,
-        "object": "m 15",
-        "frequency": 0.14,
-        "coords": [
-            "322.49304",
-            "12.167"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Cumulo de pegaso"
-    },
-    {
-        "id": 109,
-        "object": "monkey head nebula",
-        "frequency": 0.15,
-        "coords": [
-            "92.43",
-            "20.5"
-        ],
-        "fov": "< 0.7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Cabeza de mono"
-    }
+  {
+    "id": 0,
+    "object": "m 51",
+    "frequency": 2.52,
+    "coords": [
+      "202.469575",
+      "47.195258"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 5195",
+      "ic 4277",
+      "ic 4278",
+      "ic 4263"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Galaxia del remolino",
+    "description": "La Galaxia del Remolino, también conocida como M51, es una impresionante galaxia espiral situada a unos 31 millones de años luz de distancia en la constelación de Canes Venatici. Es famosa por sus llamativos brazos espirales y su interacción con una galaxia compañera más pequeña, lo que la convierte en un ejemplo clásico de galaxia espiral con formación estelar activa."
+  },
+
+  {
+    "id": 1,
+    "object": "m 16",
+    "frequency": 1.94,
+    "coords": [
+      "274.7",
+      "-13.807"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "sh2-49"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Pilares de la creación",
+    "description": "Los Pilares de la Creación, ubicados en la Nebulosa del Águila (M16), son enormes columnas de gas y polvo donde nacen nuevas estrellas. Estas estructuras, capturadas en imágenes icónicas por el telescopio espacial Hubble, nos ofrecen una impresionante visión de los procesos de formación estelar en nuestra galaxia."
+  },
+  {
+    "id": 2,
+    "object": "m 27",
+    "frequency": 1.87,
+    "coords": [
+      "299.901579",
+      "22.721042"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "pk 060-03.1"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa de Dumbell",
+    "description": "La Nebulosa de Dumbbell, también conocida como M27, es una nebulosa planetaria situada a unos 1,360 años luz de distancia en la constelación de Vulpecula. Se formó a partir de la capa exterior de una estrella moribunda, y su apariencia de reloj de arena o mancuerna es el resultado de la emisión de gases ionizados brillando en el espacio."
+  },
+  {
+    "id": 3,
+    "object": "m 81",
+    "frequency": 1.35,
+    "coords": [
+      "148.888221",
+      "69.065295"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "m 82"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Galaxia de Bode y Cigarro",
+    "description": "La Galaxia de Bode (M81) y la Galaxia del Cigarro (M82) forman un par de galaxias espectaculares en la constelación de la Osa Mayor, situadas a unos 12 millones de años luz de la Tierra. M81 es una elegante galaxia espiral, mientras que M82, su vecina más pequeña, es una galaxia con intensa actividad de formación estelar, probablemente influenciada por la interacción gravitacional entre ambas."
+  },
+  {
+    "id": 4,
+    "object": "m 101",
+    "frequency": 1.31,
+    "coords": [
+      "210.802429",
+      "54.34875"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 5461",
+      "ngc 5471",
+      "ngc 5455",
+      "ngc 5477",
+      "ngc 5451",
+      "ngc 5462",
+      "ngc 5453",
+      "ngc 5449",
+      "ngc 5450",
+      "ngc 5447"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Galaxia del Molinillo",
+    "description": "La Galaxia del Molinillo, conocida también como M101, es una majestuosa galaxia espiral ubicada a unos 21 millones de años luz de la Tierra en la constelación de la Osa Mayor. Se caracteriza por sus brillantes brazos espirales, que están salpicados de regiones de formación estelar y le dan una apariencia similar a un molinillo."
+  },
+  {
+    "id": 5,
+    "object": "m 33",
+    "frequency": 1.16,
+    "coords": [
+      "23.4621",
+      "30.659942"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 595",
+      "ngc 604"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Galaxia del Triángulo",
+    "description": "La Galaxia del Triángulo, o M33, es una espiral ubicada a unos 3 millones de años luz de la Tierra en la constelación del Triángulo, y es la tercera galaxia más grande del Grupo Local después de la Vía Láctea y la Galaxia de Andrómeda. Con una estructura en espiral bien definida, es un excelente objeto de estudio para comprender la formación y evolución de las galaxias."
+  },
+  {
+    "id": 6,
+    "object": "m 1",
+    "frequency": 1.1,
+    "coords": [
+      "83.63308",
+      "22.0145"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "sh2-244"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa del cangrejo",
+    "description": "La Nebulosa del Cangrejo, también conocida como M1, es el remanente de una supernova que explotó en el año 1054 y se encuentra a unos 6,500 años luz de la Tierra en la constelación de Tauro. Este objeto fascinante es una nube de polvo y gas en expansión que sigue brillando intensamente gracias a la energía del púlsar en su centro, un tipo de estrella de neutrones que gira rápidamente."
+  },
+  {
+    "id": 7,
+    "object": "m 13",
+    "frequency": 1.09,
+    "coords": [
+      "250.423475",
+      "36.461319"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ic 4617",
+      "ngc 6207"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Gran cúmulo de Hércules",
+    "description": "El Gran Cúmulo de Hércules, también conocido como M13, es un espectacular cúmulo globular ubicado a unos 22,000 años luz de distancia en la constelación de Hércules, compuesto por cientos de miles de estrellas agrupadas en una esfera compacta. Es uno de los cúmulos estelares más brillantes y fáciles de observar en el hemisferio norte, visible incluso con telescopios pequeños."
+  },
+  {
+    "id": 8,
+    "object": "m 42",
+    "frequency": 1.05,
+    "coords": [
+      "83.8221",
+      "-5.3911"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "mairan's nebula"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa de Orión",
+    "description": "La Nebulosa de Orión, o M42, es una vasta nube de gas y polvo ubicada en la constelación de Orión, donde nacen nuevas estrellas y sistemas planetarios. Visible a simple vista como un tenue resplandor, es uno de los viveros estelares más cercanos a la Tierra, situado a unos 1,344 años luz de distancia."
+  },
+  {
+    "id": 9,
+    "object": "m 65",
+    "frequency": 0.97,
+    "coords": [
+      "169.733154",
+      "13.092211"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 3628"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Trío de Leo",
+    "description": "El Trío de Leo es un grupo fascinante de tres galaxias espirales, M65, M66 y NGC 3628, ubicadas en la constelación de Leo a unos 35 millones de años luz de distancia. Estas galaxias interactúan gravitacionalmente entre sí, ofreciendo una vista espectacular que ayuda a los astrónomos a estudiar la dinámica galáctica y la influencia de la gravedad en la formación de estructuras cósmicas."
+  },
+  {
+    "id": 10,
+    "object": "ngc 7635",
+    "frequency": 0.94,
+    "coords": [
+      "350.2012",
+      "61.2017"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "sh2-162"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa de la Burbuja",
+    "description": "La Nebulosa de la Burbuja, o NGC 7635, es una impresionante estructura cósmica esculpida por los vientos estelares de una estrella masiva, que crean una forma esférica similar a una burbuja en el espacio. Ubicada en la constelación de Casiopea, esta nebulosa es un ejemplo fascinante de cómo las estrellas pueden moldear su entorno con su energía."
+  },
+  {
+    "id": 11,
+    "object": "m 63",
+    "frequency": 0.82,
+    "coords": [
+      "198.955537",
+      "42.029289"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Galaxia del Girasol",
+    "description": "La Galaxia del Girasol, también conocida como M63, es una galaxia espiral ubicada a unos 27 millones de años luz de la Tierra en la constelación de Canes Venatici. Su distintivo brillo dorado y sus brazos espirales salpicados de regiones de formación estelar la hacen parecerse a un girasol cósmico."
+  },
+  {
+    "id": 12,
+    "object": "ngc 6888",
+    "frequency": 0.82,
+    "coords": [
+      "303.029",
+      "38.355"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Creciente",
+    "description": "La Nebulosa Creciente, o NGC 6888, es una burbuja cósmica formada por el viento estelar de una estrella masiva en sus últimas etapas de vida, ubicada a unos 5,000 años luz de distancia en la constelación del Cisne. Su apariencia brillante y en expansión se debe a la colisión de materiales expulsados por la estrella, creando un espectáculo de gases resplandecientes."
+  },
+  {
+    "id": 14,
+    "object": "m 20",
+    "frequency": 0.77,
+    "coords": [
+      "270.675",
+      "-22.972"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 6526"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa de la Trifida",
+    "description": "La Nebulosa de la Trifida, también conocida como M20, es una asombrosa nube de gas y polvo situada en la constelación de Sagitario, famosa por su apariencia única que combina regiones de emisión roja, reflexión azul y oscurecimiento oscuro. Este objeto celestial, a unos 5,000 años luz de distancia, ofrece una vista espectacular donde nacen nuevas estrellas, iluminando el gas circundante."
+  },
+  {
+    "id": 15,
+    "object": "m 57",
+    "frequency": 0.72,
+    "coords": [
+      "283.396163",
+      "33.029175"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ic 1296"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa del Anillo",
+    "description": "La Nebulosa del Anillo, o M57, es una nebulosa planetaria ubicada en la constelación de Lyra, famosa por su forma de anillo brillante que se formó a partir de las capas de gas expulsadas por una estrella moribunda. Este objeto ofrece una vista fascinante de la fase final de la evolución estelar, mostrando cómo las estrellas como nuestro Sol terminan su ciclo de vida."
+  },
+  {
+    "id": 16,
+    "object": "m 17",
+    "frequency": 0.6,
+    "coords": [
+      "275.196",
+      "-16.172"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa Omega",
+    "description": "La Nebulosa Omega, también conocida como M17, es una región de formación estelar ubicada en la constelación de Sagitario, a unos 5,000-6,000 años luz de la Tierra. Es famosa por sus brillantes nubes de gas y polvo, que brillan intensamente debido a la radiación ultravioleta de las estrellas jóvenes en su interior."
+  },
+  {
+    "id": 19,
+    "object": "m 104",
+    "frequency": 0.55,
+    "coords": [
+      "189.997633",
+      "-11.623054"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Galaxia Sombrero",
+    "description": "La Galaxia Sombrero, o M104, es una galaxia espiral ubicada a unos 30 millones de años luz de la Tierra, reconocida por su distintivo núcleo brillante y un prominente anillo de polvo que le da la apariencia de un sombrero. Su estructura única y su combinación de características de galaxias tanto elípticas como espirales la convierten en un fascinante objeto de estudio astronómico."
+  },
+  {
+    "id": 20,
+    "object": "m 106",
+    "frequency": 0.54,
+    "coords": [
+      "184.740083",
+      "47.303719"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 4248"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Galaxia M106",
+    "description": "La Galaxia M106, también conocida como NGC 4258, es una gran galaxia espiral ubicada a unos 23 millones de años luz de la Tierra en la constelación de Canes Venatici. Es especialmente interesante por su núcleo activo, que alberga un agujero negro supermasivo y emite rayos X y ondas de radio debido al material que cae en él."
+  },
+  {
+    "id": 21,
+    "object": "ic 5146",
+    "frequency": 0.44,
+    "coords": [
+      "328.35",
+      "47.267"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Cocoon",
+    "description": "La Nebulosa Cocoon, o IC 5146, es una región de formación estelar situada a unos 4,000 años luz de la Tierra en la constelación de Cygnus. Este objeto celeste combina una nebulosa de emisión brillante, donde nuevas estrellas están naciendo, con una nebulosa de reflexión que dispersa la luz de estas estrellas jóvenes."
+  },
+  {
+    "id": 22,
+    "object": "m 8",
+    "frequency": 0.42,
+    "coords": [
+      "270.904 ",
+      "-24.378  "
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 6530"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa de la Laguna",
+    "description": "La Nebulosa de la Laguna, también conocida como M8, es una vasta nube de gas y polvo situada en la constelación de Sagitario, a unos 5,000 años luz de la Tierra, donde nacen nuevas estrellas. Su resplandor rosado se debe a la intensa radiación de las estrellas jóvenes que ionizan el hidrógeno que la compone."
+  },
+  {
+    "id": 23,
+    "object": "ngc 7293",
+    "frequency": 0.42,
+    "coords": [
+      "337.410588",
+      "-20.837122"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa Hélice",
+    "description": "La Nebulosa Hélice, o NGC 7293, es una nebulosa planetaria ubicada a unos 650 años luz de distancia en la constelación de Acuario. Conocida como el \"Ojo de Dios\", se formó a partir de los gases expulsados por una estrella moribunda, creando una estructura colorida y fascinante que ofrece un vistazo al destino futuro de nuestro propio Sol."
+  },
+  {
+    "id": 24,
+    "object": "ngc 7023",
+    "frequency": 0.4,
+    "coords": [
+      "315.4037",
+      "68.1633"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Iris",
+    "description": "La Nebulosa Iris, o NGC 7023, es una brillante nebulosa de reflexión ubicada a unos 1,300 años luz de distancia en la constelación de Cefeo. Esta nebulosa resplandece con un característico color azul debido a la luz de una estrella cercana que es dispersada por el polvo interestelar que la rodea."
+  },
+  {
+    "id": 25,
+    "object": "m 97",
+    "frequency": 0.4,
+    "coords": [
+      "168.698754",
+      "55.019089"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa de la Lechuza",
+    "description": "La Nebulosa de la Lechuza, también conocida como M97, es una nebulosa planetaria situada en la constelación de la Osa Mayor, a unos 2,030 años luz de distancia de la Tierra. Su apariencia circular con dos cavidades oscuras le da una apariencia que recuerda a los ojos de una lechuza, de ahí su nombre."
+  },
+  {
+    "id": 26,
+    "object": "m 64",
+    "frequency": 0.4,
+    "coords": [
+      "194.182067",
+      "21.682658"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Galaxia Ojo Negro",
+    "description": "La Galaxia Ojo Negro, también conocida como M64, es una galaxia espiral ubicada a unos 17 millones de años luz de distancia en la constelación de Coma Berenices. Se caracteriza por una distintiva banda oscura de polvo que oscurece parte de su núcleo brillante, dándole el aspecto de un ojo con un hematoma."
+  },
+  {
+    "id": 29,
+    "object": "m 76",
+    "frequency": 0.34,
+    "coords": [
+      "25.583117",
+      "51.575319"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Pequeña nebulosa de Dumbell",
+    "description": "La Pequeña Nebulosa de Dumbbell, o M76, es una nebulosa planetaria situada en la constelación de Perseo, formada por los restos de una estrella similar al Sol que ha expulsado sus capas exteriores al espacio. Su forma característica, que recuerda a una pesa de gimnasia, se debe a la estructura en expansión de gas iluminado por el núcleo caliente remanente de la estrella."
+  },
+  {
+    "id": 31,
+    "object": "ngc 281",
+    "frequency": 0.32,
+    "coords": [
+      "13.1046",
+      "56.565"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ic 1590"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Pacman",
+    "description": "La Nebulosa Pacman, conocida oficialmente como NGC 281, es una nube de gas y polvo en la constelación de Casiopea donde nacen nuevas estrellas. Su forma distintiva, que recuerda al personaje del videojuego Pac-Man, es visible a través de telescopios gracias a la emisión de luz de los gases ionizados por estrellas jóvenes."
+  },
+  {
+    "id": 32,
+    "object": "m 83",
+    "frequency": 0.31,
+    "coords": [
+      "204.253829",
+      "-29.865761"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Galaxia del Molinillo Austral",
+    "description": "La Galaxia del Molinillo Austral, también conocida como M83, es una galaxia espiral ubicada a unos 15 millones de años luz de la Tierra en la constelación de Hydra. Es famosa por sus brillantes brazos espirales y su activo núcleo, donde se están formando nuevas estrellas a gran velocidad."
+  },
+  {
+    "id": 33,
+    "object": "ngc 6960",
+    "frequency": 0.31,
+    "coords": [
+      "311.4083",
+      "30.7083"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Filamentosa",
+    "description": "La Nebulosa Filamentosa, también conocida como NGC 6960 o parte del \"Velo\", es un remanente de supernova en la constelación de Cygnus, formado por los restos de una estrella que explotó hace miles de años. Sus intrincadas estructuras de gas y polvo, visibles como filamentos brillantes, ofrecen una vista impresionante y son un ejemplo fascinante de la belleza y complejidad del universo."
+  },
+  {
+    "id": 34,
+    "object": "m 3",
+    "frequency": 0.29,
+    "coords": [
+      "205.54842",
+      "28.37728"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Cumulo Globular M3",
+    "description": "El cúmulo globular M3 es un impresionante conjunto de alrededor de medio millón de estrellas antiguas, ubicado a unos 33,900 años luz de la Tierra en la constelación de Canes Venatici. Este cúmulo es conocido por su abundancia de estrellas variables, lo que lo convierte en un valioso laboratorio natural para el estudio de la evolución estelar."
+  },
+  {
+    "id": 37,
+    "object": "ngc 253",
+    "frequency": 0.26,
+    "coords": [
+      "11.888058",
+      "-25.2888"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Galaxia del Escultor",
+    "description": "La Galaxia del Escultor, también conocida como NGC 253, es una de las galaxias espirales más brillantes visibles desde la Tierra, situada a unos 11 millones de años luz en la constelación del Escultor. Es conocida por su intensa formación estelar, lo que la convierte en un fascinante laboratorio natural para estudiar cómo nacen las estrellas."
+  },
+  {
+    "id": 38,
+    "object": "ic 1805",
+    "frequency": 0.25,
+    "coords": [
+      "38.175",
+      "61.45"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa del Corazón",
+    "description": "La Nebulosa del Corazón, o IC 1805, es una vasta región de formación estelar ubicada en la constelación de Casiopea, conocida por su forma que recuerda a un corazón humano. Brilla intensamente debido a la radiación de estrellas jóvenes y calientes en su interior, que iluminan los gases y el polvo que la componen."
+  },
+  {
+    "id": 43,
+    "object": "ic 434",
+    "frequency": 0.24,
+    "coords": [
+      "85.2",
+      "-2.5"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 2024",
+      "ngc 2023",
+      "horsehead nebula"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa cabeza de caballo",
+    "description": "La Nebulosa Cabeza de Caballo, o IC 434, es una oscura y pequeña nube de polvo y gas que se encuentra en la constelación de Orión, famosa por su distintiva forma que se asemeja a la cabeza de un caballo. Este fascinante objeto es visible porque se perfila contra el brillo de una nebulosa de fondo iluminada por la cercana estrella Sigma Orionis."
+  },
+  {
+    "id": 44,
+    "object": "ngc 2359",
+    "frequency": 0.24,
+    "coords": [
+      "109.625",
+      "-13.23"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa Casco de Thor",
+    "description": "La Nebulosa Casco de Thor, también conocida como NGC 2359, es una impresionante nube de gas y polvo con forma de casco vikingo, situada a unos 15,000 años luz de la Tierra en la constelación de Canis Major. Esta nebulosa es el resultado de los poderosos vientos estelares de una estrella masiva y caliente en su centro, que es una estrella Wolf-Rayet, inflando el material circundante."
+  },
+  {
+    "id": 46,
+    "object": "ngc 6946",
+    "frequency": 0.23,
+    "coords": [
+      "308.71805",
+      "60.153678"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Galaxia de los fuegos artificiales",
+    "description": "La Galaxia de los Fuegos Artificiales, o NGC 6946, es una galaxia espiral ubicada a unos 22 millones de años luz de la Tierra, conocida por su alta tasa de formación estelar y la frecuente aparición de supernovas en su interior. Su deslumbrante actividad la convierte en un objeto fascinante para los astrónomos que estudian la evolución de las galaxias."
+  },
+  {
+    "id": 47,
+    "object": "ngc 7335",
+    "frequency": 0.23,
+    "coords": [
+      "339.267092",
+      "34.415919"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 7331",
+      "ngc 7337",
+      "ngc 7319",
+      "ngc 7318"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Quinteto de Stephan",
+    "description": "El Quinteto de Stephan es un grupo compacto de cinco galaxias, situado a unos 290 millones de años luz de la Tierra en la constelación de Pegaso, que ofrece una fascinante oportunidad para observar interacciones galácticas. Este conjunto es famoso por sus colisiones y fusiones galácticas, que generan impresionantes fenómenos como oleadas de formación estelar y corrientes de marea."
+  },
+  {
+    "id": 52,
+    "object": "ngc 7380",
+    "frequency": 0.22,
+    "coords": [
+      "341.837",
+      "58.132"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa del Mago",
+    "description": "La Nebulosa del Mago, también conocida como NGC 7380, es una región de formación estelar situada a unos 7,000 años luz de distancia en la constelación de Cefeo. Su forma evocadora, similar a la de un mago, se debe a las nubes de gas y polvo que brillan intensamente debido a la energía emitida por las estrellas jóvenes en su interior."
+  },
+  {
+    "id": 53,
+    "object": "ic 5070",
+    "frequency": 0.22,
+    "coords": [
+      "312.75",
+      "44.37"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Norteamericana y pelícano",
+    "description": "La Nebulosa Norteamericana y Pelícano, también conocida como IC 5070, es una extensa región de formación estelar ubicada en la constelación de Cygnus, a unos 1,500 años luz de distancia. Su forma distintiva se asemeja a los contornos de América del Norte y a la silueta de un pelícano, ofreciendo un espectáculo fascinante de nubes de gas y polvo iluminadas por estrellas jóvenes y ardientes."
+  },
+  {
+    "id": 54,
+    "object": "m 31",
+    "frequency": 0.22,
+    "coords": [
+      "10.684708",
+      "41.26875"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nucleo de la Galaxia de Andrómeda",
+    "description": "El núcleo de la Galaxia de Andrómeda, también conocido como M31, es el centro brillante y denso de nuestra galaxia vecina más cercana, donde se cree que reside un agujero negro supermasivo. Este núcleo es una región activa y dinámica, con un bulbo estelar compacto rodeado de cúmulos de estrellas y gas interestelar."
+  },
+  {
+    "id": 55,
+    "object": "ngc 1975",
+    "frequency": 0.22,
+    "coords": [
+      "83.8254",
+      "-4.6847"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa del hombre corriendo",
+    "description": "La Nebulosa del Hombre Corriendo, o NGC 1975, es una región de formación estelar ubicada en la constelación de Orión, conocida por sus brillantes nubes de gas y polvo que reflejan la luz de estrellas cercanas. Este objeto del espacio profundo destaca por sus colores azulados y su forma que recuerda a la silueta de una persona corriendo."
+  },
+  {
+    "id": 58,
+    "object": "ngc 1097",
+    "frequency": 0.21,
+    "coords": [
+      "41.579413",
+      "-30.274911"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Galaxia NGC1097",
+    "description": "La galaxia NGC 1097 es una galaxia espiral barrada situada a unos 45 millones de años luz de la Tierra en la constelación de Fornax. Es conocida por su espectacular anillo de formación estelar y un agujero negro supermasivo en su centro."
+  },
+  {
+    "id": 60,
+    "object": "m 78",
+    "frequency": 0.2,
+    "coords": [
+      "86.6948",
+      "0.014"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Gasparín",
+    "description": "La Nebulosa Gasparín, también conocida como M78, es una nebulosa de reflexión situada en la constelación de Orión, a unos 1,600 años luz de distancia de la Tierra. Su brillo distintivo proviene del polvo cósmico que refleja la luz de estrellas cercanas, creando un hermoso resplandor azul."
+  },
+  {
+    "id": 63,
+    "object": "m 74",
+    "frequency": 0.19,
+    "coords": [
+      "24.17405",
+      "15.783461"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Galaxia del abanico",
+    "description": "La Galaxia del Abanico, también conocida como M74, es una galaxia espiral ubicada a unos 32 millones de años luz de la Tierra en la constelación de Piscis. Es famosa por sus brazos espirales bien definidos y su estructura simétrica, lo que la convierte en un objeto ideal para estudiar la formación y evolución de galaxias espirales."
+  },
+  {
+    "id": 64,
+    "object": "ngc 4565",
+    "frequency": 0.19,
+    "coords": [
+      "188.922746",
+      "26.285497"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 4565 a"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Galaxia de la Aguja",
+    "description": "La Galaxia de la Aguja, o NGC 4565, es una espectacular galaxia espiral vista casi de canto desde la Tierra, lo que le da una apariencia delgada y alargada similar a una aguja. Situada a unos 30 millones de años luz de distancia en la constelación de Coma Berenices, es un ejemplo clásico de las galaxias espirales y se destaca por su prominente bulbo central y su delgado disco."
+  },
+  {
+    "id": 65,
+    "object": "m 94",
+    "frequency": 0.19,
+    "coords": [
+      "192.72145",
+      "41.120153"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Galaxia Ojo de Cocodrilo",
+    "description": "La Galaxia Ojo de Cocodrilo, también conocida como M94, es una galaxia espiral ubicada a unos 16 millones de años luz de la Tierra en la constelación de Canes Venatici. Destaca por su brillante anillo de formación estelar, que le da un aspecto distintivo y colorido en observaciones astronómicas."
+  },
+  {
+    "id": 66,
+    "object": "ngc 891",
+    "frequency": 0.19,
+    "coords": [
+      "35.637112",
+      "42.348319"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Galaxia Astilla de plata",
+    "description": "La Galaxia Astilla de Plata, o NGC 891, es una galaxia espiral que se observa de canto desde la Tierra, lo que nos permite apreciar su delgado perfil y el destacado disco de polvo que la atraviesa. Situada a unos 30 millones de años luz en la constelación de Andrómeda, esta galaxia se asemeja a cómo se vería nuestra propia Vía Láctea desde una perspectiva similar."
+  },
+  {
+    "id": 68,
+    "object": "ngc 2264",
+    "frequency": 0.18,
+    "coords": [
+      "100.242",
+      "9.895"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Cumulo arbol de navidad",
+    "description": "El Cúmulo Árbol de Navidad, conocido también como NGC 2264, es una región del espacio donde nacen nuevas estrellas, ubicada en la constelación de Monoceros. Este cúmulo recibe su nombre debido a su forma triangular que recuerda a un árbol de navidad, especialmente cuando se observa junto a la Nebulosa del Cono, que forma parte del mismo complejo."
+  },
+  {
+    "id": 69,
+    "object": "ngc 2244",
+    "frequency": 0.18,
+    "coords": [
+      "97.979",
+      "4.942"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [
+      "ngc 2244 satellite cluster"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Centro de la Nebulosa Roseta",
+    "description": "El centro de la Nebulosa Roseta, conocido como NGC 2244, es un cúmulo abierto de estrellas jóvenes y calientes que emiten radiación intensa, iluminando y esculpiendo la nube de gas y polvo circundante en formas espectaculares. Este cúmulo estelar se encuentra a unos 5,200 años luz de distancia en la constelación de Monoceros y ofrece una fascinante región de estudio para comprender la formación estelar."
+  },
+  {
+    "id": 71,
+    "object": "ic 405",
+    "frequency": 0.17,
+    "coords": [
+      "79.35",
+      "34.38"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa de la estrella llameante",
+    "description": "La Nebulosa de la Estrella Llameante, o IC 405, es una impresionante nube de gas y polvo iluminada por la estrella cercana AE Aurigae, que hace que la nebulosa brille con tonos rojizos y azulados. Se encuentra a unos 1,500 años luz de la Tierra en la constelación de Auriga, ofreciendo un hermoso espectáculo de colores debido a la combinación de emisión y reflexión de la luz estelar."
+  },
+  {
+    "id": 76,
+    "object": "m 92",
+    "frequency": 0.15,
+    "coords": [
+      "259.28079",
+      "43.13594"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Cúmulo globular M92",
+    "description": "El Cúmulo Globular M92 es un conjunto esférico de estrellas muy antiguas y densamente agrupadas, ubicado en la constelación de Hércules. Es uno de los cúmulos globulares más brillantes y antiguos de nuestra galaxia, la Vía Láctea, ofreciendo una vista impresionante a través de telescopios modestos."
+  },
+  {
+    "id": 77,
+    "object": "ngc 4631",
+    "frequency": 0.15,
+    "coords": [
+      "190.533371",
+      "32.541511"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Galaxia de la ballena",
+    "description": "La Galaxia de la Ballena, conocida como NGC 4631, es una galaxia espiral vista de perfil, ubicada a unos 30 millones de años luz en la constelación de Canes Venatici. Su apariencia alargada y curva se asemeja a la forma de una ballena, y es un ejemplo fascinante de cómo las galaxias pueden adoptar formas distintas en el universo."
+  },
+  {
+    "id": 79,
+    "object": "ngc 5128",
+    "frequency": 0.14,
+    "coords": [
+      "201.365063",
+      "-43.019113"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Galaxia Centauro A",
+    "description": "La Galaxia Centauro A, también conocida como NGC 5128, es una galaxia elíptica peculiar ubicada a unos 13 millones de años luz de la Tierra, que destaca por su brillante núcleo activo y una banda oscura de polvo que la atraviesa, resultado de una colisión galáctica. Esta galaxia es una de las radios más potentes del cielo y es un objeto de estudio fascinante para entender mejor el comportamiento de los agujeros negros supermasivos en los núcleos galácticos."
+  },
+  {
+    "id": 80,
+    "object": "m 109",
+    "frequency": 0.14,
+    "coords": [
+      "179.399933",
+      "53.374519"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Galaxia de la aspiradora",
+    "description": "La Galaxia de la Aspiradora, también conocida como M109, es una espiral barrada ubicada a unos 83 millones de años luz de la Tierra en la constelación de la Osa Mayor. Su estructura distintiva, que incluye una barra central y brazos espirales, la convierte en un ejemplo fascinante de la diversidad de formas que pueden adoptar las galaxias."
+  },
+  {
+    "id": 81,
+    "object": "m 15",
+    "frequency": 0.14,
+    "coords": [
+      "322.49304",
+      "12.167"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Cumulo de pegaso",
+    "description": "El Cúmulo de Pegaso, también conocido como M15, es un cúmulo globular situado en la constelación de Pegaso, a unos 33,600 años luz de la Tierra. Este antiguo grupo de estrellas, que contiene cientos de miles de estrellas, es uno de los cúmulos más densos y brillantes que se conocen, ofreciendo una visión fascinante de las etapas tempranas de formación estelar en el universo."
+  },
+  {
+    "id": 109,
+    "object": "monkey head nebula",
+    "frequency": 0.15,
+    "coords": [
+      "92.43",
+      "20.5"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Cabeza de mono",
+    "description": "La Nebulosa Cabeza de Mono, o NGC 2174, es una región de formación estelar situada en la constelación de Orión, donde el gas y el polvo se combinan para crear nuevas estrellas y darle su característica apariencia que recuerda a la cabeza de un mono. Su vibrante resplandor es resultado de la radiación de estrellas jóvenes que energizan los gases circundantes."
+  }
 ]

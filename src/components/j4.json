@@ -1,252 +1,266 @@
 [
-    {
-        "id": 48,
-        "object": "ngc 1990",
-        "frequency": 0.22,
-        "coords": [
-            "83.7",
-            "-1.7"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [
-            "ic 430",
-            "ngc 2064",
-            "ic 426",
-            "ic 423",
-            "ngc 2067",
-            "lbn 962",
-            "ldn 1636",
-            "ldn 1635",
-            "lbn 950",
-            "lbn 946",
-            "lbn 944",
-            "lbn 965",
-            "lbn 967",
-            "lbn 940",
-            "lbn 963",
-            "ngc 1924",
-            "ngc 2071",
-            "lbn 924",
-            "lbn 935",
-            "lbn 925",
-            "lbn 927",
-            "ldn 1614",
-            "sh2-276"
-        ],
-        "hemisphere": "S",
-        "repr_name": "Constelación de Orion"
-    },
-    {
-        "id": 56,
-        "object": "ic 4604",
-        "frequency": 0.21,
-        "coords": [
-            "246.5",
-            "-24.4"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [
-            "ic 4603",
-            "ic 4605",
-            "m 80",
-            "ngc 6144"
-        ],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa Rho Ophiuchi y Antares"
-    },
-    {
-        "id": 61,
-        "object": "ngc 7039",
-        "frequency": 0.19,
-        "coords": [
-            "317.7",
-            "45.617"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [
-            "ic 5076",
-            "Barnard 349",
-            "Barnard 352",
-            "Barnard 350",
-            "Barnard 358",
-            "pk 084+01.1"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Constelación del cisne"
-    },
-    {
-        "id": 73,
-        "object": "ngc 6914",
-        "frequency": 0.16,
-        "coords": [
-            "306.3",
-            "42.3"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [
-            "ic 1311",
-            "sh2-105",
-            "Barnard 344",
-            "sh2-108",
-            "Barnard 343",
-            "pk 076+01.2",
-            "pk 077+02.1",
-            "pk 077+03.2",
-            "pk 076+01.1",
-            "Barnard 347",
-            "pk 077+03.1"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Region de Sadr"
-    },
-    {
-        "id": 83,
-        "object": "ic 447",
-        "frequency": 0.16,
-        "coords": [
-            "98.5",
-            "7.3"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [
-            "ic 448",
-            "ngc 2251"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Región en Monoceros"
-    },
-    {
-        "id": 84,
-        "object": "m 36",
-        "frequency": 0.13,
-        "coords": [
-            "84.075",
-            "34.14"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [
-            "ngc 1907"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Cumulo del molinillo"
-    },
-    {
-        "id": 88,
-        "object": "ic 353",
-        "frequency": 0.12,
-        "coords": [
-            "56.2",
-            "32.4"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Pléyades campo amplio"
-    },
-    {
-        "id": 93,
-        "object": "ngc 957",
-        "frequency": 0.1,
-        "coords": [
-            "38.338",
-            "57.56"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [
-            "sh2-194",
-            "sh2-192",
-            "sh2-191",
-            "sh2-193",
-            "sh2-195",
-            "sh2-197",
-            "sh2-198",
-            "sh2-196",
-            "sh2-199",
-            "sh2-201"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Constelacion de Cassiopea"
-    },
-    {
-        "id": 99,
-        "object": "m 24",
-        "frequency": 0.09,
-        "coords": [
-            "274.2",
-            "-18.55"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [
-            "m 18",
-            "ngc 6568",
-            "ic 4701"
-        ],
-        "hemisphere": "S",
-        "repr_name": "Centro de la Via Láctea"
-    },
-    {
-        "id": 100,
-        "object": "m 35",
-        "frequency": 0.09,
-        "coords": [
-            "92.225",
-            "24.333"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Cumulo hebilla de zapato"
-    },
-    {
-        "id": 104,
-        "object": "ngc 6871",
-        "frequency": 0.08,
-        "coords": [
-            "301.496",
-            "35.777"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "NGC 6871"
-    },
-    {
-        "id": 105,
-        "object": "ngc 1909",
-        "frequency": 0.08,
-        "coords": [
-            "75.5",
-            "-7.9"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa cabeza de bruja"
-    },
-    {
-        "id": 106,
-        "object": "m 90",
-        "frequency": 0.08,
-        "coords": [
-            "189.207567",
-            "13.162869"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Cumulo de galaxias en Virgo"
-    },
-    {
-        "id": 108,
-        "object": "ic 354",
-        "frequency": 0.07,
-        "coords": [
-            "58.2",
-            "23"
-        ],
-        "fov": ">= 3.5 AND < 7 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Pl\u00e9yades"
-    }
+  {
+    "id": 48,
+    "object": "ngc 1990",
+    "frequency": 0.22,
+    "coords": [
+      "83.7",
+      "-1.7"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [
+      "ic 430",
+      "ngc 2064",
+      "ic 426",
+      "ic 423",
+      "ngc 2067",
+      "lbn 962",
+      "ldn 1636",
+      "ldn 1635",
+      "lbn 950",
+      "lbn 946",
+      "lbn 944",
+      "lbn 965",
+      "lbn 967",
+      "lbn 940",
+      "lbn 963",
+      "ngc 1924",
+      "ngc 2071",
+      "lbn 924",
+      "lbn 935",
+      "lbn 925",
+      "lbn 927",
+      "ldn 1614",
+      "sh2-276"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Constelación de Orion",
+    "description": "La Constelación de Orión es una de las más reconocibles en el cielo nocturno, caracterizada por sus brillantes estrellas que forman una figura similar a un cazador. Aunque NGC 1990 es una nebulosa de reflexión asociada a esta constelación, Orión es conocido por albergar maravillas como la Nebulosa de Orión, un vivero estelar donde nacen nuevas estrellas."
+  },
+  {
+    "id": 56,
+    "object": "ic 4604",
+    "frequency": 0.21,
+    "coords": [
+      "246.5",
+      "-24.4"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [
+      "ic 4603",
+      "ic 4605",
+      "m 80",
+      "ngc 6144"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa Rho Ophiuchi y Antares",
+    "description": "La Nebulosa Rho Ophiuchi y Antares, también conocida como IC 4604, es una región activa de formación estelar situada a unos 460 años luz de la Tierra, donde el polvo cósmico y los gases brillan intensamente al reflejar la luz de estrellas jóvenes cercanas. Esta nebulosa se encuentra en la constelación de Ofiuco y destaca por su colorido, que varía desde azul hasta rojo debido a la presencia de diferentes tipos de polvo y gas."
+  },
+  {
+    "id": 61,
+    "object": "ngc 7039",
+    "frequency": 0.19,
+    "coords": [
+      "317.7",
+      "45.617"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [
+      "ic 5076",
+      "Barnard 349",
+      "Barnard 352",
+      "Barnard 350",
+      "Barnard 358",
+      "pk 084+01.1"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Constelación del cisne",
+    "description": "La Constelación del Cisne, también conocida como NGC 7039, es un cúmulo estelar abierto en el cielo que brilla con una colección de estrellas jóvenes y calientes. Este cúmulo se encuentra en la Vía Láctea y es un excelente ejemplo de cómo las estrellas pueden agruparse en regiones activas de formación estelar."
+  },
+  {
+    "id": 73,
+    "object": "ngc 6914",
+    "frequency": 0.16,
+    "coords": [
+      "306.3",
+      "42.3"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [
+      "ic 1311",
+      "sh2-105",
+      "Barnard 344",
+      "sh2-108",
+      "Barnard 343",
+      "pk 076+01.2",
+      "pk 077+02.1",
+      "pk 077+03.2",
+      "pk 076+01.1",
+      "Barnard 347",
+      "pk 077+03.1"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Region de Sadr",
+    "description": "La Región de Sadr, también conocida como NGC 6914, es un complejo de nebulosas de emisión y reflexión ubicado en la constelación de Cygnus, lleno de nubes de gas y polvo iluminadas por estrellas jóvenes y calientes. Este vibrante paisaje celeste ofrece una espectacular vista de contrastes de colores y formas, siendo un fascinante ejemplo de las áreas donde nacen nuevas estrellas."
+  },
+  {
+    "id": 83,
+    "object": "ic 447",
+    "frequency": 0.16,
+    "coords": [
+      "98.5",
+      "7.3"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [
+      "ic 448",
+      "ngc 2251"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Región en Monoceros",
+    "description": "La Región en Monoceros, también conocida como IC 447, es una nebulosa de reflexión situada en la constelación de Monoceros, donde el polvo interestelar refleja la luz de estrellas cercanas, creando un resplandor azulado. Este fenómeno permite a los astrónomos estudiar la formación estelar y la composición del polvo cósmico en el espacio."
+  },
+  {
+    "id": 84,
+    "object": "m 36",
+    "frequency": 0.13,
+    "coords": [
+      "84.075",
+      "34.14"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [
+      "ngc 1907"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Cumulo del molinillo",
+    "description": "El Cúmulo del Molinillo, también conocido como M36, es un cúmulo abierto en la constelación de Auriga, ubicado a unos 4,100 años luz de la Tierra. Este cúmulo está compuesto por varias decenas de estrellas jóvenes y brillantes, ofreciendo una visión fascinante para los observadores del cielo con telescopios pequeños."
+  },
+  {
+    "id": 88,
+    "object": "ic 353",
+    "frequency": 0.12,
+    "coords": [
+      "56.2",
+      "32.4"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Pléyades campo amplio",
+    "description": "El objeto \"Pléyades campo amplio\", también conocido como IC 353, es una nebulosa de reflexión que rodea el famoso cúmulo estelar de las Pléyades, situado en la constelación de Tauro. La nebulosa brilla porque refleja la luz azulada de las jóvenes estrellas calientes del cúmulo, creando un paisaje celeste impresionante."
+  },
+  {
+    "id": 93,
+    "object": "ngc 957",
+    "frequency": 0.1,
+    "coords": [
+      "38.338",
+      "57.56"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [
+      "sh2-194",
+      "sh2-192",
+      "sh2-191",
+      "sh2-193",
+      "sh2-195",
+      "sh2-197",
+      "sh2-198",
+      "sh2-196",
+      "sh2-199",
+      "sh2-201"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Constelacion de Cassiopea",
+    "description": "La constelación de Casiopea es fácilmente reconocible en el cielo por su forma de \"W\" o \"M\", formada por cinco estrellas brillantes. NGC 957, un cúmulo estelar abierto dentro de Casiopea, es un grupo de estrellas que se encuentran a unos 6,300 años luz de la Tierra, ofreciendo una hermosa visión para los astrónomos aficionados."
+  },
+  {
+    "id": 99,
+    "object": "m 24",
+    "frequency": 0.09,
+    "coords": [
+      "274.2",
+      "-18.55"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [
+      "m 18",
+      "ngc 6568",
+      "ic 4701"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Centro de la Via Láctea",
+    "description": "El Centro de la Vía Láctea es una región densa y brillante en el núcleo de nuestra galaxia, donde se encuentra un agujero negro supermasivo llamado Sagitario A*. No obstante, M24 no se refiere al centro de la Vía Láctea, sino a una nube estelar en la constelación de Sagitario que ofrece una ventana clara para observar el disco galáctico."
+  },
+  {
+    "id": 100,
+    "object": "m 35",
+    "frequency": 0.09,
+    "coords": [
+      "92.225",
+      "24.333"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Cumulo hebilla de zapato",
+    "description": "El Cúmulo Hebilla de Zapato, también conocido como M35, es un cúmulo abierto de estrellas ubicado en la constelación de Géminis, a unos 2,800 años luz de distancia de la Tierra. Este brillante conjunto estelar, visible a simple vista bajo cielos oscuros, se compone de cientos de estrellas jóvenes que ofrecen un espectáculo deslumbrante a través de telescopios modestos."
+  },
+  {
+    "id": 104,
+    "object": "ngc 6871",
+    "frequency": 0.08,
+    "coords": [
+      "301.496",
+      "35.777"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "NGC 6871",
+    "description": "NGC 6871 es un cúmulo abierto de estrellas situado en la constelación del Cisne, a unos 5,000 años luz de la Tierra. Este grupo de estrellas jóvenes y brillantes ofrece una hermosa vista y es un excelente ejemplo de la formación estelar en nuestra galaxia."
+  },
+  {
+    "id": 105,
+    "object": "ngc 1909",
+    "frequency": 0.08,
+    "coords": [
+      "75.5",
+      "-7.9"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa cabeza de bruja",
+    "description": "La Nebulosa Cabeza de Bruja, también conocida como NGC 1909, es una nebulosa de reflexión ubicada en la constelación de Eridanus, conocida por su forma que recuerda al perfil de una bruja. Esta nebulosa brilla al reflejar la luz de la cercana estrella Rigel, en la constelación de Orión."
+  },
+  {
+    "id": 106,
+    "object": "m 90",
+    "frequency": 0.08,
+    "coords": [
+      "189.207567",
+      "13.162869"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Cumulo de galaxias en Virgo",
+    "description": "El Cúmulo de Virgo es un vasto conjunto de galaxias que se encuentra a unos 55 millones de años luz de la Tierra, en la dirección de la constelación de Virgo. Es el cúmulo galáctico más cercano a nuestro Grupo Local y contiene miles de galaxias, brindando una fascinante oportunidad para estudiar la estructura y evolución del universo."
+  },
+  {
+    "id": 108,
+    "object": "ic 354",
+    "frequency": 0.07,
+    "coords": [
+      "58.2",
+      "23"
+    ],
+    "fov": ">= 3.5 AND < 7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Pléyades",
+    "description": "Las Pléyades, también conocidas como M45, son un cúmulo estelar abierto situado a unos 440 años luz de la Tierra en la constelación de Tauro. Este grupo de estrellas jóvenes y brillantes es fácilmente visible a simple vista y a menudo se le llama \"las Siete Hermanas\" debido a sus estrellas más notables."
+  }
 ]

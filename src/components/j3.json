@@ -1,269 +1,284 @@
 [
-    {
-        "id": 39,
-        "object": "ngc 1027",
-        "frequency": 0.24,
-        "coords": [
-            "40.679",
-            "61.633"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "sh2-190",
-            "ic 1831",
-            "ldn 1361",
-            "ldn 1372",
-            "ldn 1373",
-            "ldn 1362",
-            "lbn 650",
-            "lbn 655",
-            "lbn 647",
-            "ldn 1369",
-            "ldn 1367",
-            "ldn 1363",
-            "ldn 1364",
-            "ldn 1360",
-            "ldn 1371",
-            "ldn 1365",
-            "ldn 1366",
-            "ldn 1359",
-            "lbn 648",
-            "lbn 656",
-            "lbn 646",
-            "lbn 657",
-            "ldn 1370",
-            "ldn 1368",
-            "lbn 658",
-            "ldn 1375"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa del Coraz\u00f3n"
-    },
-    {
-        "id": 45,
-        "object": "ngc 6979",
-        "frequency": 0.23,
-        "coords": [
-            "312.6167",
-            "32.0258 "
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "ngc 6974",
-            "sh2-103"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Tri\u00e1ngulo de Pickering"
-    },
-    {
-        "id": 49,
-        "object": "ngc 6989",
-        "frequency": 0.22,
-        "coords": [
-            "313.493",
-            "45.24"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "ic 5068",
-            "sh2-117",
-            "Barnard 355",
-            "ngc 6996",
-            "ldn 935",
-            "Barnard 353",
-            "lbn 354",
-            "lbn 348",
-            "lbn 349",
-            "ldn 933",
-            "lbn 359",
-            "lbn 371",
-            "lbn 356",
-            "lbn 378",
-            "lbn 385"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Norteamericana y pel\u00edcano"
-    },
-    {
-        "id": 50,
-        "object": "m 87",
-        "frequency": 0.22,
-        "coords": [
-            "187.705931",
-            "12.391123"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "m 88",
-            "ngc 4473"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Cadena de Markarian"
-    },
-    {
-        "id": 70,
-        "object": "ic 420",
-        "frequency": 0.17,
-        "coords": [
-            "83.058",
-            "-4.52"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "ngc 1999",
-            "lbn 977",
-            "lbn 958"
-        ],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa de Ori\u00f3n"
-    },
-    {
-        "id": 72,
-        "object": "ngc 6546",
-        "frequency": 0.16,
-        "coords": [
-            "271.842",
-            "-23.297"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "ic 1274",
-            "ic 4685",
-            "ngc 6544",
-            "ngc 6559"
-        ],
-        "hemisphere": "S",
-        "repr_name": "Nebulosas de la Laguna y Trifida"
-    },
-    {
-        "id": 78,
-        "object": "ic 417",
-        "frequency": 0.14,
-        "coords": [
-            "82.03",
-            "34.42"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "m 38"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa de la ara\u00f1a"
-    },
-    {
-        "id": 82,
-        "object": "ngc 6910",
-        "frequency": 0.13,
-        "coords": [
-            "305.783",
-            "40.775"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "ic 4996",
-            "m 29"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Sadr region"
-    },
-    {
-        "id": 91,
-        "object": "ngc 7538",
-        "frequency": 0.11,
-        "coords": [
-            "348.405",
-            "61.5"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "ngc 7510"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa de la Burbuja"
-    },
-    {
-        "id": 92,
-        "object": "ic 2177",
-        "frequency": 0.11,
-        "coords": [
-            "106.104",
-            "-10.455"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Nebulosa de la gaviota"
-    },
-    {
-        "id": 94,
-        "object": "m 4",
-        "frequency": 0.1,
-        "coords": [
-            "245.89675",
-            "-26.52575"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [],
-        "hemisphere": "S",
-        "repr_name": "Cumulo del cangrejo"
-    },
-    {
-        "id": 95,
-        "object": "Barnard 161",
-        "frequency": 0.1,
-        "coords": [
-            "325.1",
-            "57.82"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "sh2-131",
-            "Barnard 365",
-            "Barnard 163",
-            "Barnard 367"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Trompa de Elefante"
-    },
-    {
-        "id": 101,
-        "object": "ngc 2259",
-        "frequency": 0.09,
-        "coords": [
-            "99.6433",
-            "10.89"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Cumulo arbol de navidad"
-    },
-    {
-        "id": 102,
-        "object": "sh2-220",
-        "frequency": 0.09,
-        "coords": [
-            "59.414775",
-            "36.787483"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [
-            "ic 2005"
-        ],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa California"
-    },
-    {
-        "id": 107,
-        "object": "lbn 943",
-        "frequency": 0.08,
-        "coords": [
-            "98.5",
-            "5.7"
-        ],
-        "fov": ">= 1.5 AND < 3.5 deg",
-        "neighbours": [],
-        "hemisphere": "N",
-        "repr_name": "Nebulosa Roseta"
-    }
+  {
+    "id": 39,
+    "object": "ngc 1027",
+    "frequency": 0.24,
+    "coords": [
+      "40.679",
+      "61.633"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "sh2-190",
+      "ic 1831",
+      "ldn 1361",
+      "ldn 1372",
+      "ldn 1373",
+      "ldn 1362",
+      "lbn 650",
+      "lbn 655",
+      "lbn 647",
+      "ldn 1369",
+      "ldn 1367",
+      "ldn 1363",
+      "ldn 1364",
+      "ldn 1360",
+      "ldn 1371",
+      "ldn 1365",
+      "ldn 1366",
+      "ldn 1359",
+      "lbn 648",
+      "lbn 656",
+      "lbn 646",
+      "lbn 657",
+      "ldn 1370",
+      "ldn 1368",
+      "lbn 658",
+      "ldn 1375"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa del Corazón",
+    "description": "La Nebulosa del Corazón, también conocida como IC 1805, es una impresionante región de formación estelar ubicada en la constelación de Casiopea, famosa por su forma que recuerda a un corazón humano. Esta nebulosa resplandece principalmente debido a la radiación de un cúmulo abierto de estrellas jóvenes en su interior, que ilumina los gases y polvo circundantes."
+  },
+  {
+    "id": 45,
+    "object": "ngc 6979",
+    "frequency": 0.23,
+    "coords": [
+      "312.6167",
+      "32.0258 "
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "ngc 6974",
+      "sh2-103"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Triángulo de Pickering",
+    "description": "El Triángulo de Pickering, también conocido como NGC 6979, es una nebulosa de emisión que forma parte del extenso y colorido Remanente de la Supernova del Velo, ubicada en la constelación de Cygnus. Esta estructura es el resultado de una explosión estelar ocurrida hace miles de años, y sus filamentos brillantes son producidos por el gas ionizado que brilla al ser calentado por la onda de choque de la supernova."
+  },
+  {
+    "id": 49,
+    "object": "ngc 6989",
+    "frequency": 0.22,
+    "coords": [
+      "313.493",
+      "45.24"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "ic 5068",
+      "sh2-117",
+      "Barnard 355",
+      "ngc 6996",
+      "ldn 935",
+      "Barnard 353",
+      "lbn 354",
+      "lbn 348",
+      "lbn 349",
+      "ldn 933",
+      "lbn 359",
+      "lbn 371",
+      "lbn 356",
+      "lbn 378",
+      "lbn 385"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Norteamericana y pelícano",
+    "description": "La Nebulosa Norteamericana y Pelícano, también conocida como NGC 7000 y IC 5070 respectivamente, es una vasta región de formación estelar ubicada en la constelación de Cygnus, famosa por su forma que recuerda al continente norteamericano y a un pelícano. Este complejo de nebulosas, visible con telescopios modestos, es un espectáculo de nubes de gas y polvo iluminadas por estrellas jóvenes y calientes."
+  },
+  {
+    "id": 50,
+    "object": "m 87",
+    "frequency": 0.22,
+    "coords": [
+      "187.705931",
+      "12.391123"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "m 88",
+      "ngc 4473"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Cadena de Markarian",
+    "description": "La Cadena de Markarian es un impresionante conjunto de galaxias ubicado en el Cúmulo de Virgo, famoso por su disposición lineal aparente en el cielo nocturno. Aunque M87 es una galaxia gigante elíptica situada en esta cadena, es especialmente conocida por albergar un agujero negro supermasivo en su centro, del cual se obtuvo la primera imagen directa en 2019."
+  },
+  {
+    "id": 70,
+    "object": "ic 420",
+    "frequency": 0.17,
+    "coords": [
+      "83.058",
+      "-4.52"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "ngc 1999",
+      "lbn 977",
+      "lbn 958"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa de Orión",
+    "description": "La Nebulosa de Orión, también conocida como M42, es una vasta nube de gas y polvo donde nacen nuevas estrellas, ubicada a unos 1,344 años luz de la Tierra en la constelación de Orión. Es uno de los objetos más brillantes del cielo nocturno, visible a simple vista, y ofrece una oportunidad única para estudiar los procesos de formación estelar."
+  },
+  {
+    "id": 72,
+    "object": "ngc 6546",
+    "frequency": 0.16,
+    "coords": [
+      "271.842",
+      "-23.297"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "ic 1274",
+      "ic 4685",
+      "ngc 6544",
+      "ngc 6559"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Nebulosas de la Laguna y Trifida",
+    "description": "La Nebulosa de la Laguna (M8) y la Nebulosa Trífida (M20) son dos impresionantes regiones de formación estelar en la constelación de Sagitario, donde nubes de gas y polvo crean espectaculares paisajes celestes brillantes y coloridos. La Nebulosa de la Laguna es conocida por su brillante región central y su cúmulo estelar, mientras que la Trífida se destaca por sus bandas oscuras que dividen sus zonas brillantes en tres lóbulos distintos."
+  },
+  {
+    "id": 78,
+    "object": "ic 417",
+    "frequency": 0.14,
+    "coords": [
+      "82.03",
+      "34.42"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "m 38"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa de la araña",
+    "description": "La Nebulosa de la Araña, también conocida como IC 417, es una región de formación estelar situada en la constelación de Auriga, donde el gas y el polvo cósmico se iluminan y crean figuras que recuerdan a una araña. Esta nebulosa es un vivero estelar, donde nuevas estrellas están naciendo a partir de densas nubes de gas y polvo."
+  },
+  {
+    "id": 82,
+    "object": "ngc 6910",
+    "frequency": 0.13,
+    "coords": [
+      "305.783",
+      "40.775"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "ic 4996",
+      "m 29"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Sadr region",
+    "description": "La región de Sadr, también conocida como NGC 6910, es un cúmulo estelar abierto ubicado en la constelación del Cisne, cerca de la brillante estrella Sadr. Este cúmulo es un área rica en estrellas jóvenes y gas interestelar, ofreciendo un espectacular panorama de nebulosidad y formación estelar."
+  },
+  {
+    "id": 91,
+    "object": "ngc 7538",
+    "frequency": 0.11,
+    "coords": [
+      "348.405",
+      "61.5"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "ngc 7510"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa de la Burbuja",
+    "description": "La Nebulosa de la Burbuja, o NGC 7538, es una nube interestelar de gas y polvo situada en la constelación de Casiopea, famosa por su forma esférica que se asemeja a una burbuja soplada en el espacio. Esta peculiar forma es creada por el viento estelar de una estrella masiva que se encuentra en su interior, iluminando y empujando el material circundante."
+  },
+  {
+    "id": 92,
+    "object": "ic 2177",
+    "frequency": 0.11,
+    "coords": [
+      "106.104",
+      "-10.455"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa de la gaviota",
+    "description": "La Nebulosa de la Gaviota, también conocida como IC 2177, es una impresionante región de formación estelar que se extiende a lo largo de la frontera entre las constelaciones de Monoceros y Canis Major. Su forma recuerda a una gaviota en vuelo, y está compuesta por nubes de gas y polvo donde nacen nuevas estrellas."
+  },
+  {
+    "id": 94,
+    "object": "m 4",
+    "frequency": 0.1,
+    "coords": [
+      "245.89675",
+      "-26.52575"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Cumulo del cangrejo",
+    "description": "El Cúmulo del Cangrejo, conocido como M4, es un cúmulo globular cercano que se encuentra en la constelación de Escorpión, a unos 7,200 años luz de la Tierra. Este cúmulo es notable por ser uno de los más fáciles de observar con telescopios modestos y contiene miles de estrellas antiguas compactadas en una región relativamente pequeña del espacio."
+  },
+  {
+    "id": 95,
+    "object": "Barnard 161",
+    "frequency": 0.1,
+    "coords": [
+      "325.1",
+      "57.82"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "sh2-131",
+      "Barnard 365",
+      "Barnard 163",
+      "Barnard 367"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Trompa de Elefante",
+    "description": "La Nebulosa Trompa de Elefante, también conocida como Barnard 161, es una impresionante estructura de gas y polvo situada en la constelación de Cefeo, que se asemeja a la trompa de un elefante. Esta nebulosa es una región activa de formación estelar, donde nuevas estrellas están naciendo a partir de los densos cúmulos de material interestelar."
+  },
+  {
+    "id": 101,
+    "object": "ngc 2259",
+    "frequency": 0.09,
+    "coords": [
+      "99.6433",
+      "10.89"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Cumulo arbol de navidad",
+    "description": "El Cúmulo Árbol de Navidad, también conocido como NGC 2259, es un grupo de estrellas jóvenes que se encuentran en la constelación de Monoceros, a unos 2,600 años luz de la Tierra. Su nombre proviene de la disposición triangular de sus estrellas, que recuerda a un árbol de Navidad iluminado."
+  },
+  {
+    "id": 102,
+    "object": "sh2-220",
+    "frequency": 0.09,
+    "coords": [
+      "59.414775",
+      "36.787483"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [
+      "ic 2005"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa California",
+    "description": "La Nebulosa California, también conocida como Sh2-220, es una extensa nube de gas y polvo interestelar ubicada en la constelación de Perseo, que brilla con un característico tono rojizo debido a la radiación de estrellas cercanas. Su nombre proviene de su parecido con la silueta del estado de California en los mapas."
+  },
+  {
+    "id": 107,
+    "object": "lbn 943",
+    "frequency": 0.08,
+    "coords": [
+      "98.5",
+      "5.7"
+    ],
+    "fov": ">= 1.5 AND < 3.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Roseta",
+    "description": "La Nebulosa Roseta es una vasta y hermosa región de formación estelar ubicada a unos 5,000 años luz de la Tierra, en la constelación del Unicornio. Su forma recuerda a una flor cósmica, y está compuesta por gas y polvo que brillan intensamente debido a la radiación de las jóvenes estrellas en su interior."
+  }
 ]

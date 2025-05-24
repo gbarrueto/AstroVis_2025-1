@@ -88,3 +88,9 @@
 .modal-panel button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+.modal-description {
+  margin-top: 1em;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
