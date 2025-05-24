@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import ToolsBar from './toolsBar';
 import Modal from './modal';
 import { Context } from "../app.jsx";
@@ -46,6 +46,10 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
   } = useContext(Context);
   
   const [hoveredFov, setHoveredFov] = useState(null);
+  
+  useEffect(() => {
+    setIsModalOpen(true);
+  }, [selectedObject])
   
   
   return (

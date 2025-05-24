@@ -95,9 +95,10 @@
   line-height: 1.4;
 }
 
+/* Esta es la clase importante, UTILIZA GALAXIA REMOLINO COMO EJEMPLO PARA ESTILIZAR */
 .modal-image.rotate-image {
   transform: rotate(90deg);
   max-height: 40vh;
   max-width: 70vh; /* para que quepa horizontalmente cuando está girada */
-  object-fit: contain;
+  object-fit: cover;
 }
