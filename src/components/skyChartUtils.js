@@ -77,8 +77,8 @@ export const obtenerTopPorFOV = (listasPorFov) => {
   }
   return topPorFov;
 };
-// TODO: Modificar para que los objetos elegidos a destacar no sea solo por el nombre.
-// de esa manera objetos con el mismo nombre, pero que no estan en el top, no sean destacados
+// TODO: Modificar para que los objetos elegidos a destacar no sea en base a su nombre (que trucho pancito)
+// de manera que objetos con el mismo nombre, pero que no estan en el top, no sean destacados
 export const procesar = (data, topDestacados) => {
   const topNames = topDestacados.map((t) => t.object);
 
