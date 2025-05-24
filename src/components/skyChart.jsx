@@ -11,14 +11,12 @@ import {
 } from "./skyChartUtils";
 import { Context } from "../app.jsx";
 
-
 const fovListEntries = {
   "07": "< 0.7 deg",
-  "15": ">= 0.7 AND < 1.5 deg",
-  "35": ">= 1.5 AND < 3.5 deg",
-  "70": ">= 3.5 AND < 7 deg"
-}
-
+  15: ">= 0.7 AND < 1.5 deg",
+  35: ">= 1.5 AND < 3.5 deg",
+  70: ">= 3.5 AND < 7 deg",
+};
 
 const SkyChart = ({ hemisphere, fov }) => {
   // Acceder al contexto de los estados globales y del Modal
@@ -38,7 +36,7 @@ const SkyChart = ({ hemisphere, fov }) => {
     selectedObject,
     setSelectedObject, // Objeto seleccionado
     objectsByHemisphereFov,
-    setObjectsByHemisphereFov
+    setObjectsByHemisphereFov,
   } = useContext(Context);
 
   // Efecto para cargar los datos al montar el componente
@@ -67,17 +65,23 @@ const SkyChart = ({ hemisphere, fov }) => {
   ]);
 
   // Manejador del clic en los puntos del gráfico para mostrar el modal
-  
+
   // TODO: Modificar funcion para que la estrella polar no muestre el modal
   // puede ser una condicion basada en "event" y que handlePontClick no haga nada cuando "event" sea la polar
-  
+
   const handlePointClick = (event, dataList) => {
-    const pointIndex = event.points[0]?.pointIndex;
+    const point = event.points[0];
+
+    if (point.curveNumber > 0) { 
+      return;
+    }
+
+    const pointIndex = point.pointIndex;
+
     const allObjects = Object.values(dataList).flat();
     const pointData = allObjects[pointIndex];
 
     if (pointData) {
-        console.log(pointData)
       setSelectedObject(pointData); // Establecer el objeto seleccionado
       setIsModalOpen(true); // Abrir el modal
     }
@@ -106,7 +110,11 @@ const SkyChart = ({ hemisphere, fov }) => {
         {loading || !fov ? (
           <p>Loading...</p>
         ) : hemisphere === "N" ? (
-          renderChart(listasPorFovNorth[fovListEntries[fov]], topPorFovNorth, true) // Gráfico del hemisferio norte
+          renderChart(
+            listasPorFovNorth[fovListEntries[fov]],
+            topPorFovNorth,
+            true
+          ) // Gráfico del hemisferio norte
         ) : (
           renderChart(listasPorFovSouth[fovListEntries[fov]], topPorFovSouth) // Gráfico del hemisferio sur
         )}
