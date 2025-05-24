@@ -35,8 +35,14 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
   const {
     listasPorFovNorth,
     listasPorFovSouth,
-    selectedObject
+    selectedObject,
+    setSelectedObject
   } = useContext(Context);
+  
+  function handleTableClick(object) {
+    setSelectedObject(object);
+  }
+  
   
   return (
     <div className="tableWrapper">
@@ -54,14 +60,14 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
           </thead> 
           <tbody>
             {hemisphereSelected === 'N' ? (listasPorFovNorth[fovListEntries[fovSelected]] ? listasPorFovNorth[fovListEntries[fovSelected]].map((obj, i) => (
-              <tr key={i} style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
+              <tr key={i} onClick={() => handleTableClick(obj)} style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
                   {obj.frecuencia.toFixed(2)}%
                 </td>
               </tr>
             )) : <></>) : (listasPorFovSouth[fovListEntries[fovSelected]] ? listasPorFovSouth[fovListEntries[fovSelected]].map((obj, i) => (
-              <tr key={i} style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
+              <tr key={i} onClick={() => handleTableClick(obj)} style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
                   {obj.frecuencia.toFixed(2)}%

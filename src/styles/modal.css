@@ -95,11 +95,9 @@
   line-height: 1.4;
 }
 
-.rotate-image {
+.modal-image.rotate-image {
   transform: rotate(90deg);
-  width: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-height: 40vh;
+  max-width: 70vh; /* para que quepa horizontalmente cuando está girada */
+  object-fit: contain;
 }
-

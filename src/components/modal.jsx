@@ -2,34 +2,32 @@ import React, { useEffect, useState } from "react";
 import { IoPlay, IoPause } from "react-icons/io5";
 import "../styles/modal.css";
 
-const Modal = ({ isOpen, objectData, onClose, objImage }) => {
-  console.log(objectData);
+const Modal = ({ isOpen, objectData, onClose }) => {
   const [shouldRender, setShouldRender] = useState(false);
   const [closing, setClosing] = useState(false);
   const [playingSound, setPlayingSound] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [rotateImage, setRotateImage] = useState(false);
+  const [loadingImage, setLoadingImage] = useState(true);
 
-  /* CAMBIAR POR LINK DE SONIDO CORRESPONDIENTE */
-  const [sound, setSound] = useState(
+  const [sound] = useState(
     new Audio(
       "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/y2mate_5gbydy1.mp3?v=1747860004222"
     )
   );
   sound.loop = true;
 
-  // Controla la aparición/desaparición con animación
   useEffect(() => {
     if (isOpen && objectData) {
       setShouldRender(true);
       setClosing(false);
-      setImageLoaded(false); // Resetear carga al abrir nuevo modal
+      setLoadingImage(true);
     } else if (shouldRender) {
-      // Comienza animación de salida
       setClosing(true);
       const timeout = setTimeout(() => {
         setShouldRender(false);
         setClosing(false);
-      }, 300); // Duración de la animación de salida
+        setRotateImage(false);
+      }, 300);
       return () => clearTimeout(timeout);
     }
   }, [isOpen, objectData]);
@@ -54,25 +52,29 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
     }
   }
 
-  // Mostrar "Cargando..." hasta que la imagen cargue
-  if (!imageLoaded) {
-    return (
-      <div className="modal-panel" style={modalStyle}>
-        <p>Cargando...</p>
-      </div>
-    );
-  }
-
   return (
-    <div className={`modal-panel ${closing ? "closing" : ""}`} style={modalStyle}>
+    <div
+      className={`modal-panel ${closing ? "closing" : ""} ${
+        rotateImage ? "rotated-modal" : ""
+      }`}
+      style={modalStyle}
+    >
       <h3>{objectData.object}</h3>
+
+      {loadingImage && <p className="loading-text">Cargando imagen...</p>}
 
       <img
         src={`https://gbarrueto.github.io/infovis-assets/img/${objectData.id}.jpg`}
         alt={objectData.object}
-        className="modal-image"
-        onLoad={() => {
-          setImageLoaded(true);
+        className={`modal-image ${rotateImage ? "rotate-image" : ""}`}
+        onLoad={(e) => {
+          const img = e.target;
+          setLoadingImage(false);
+          if (img.naturalHeight > img.naturalWidth) {
+            setRotateImage(true);
+          } else {
+            setRotateImage(false);
+          }
         }}
       />
 
@@ -89,7 +91,6 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
   );
 };
 
-// Reutiliza la función para contraste
 function getContrastColor(hexColor) {
   const color = hexColor.replace("#", "");
   const r = parseInt(color.substr(0, 2), 16);
