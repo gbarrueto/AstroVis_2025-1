@@ -7,12 +7,12 @@
 
 .objectInfoContainer {
   min-height: 50%;
+  flex: 1;
   width: 100%;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  flex: 1;
 }
 
 .extraInfoContainer {
