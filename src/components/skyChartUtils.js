@@ -111,9 +111,14 @@ export const procesar = (
     theta: data.map((d) => d.theta),
     marker: {
       size: data.map((d) => {
-        const baseSize = Math.max(Math.pow(d.frecuencia, 1.2) * 100, 1);
-        return d.fovCategory === "< 0.7 deg" ? baseSize : baseSize * 5; // ajusta 1.5 a tu gusto
+        const scaled = Math.pow(d.frecuencia, 1.2) * 100;
+        const final =
+          d.fovCategory === "< 0.7 deg"
+            ? Math.max(scaled, 6)
+            : Math.max(scaled * 1.5, 6 + (scaled - 6) * 1.5); // solo amplía lo que está por encima del mínimo
+        return final;
       }),
+
       sizemode: "area",
       color: data.map((d) =>
         d.id === hoveredTableObject?.id
