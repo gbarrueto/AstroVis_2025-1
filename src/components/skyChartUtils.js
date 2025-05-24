@@ -55,7 +55,8 @@ export const cargar = async () => {
         frecuencia: obj.frequency,
         fovCategory: fovLabel,
         color: fovColors[fovLabel],
-        id: obj.id
+        id: obj.id,
+        description: obj.description
       };
 
       if (obj.hemisphere === "N") objetosNorte.push(transformed);

@@ -75,7 +75,6 @@ const handlePointClick = (event) => {
 
   // Obtener el objeto completo desde customdata
   const pointData = point.customdata;
-  console.log(pointData)
 
   if (pointData) {
     setSelectedObject(pointData); // Actualizar objeto seleccionado
