@@ -36,11 +36,20 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
     listasPorFovNorth,
     listasPorFovSouth,
     selectedObject,
-    setSelectedObject
+    setSelectedObject,
+    setHoveredTableObject
   } = useContext(Context);
   
   function handleTableClick(object) {
     setSelectedObject(object);
+  }
+  
+  function handleMouseEnter(object) {
+    setHoveredTableObject(object);
+  }
+  
+  function handleMouseLeave() {
+    setHoveredTableObject(null);
   }
   
   
@@ -60,7 +69,11 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
           </thead> 
           <tbody>
             {hemisphereSelected === 'N' ? (listasPorFovNorth[fovListEntries[fovSelected]] ? listasPorFovNorth[fovListEntries[fovSelected]].map((obj, i) => (
-              <tr key={i} onClick={() => handleTableClick(obj)} style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
+              <tr key={i} 
+                onClick={() => handleTableClick(obj)} 
+                onMouseEnter={() => handleMouseEnter(obj)}
+                
+                style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
                   {obj.frecuencia.toFixed(2)}%

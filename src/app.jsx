@@ -29,6 +29,8 @@ export default function Home() {
   // Añadir estados de Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedObject, setSelectedObject] = useState(null);
+  
+  const [hoveredTableObject, setHoveredTableObject] = useState(null);
 
   const context = {
     loading, setLoading,
@@ -39,6 +41,7 @@ export default function Home() {
     // Estados del Modal
     isModalOpen, setIsModalOpen,
     selectedObject, setSelectedObject,
+    hoveredTableObject, setHoveredTableObject,
     objectsByHemisphereFov, setObjectsByHemisphereFov
   };
   
