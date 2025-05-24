@@ -77,7 +77,7 @@ export const obtenerTopPorFOV = (listasPorFov) => {
     // Ordenar por frecuencia descendente
     const ordenados = objetos.sort((a, b) => b.frecuencia - a.frecuencia);
 
-    // Mantener solo los primeros 3 con nombres únicos
+    // Mantener solo los primeros 5 con nombres únicos
     const vistos = new Set();
     const topUnicos = [];
 
@@ -86,7 +86,7 @@ export const obtenerTopPorFOV = (listasPorFov) => {
         vistos.add(obj.object);
         topUnicos.push(obj);
       }
-      if (topUnicos.length === 3) break;
+      if (topUnicos.length === 5) break;
     }
 
     topPorFov[fovKey] = topUnicos;
@@ -178,9 +178,32 @@ export const estrellaPolarTrace = {
   hoveron: false,
 };
 
-// TODO: SigmaOctantisTrace (Equivalente a la estrella polar pero en el sur)
-// son 4 estrellas así que si haces esto pideme las coordenadas. #Gonza
 
-export const sigmaOctantisTrace = {
-  
-}
+export const cruzPolarTrace = {
+  type: "scatterpolar",
+  mode: "markers+text",
+  r: [0],
+  theta: [0],
+  marker: {
+    color: "#00bfff", // azul claro
+    size: 9,
+    line: {
+      color: "#1e90ff", // azul más intenso
+      width: 2,
+    },
+    symbol: "star",
+  },
+  text: ["Cruz del Sur"],
+  textposition: "bottom center",
+  textfont: {
+    size: 11,
+    color: "#1e90ff",
+  },
+  hoverinfo: "text",
+  hoveron: false,
+  selected: {
+    marker: {
+      opacity: 0.5,
+    },
+  },
+};
