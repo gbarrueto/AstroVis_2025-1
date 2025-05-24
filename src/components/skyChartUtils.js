@@ -123,6 +123,7 @@ export const procesar = (data, topDestacados) => {
     },
     textposition: "top center",
     hoverinfo: "text",
+    customdata: data,
   };
 };
 
