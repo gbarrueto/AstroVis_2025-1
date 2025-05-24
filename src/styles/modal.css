@@ -27,7 +27,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
   border-radius: 10px;
-  width: 30vh;
+  width: 40vh;
   /* position: fixed; */
   top: 50%;
   right: 40px;
@@ -94,3 +94,12 @@
   font-size: 0.95em;
   line-height: 1.4;
 }
+
+.rotate-image {
+  transform: rotate(90deg);
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
