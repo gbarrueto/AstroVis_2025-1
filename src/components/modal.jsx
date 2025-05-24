@@ -7,6 +7,7 @@ const Modal = ({ isOpen, objectData, onClose, objImage }) => {
   const [closing, setClosing] = useState(false);
   const [playingSound, setPlayingSound] = useState(false);
   
+  /* CAMBIAR POR LINK DE SONIDO CORRESPONDIENTE */
   const [sound, setSound] = useState(new Audio('https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/y2mate_5gbydy1.mp3?v=1747860004222'));
   sound.loop = true;
   
