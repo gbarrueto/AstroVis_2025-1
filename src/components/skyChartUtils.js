@@ -141,8 +141,8 @@ export const layout = {
       ticktext: ["0h", "6h", "12h", "18h"],
       tickfont: { color: "yellow" },
       showline: true,
-      gridcolor: "#cccccc",
-      gridwidth: 1,
+     gridcolor: "#888888",
+      gridwidth: 0,
     },
   },
   showlegend: false,
@@ -185,10 +185,10 @@ export const cruzPolarTrace = {
   r: [0],
   theta: [0],
   marker: {
-    color: "#00bfff", // azul claro
-    size: 9,
+    color: "#ffffff",
+    size: 10,
     line: {
-      color: "#1e90ff", // azul más intenso
+      color: "#ffd700",
       width: 2,
     },
     symbol: "star",
@@ -196,8 +196,8 @@ export const cruzPolarTrace = {
   text: ["Cruz del Sur"],
   textposition: "bottom center",
   textfont: {
-    size: 11,
-    color: "#1e90ff",
+    size: 12,
+    color: "#ffd700",
   },
   hoverinfo: "text",
   hoveron: false,

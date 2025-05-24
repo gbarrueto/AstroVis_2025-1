@@ -8,6 +8,7 @@ import {
   procesar,
   layout,
   estrellaPolarTrace,
+  cruzPolarTrace
 } from "./skyChartUtils";
 import { Context } from "../app.jsx";
 
@@ -66,11 +67,10 @@ const SkyChart = ({ hemisphere, fov }) => {
 
   // Manejador del clic en los puntos del gráfico para mostrar el modal
 
-
   const handlePointClick = (event, dataList) => {
     const point = event.points[0];
 
-    if (point.curveNumber > 0) { 
+    if (point.curveNumber > 0) {
       return;
     }
 
@@ -86,11 +86,14 @@ const SkyChart = ({ hemisphere, fov }) => {
   };
 
   // Función para renderizar el gráfico dependiendo del hemisferio
-  const renderChart = (listas, top, includePolar = false) => {
+  const renderChart = (listas, top, includePolar = true) => {
     const data = [
       procesar(Object.values(listas).flat(), Object.values(top).flat()),
     ];
-    if (includePolar) data.push(estrellaPolarTrace); // Incluir la estrella polar solo en el hemisferio norte
+    if (includePolar) {
+      if (hemisphere === "N") data.push(estrellaPolarTrace);
+      if (hemisphere === "S") data.push(cruzPolarTrace);
+    }
     return (
       <Plot
         data={data}
