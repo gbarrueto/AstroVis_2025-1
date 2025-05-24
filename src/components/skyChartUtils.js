@@ -97,7 +97,7 @@ export const obtenerTopPorFOV = (listasPorFov) => {
 };
 
 // :(
-export const procesar = (selectedObject, data, topDestacados) => {
+export const procesar = (selectedObject, hoveredTableObject, data, topDestacados) => {
   const topIds = new Set(topDestacados.map((t) => t.id)); // usar id en lugar de nombre
 
   return {
@@ -109,9 +109,11 @@ export const procesar = (selectedObject, data, topDestacados) => {
       size: data.map((d) => Math.max(Math.pow(d.frecuencia, 1.2) * 100, 6)),
       sizemode: "area",
       color: data.map((d) =>
-        d.id === selectedObject?.id
-          ? 'aqua'
-          : d.color
+        d.id === hoveredTableObject?.id
+          ? 'yellow'
+          : d.id === selectedObject?.id
+              ? 'aqua'
+              : d.color
       ),
       opacity: 0.8,
       line: {

@@ -72,7 +72,7 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
               <tr key={i} 
                 onClick={() => handleTableClick(obj)} 
                 onMouseEnter={() => handleMouseEnter(obj)}
-                
+                onMouseLeave={handleMouseLeave}
                 style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
@@ -80,7 +80,11 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
                 </td>
               </tr>
             )) : <></>) : (listasPorFovSouth[fovListEntries[fovSelected]] ? listasPorFovSouth[fovListEntries[fovSelected]].map((obj, i) => (
-              <tr key={i} onClick={() => handleTableClick(obj)} style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
+              <tr key={i} 
+                onClick={() => handleTableClick(obj)} 
+                onMouseEnter={() => handleMouseEnter(obj)}
+                onMouseLeave={handleMouseLeave}
+                style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
                   {obj.frecuencia.toFixed(2)}%
