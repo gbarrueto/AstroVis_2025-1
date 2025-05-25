@@ -26,7 +26,8 @@ export const fovColors = {
   ">= 3.5 AND < 7 deg": "#ff6ec7",
 };
 
-const 
+const selectedObjectColor = 'aqua';
+const hoveredObjectColor = 'yellow';
 
 // DEPRECATED
 //export const raToDegrees = (raStr) => {
@@ -130,9 +131,9 @@ export const procesar = (
       sizemode: "area",
       color: data.map((d) =>
         d.id === hoveredTableObject?.id
-          ? "yellow"
+          ? hoveredObjectColor
           : d.id === selectedObject?.id
-          ? "aqua"
+          ? selectedObjectColor
           : d.color
       ),
       opacity: 0.8,
@@ -145,9 +146,11 @@ export const procesar = (
     textfont: {
       color: data.map((d) => (
         topIds.has(d.id) 
-          ? d.id === selectedObject?.id 
-            ? 'aqua' 
-            : d.color 
+          ? d.id === hoveredTableObject?.id 
+            ? hoveredObjectColor
+            : d.id === selectedObject?.id 
+              ? selectedObjectColor 
+              : d.color 
           : "rgba(0,0,0,0)"
       )),
       size: 10,

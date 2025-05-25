@@ -14,6 +14,10 @@ export const Context = createContext(null);
 
 
 export default function Home() {
+  const [ambientSound] = useState(
+    new Audio('https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/02%20Cornfield%20Chase.mp3?v=1748135392471')
+  );
+  
   const [location, setLocation] = useLocation();
   const [match, params] = useRoute("/:hemisphere/:fov");
   
@@ -44,6 +48,12 @@ export default function Home() {
     hoveredTableObject, setHoveredTableObject,
     objectsByHemisphereFov, setObjectsByHemisphereFov
   };
+  
+  
+  useEffect(() => {
+    ambientSound.loop = true;
+    ambientSound.play();
+  }, [])
   
 
   return (
