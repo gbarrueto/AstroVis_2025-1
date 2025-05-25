@@ -19,6 +19,18 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
     setDisplayModalInfo
   } = useContext(Context);
   
+  const [endAnimation, setEndAnimation] = useState('');
+  
+  let timeout;
+  
+  useEffect(() => {
+    timeout = setTimeout(() => {
+      setEndAnimation('noAnimation');
+    }, 10000)
+    
+    return () => clearTimeout(timeout);
+  }, [])
+  
   function handleMouseEnter(fov) {
     setHoveredFov?.(fov);
   }
@@ -35,7 +47,7 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
     <section className="toolsBarContainer">
       
       {/* More info button */}
-      <div className="moreInfoButtonContainer">
+      <div className={`moreInfoButtonContainer ${endAnimation}`}>
         <BsFillQuestionCircleFill onClick={onMoreInfoClick} />
       </div>
       

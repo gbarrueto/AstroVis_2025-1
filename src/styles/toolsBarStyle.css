@@ -22,10 +22,10 @@
 }
 
 @keyframes loopRotation {
-  from {
+  0% {
     transform: rotate(45deg);
   }
-  to {
+  100% {
     transform: rotate(-45deg);
   }
 }
@@ -34,7 +34,11 @@
   width: 100%;
   height: 100%;
   color: #a8e6ff;
-  animation: loopRotation infinite;
+  animation: loopRotation 0.5s infinite alternate ease-in-out;
+}
+
+.noAnimation svg {
+  animation: none;
 }
 
 /* HEMISPHERE SELECTOR */
