@@ -26,6 +26,8 @@ export const fovColors = {
   ">= 3.5 AND < 7 deg": "#ff6ec7",
 };
 
+const 
+
 // DEPRECATED
 //export const raToDegrees = (raStr) => {
 //  if (!raStr) return 0;
@@ -141,7 +143,13 @@ export const procesar = (
     },
     text: data.map((d) => d.object),
     textfont: {
-      color: data.map((d) => (topIds.has(d.id) ? d.color : "rgba(0,0,0,0)")),
+      color: data.map((d) => (
+        topIds.has(d.id) 
+          ? d.id === selectedObject?.id 
+            ? 'aqua' 
+            : d.color 
+          : "rgba(0,0,0,0)"
+      )),
       size: 10,
     },
     textposition: "top center",

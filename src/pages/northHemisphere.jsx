@@ -11,10 +11,6 @@ export default function NorthHemisphere() {
   useEffect(() => {
     if (params) {
       setFovSelected(params.fov);
-      console.log(`north page fov: ${params.fov}`);
-    }
-    else {
-      console.log(`north page fov: ${null}`);
     }
     
   }, [params])

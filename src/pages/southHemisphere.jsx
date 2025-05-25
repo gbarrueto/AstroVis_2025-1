@@ -11,10 +11,6 @@ export default function SouthHemisphere() {
   useEffect(() => {
     if (params) {
       setFovSelected(params.fov);
-      console.log(`south page fov: ${params.fov}`);
-    }
-    else {
-      console.log(`south page fov: ${null}`);
     }
     
   }, [params])
