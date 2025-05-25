@@ -51,9 +51,12 @@ export default function Home() {
   
   
   useEffect(() => {
+    console.log('Should be playing sound')
+    console.log('Audio:', ambientSound);
     ambientSound.loop = true;
     ambientSound.volume = 0.8;
     ambientSound.play();
+    console.log('Audio:', ambientSound);
   }, [])
   
 

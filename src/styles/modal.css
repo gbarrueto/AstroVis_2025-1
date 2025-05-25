@@ -110,6 +110,9 @@
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-image {
@@ -119,10 +122,13 @@
 }
 
 .modal-image.rotate-image {
-  /* transform: rotate(90deg);
+  /* 
   max-height: 40vh;
   max-width: 70vh;
   object-fit: cover; */
+  transform: rotate(90deg);
+  width: 15em;
+  height: 24em;
 }
 
 .modal-panel button:not(.close-button) {
