@@ -42,7 +42,7 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
   function onMoreInfoClick() {
     clearTimeout(timeout);
     setEndAnimation('noAnimation');
-    setDisplayModalInfo(true);
+    setDisplayModalInfo('showModalInfo');
   }
   
   return (

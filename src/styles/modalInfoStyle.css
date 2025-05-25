@@ -3,11 +3,21 @@
   width: 100%;
   height: 100%;
   background-color: #000000a6;
-  z-index: 999999;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity .5s ease-in-out;
+}
+
+.showModalInfo {
+  opacity: 1;
+  z-index: 999999;
+}
+
+.hideModalInfo {
+  opacity: 0;
+  /* z-index: -1; */
 }
 
 .modalInfoWrapper {

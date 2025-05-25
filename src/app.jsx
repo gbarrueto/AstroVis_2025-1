@@ -30,7 +30,8 @@ export default function Home() {
   const [listasPorFovNorth, setListasPorFovNorth] = useState({});
   const [listasPorFovSouth, setListasPorFovSouth] = useState({});
   const [objectsByHemisphereFov, setObjectsByHemisphereFov] = useState({})
-  const [displayModalInfo, setDisplayModalInfo] = useState(false);
+  
+  const [displayModalInfo, setDisplayModalInfo] = useState('hideModalInfo');
 
   // Añadir estados de Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,11 +60,6 @@ export default function Home() {
     ambientSound.play();
   }, [])
   
-  
-  function toggleModalInfo() {
-    setDisplayModalInfo(!displayModalInfo);
-  }
-  
 
   return (
     <Context.Provider value={context}>
@@ -74,7 +70,7 @@ export default function Home() {
               <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
               <PageRouter />
               <RightPanel hemisphereSelected={hemisphere} setHemisphereSelected={setHemisphere} fovSelected={fov} setFovSelected={setFov} />
-              { displayModalInfo ? <ModalInfo setDisplayModal={setDisplayModalInfo} /> : null }
+              <ModalInfo displayModal={displayModalInfo} setDisplayModal={setDisplayModalInfo} />
             </div>
           </main>
         </Router>
