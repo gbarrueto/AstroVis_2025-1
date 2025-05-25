@@ -104,10 +104,16 @@
 }
 
 /* Imagen */
-.modal-image {
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+.modal-image-container {
   height: 15em;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.modal-image {
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }

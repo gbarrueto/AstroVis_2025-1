@@ -70,11 +70,13 @@ const Modal = ({ isOpen, objectData, onClose }) => {
             <h3>{objectData.object}</h3>
           </div>
 
-          <img
-            src={`https://gbarrueto.github.io/infovis-assets/img/${objectData.id}.jpg`}
-            alt={objectData.object}
-            className={`modal-image ${rotateImage ? "rotate-image" : ""}`}
-          />
+          <div className="modal-image-container">
+            <img
+              src={`https://gbarrueto.github.io/infovis-assets/img/${objectData.id}.jpg`}
+              alt={objectData.object}
+              className={`modal-image ${rotateImage ? "rotate-image" : ""}`}
+            />
+          </div>
 
           <p className="modal-description">
             {objectData.description || "Descripción no disponible."}
