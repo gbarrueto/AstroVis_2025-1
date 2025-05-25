@@ -311,7 +311,7 @@
     "neighbours": [],
     "hemisphere": "N",
     "repr_name": "Galaxia de Bode y Cigarro",
-    "description": "La Galaxia de Bode (M81) y la Galaxia del Cigarro (M82) son dos galaxias cercanas en la constelación de la Osa Mayor que forman parte de un grupo galáctico junto con NGC 3077. Estas galaxias interactúan gravitacionalmente, lo que provoca intensos brotes de formación estelar, especialmente en M82, dándole su apariencia alargada y turbulenta."
+    "description": "La Galaxia de Bode (M81) y la Galaxia del Cigarro (M82) son dos galaxias cercanas en la constelación de la Osa Mayor que forman parte de un grupo galáctico. Estas galaxias interactúan gravitacionalmente, lo que provoca intensos brotes de formación estelar, especialmente en M82, dándole su apariencia alargada y turbulenta."
   },
   {
     "id": 86,
@@ -327,7 +327,7 @@
     ],
     "hemisphere": "N",
     "repr_name": "Galaxia del remolino",
-    "description": "La Galaxia del Remolino, también conocida como M51 o NGC 5194, es una impresionante galaxia espiral ubicada a unos 31 millones de años luz de distancia en la constelación de Canes Venatici. Se caracteriza por sus bien definidas estructuras en espiral y es famosa por su interacción con una galaxia más pequeña, NGC 5195, que le da su distintivo aspecto \"remolinado\"."
+    "description": "La Galaxia del Remolino, también conocida como M51, es una impresionante galaxia espiral ubicada a unos 31 millones de años luz de distancia en la constelación de Canes Venatici. Se caracteriza por sus bien definidas estructuras en espiral y es famosa por su interacción con una galaxia más pequeña, NGC 5195, que le da su distintivo aspecto \"remolinado\"."
   },
   {
     "id": 87,
@@ -351,7 +351,7 @@
     ],
     "hemisphere": "N",
     "repr_name": "Galaxia del Triángulo",
-    "description": "La Galaxia del Triángulo, también conocida como Messier 33 o NGC 598, es una galaxia espiral ubicada a unos 3 millones de años luz de la Tierra, en la constelación del Triángulo. Es la tercera galaxia más grande del Grupo Local, después de la Vía Láctea y la Galaxia de Andrómeda, y se caracteriza por sus prominentes brazos espirales llenos de regiones de formación estelar."
+    "description": "La Galaxia del Triángulo, también conocida como Messier 33, es una galaxia espiral ubicada a unos 3 millones de años luz de la Tierra, en la constelación del Triángulo. Es la tercera galaxia más grande del Grupo Local, después de la Vía Láctea y la Galaxia de Andrómeda, y se caracteriza por sus prominentes brazos espirales llenos de regiones de formación estelar."
   },
   {
     "id": 89,
@@ -438,7 +438,7 @@
     "fov": ">= 0.7 AND < 1.5 deg",
     "neighbours": [],
     "hemisphere": "N",
-    "repr_name": "Galaxia Tabla de Surf",
-    "description": "La Galaxia Tabla de Surf, también conocida como M108, es una galaxia espiral situada en la constelación de la Osa Mayor, a unos 45 millones de años luz de la Tierra. Vista casi de canto, presenta una estructura desordenada con regiones de formación estelar y bandas de polvo oscuro que la atraviesan, lo que le da su peculiar apariencia."
+    "repr_name": "Nebulosa del Buho y Galaxia Tabla de Surf",
+    "description": "La Nebulosa del Búho (M97) y la Galaxia Tabla de Surf (M108) se ubican en la constelación de la Osa Mayor. Esta pareja forma una escena ideal para campos intermedios, contrastando una nebulosa planetaria cercana con una galaxia espiral vista de canto. Su proximidad aparente permite capturarlas juntas, revelando estructuras internas y diferencias morfológicas en una sola imagen."
   }
 ]
