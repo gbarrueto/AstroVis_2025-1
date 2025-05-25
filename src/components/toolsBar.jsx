@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import { Link } from "wouter";
 import "../styles/toolsBarStyle.css";
 import { BsFillQuestionCircleFill } from "react-icons/bs";
+import { Context } from '../app.jsx';
 
 
 const fovColors = {
@@ -13,7 +14,11 @@ const fovColors = {
 
 
 export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fovSelected, onFovSelected, setHoveredFov }) {
-
+  const {
+    displayModalInfo,
+    setDisplayModalInfo
+  } = useContext(Context);
+  
   function handleMouseEnter(fov) {
     setHoveredFov?.(fov);
   }
@@ -22,12 +27,16 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
     setHoveredFov?.(null);
   }
   
+  function onMoreInfoClick() {
+    setDisplayModalInfo(true);
+  }
+  
   return (
     <section className="toolsBarContainer">
       
       {/* More info button */}
       <div className="moreInfoButtonContainer">
-        <BsFillQuestionCircleFill />
+        <BsFillQuestionCircleFill onClick={onMoreInfoClick} />
       </div>
       
       

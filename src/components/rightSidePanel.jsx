@@ -20,12 +20,16 @@ const zoomFovImages = {
 }
 
 const gearImages = {
-  "07": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear%20-%20menor%20a%200.7%C2%B0%20%20-%20mayor%20a%20500mm.jpeg?v=1747852727807",
-  "15": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear-0.7%C2%B0%20a%20.5%C2%B0%20-%20300mm.png?v=1747852720434",
-  "35": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear-1.5%C2%B0%20a%203.5%C2%B0-135mm.png?v=1747852710023",
-  "70": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear-3.5%C2%B0%20a%207%C2%B0-70mm.png?v=1747852704063"
+  "07": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear%20-%20menor%20a%200.7%20%C2%B0%20-%20mayor%20a%201100mm.png?v=1748206548336",
+  "15": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear%20-%200.7%C2%B0%20a%201.5%C2%B0%20900mm.jpeg?v=1748206551936",
+  "35": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear-1.5%C2%B0%20a%203.5%C2%B0%20-%20300mm.png?v=1748206545170",
+  "70": "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/gear-3.5%C2%B0%20a%207%C2%B0-135mm.png?v=1748206533125"
 }
 
+const gearDesc = {
+  "07": "Equipo: Celestron Edge HD 8. Focal: 2032mm"
+  "15": "Equipo: "
+}
 
 export default function RightPanel({ hemisphereSelected, setHemisphereSelected, fovSelected, setFovSelected }) {
   const {

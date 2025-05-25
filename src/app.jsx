@@ -48,7 +48,8 @@ export default function Home() {
     isModalOpen, setIsModalOpen,
     selectedObject, setSelectedObject,
     hoveredTableObject, setHoveredTableObject,
-    objectsByHemisphereFov, setObjectsByHemisphereFov
+    objectsByHemisphereFov, setObjectsByHemisphereFov,
+    displayModalInfo, setDisplayModalInfo
   };
   
   
@@ -73,7 +74,7 @@ export default function Home() {
               <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
               <PageRouter />
               <RightPanel hemisphereSelected={hemisphere} setHemisphereSelected={setHemisphere} fovSelected={fov} setFovSelected={setFov} />
-              <ModalInfo displayModal={displayModalInfo} />
+              { displayModalInfo ? <ModalInfo /> : null }
             </div>
           </main>
         </Router>
