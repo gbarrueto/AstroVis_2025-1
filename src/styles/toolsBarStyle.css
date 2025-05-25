@@ -9,6 +9,24 @@
   position: relative;
 }
 
+.moreInfoButtonContainer {
+  /* background-color: white; */
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  top: 25%;
+  left: -2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moreInfoButtonContainer svg {
+  width: 100%;
+  height: 100%;
+  color: #a8e6ff;
+}
+
 /* HEMISPHERE SELECTOR */
 .hemisphereSelectorContainer {
   display: flex;
