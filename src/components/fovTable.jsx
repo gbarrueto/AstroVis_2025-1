@@ -37,11 +37,13 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
     listasPorFovSouth,
     selectedObject,
     setSelectedObject,
-    setHoveredTableObject
+    setHoveredTableObject,
+    setIsModalOpen
   } = useContext(Context);
   
   function handleTableClick(object) {
     setSelectedObject(object);
+    setIsModalOpen(true);
   }
   
   function handleMouseEnter(object) {
