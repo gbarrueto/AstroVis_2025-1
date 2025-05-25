@@ -24,9 +24,6 @@
 /* Modal */
 .modal-panel {
   /* 
-  padding: 20px;
-  top: 50%;
-  right: 40px;
   gap: 14px;
   font-family: "Segoe UI", sans-serif; 
   */
@@ -42,6 +39,7 @@
   height: 100%;
   position: relative;
   justify-content: space-around;
+  padding: 0 1em;
 }
 
 .modal-panel.closing {
