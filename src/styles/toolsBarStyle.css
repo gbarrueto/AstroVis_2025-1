@@ -37,6 +37,10 @@
   animation: loopRotation 0.5s infinite alternate ease-in-out;
 }
 
+.moreInfoButtonContainer svg:hover {
+  color: #c7a4ff;
+}
+
 .noAnimation svg {
   animation: none;
 }
