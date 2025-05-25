@@ -147,8 +147,8 @@
     "fov": ">= 3.5 AND < 7 deg",
     "neighbours": ["ic 354"],
     "hemisphere": "N",
-    "repr_name": "Pléyades campo amplio",
-    "description": "El objeto \"Pléyades campo amplio\", también conocido como IC 353, es una nebulosa de reflexión que rodea el famoso cúmulo estelar de las Pléyades, situado en la constelación de Tauro. La nebulosa brilla porque refleja la luz azulada de las jóvenes estrellas calientes del cúmulo, creando un paisaje celeste impresionante."
+    "repr_name": "Pléyades",
+    "description": "Esta imagen de campo amplio captura el cúmulo abierto de las Pléyades (M45), en la constelación de Tauro. Lo más llamativo es el contraste entre las brillantes estrellas azules del cúmulo y las delicadas nebulosas de reflexión que las envuelven. Además, el amplio encuadre permite apreciar las nubes oscuras circundantes, como Barnard 353 y Barnard 354, que añaden textura y profundidad al fondo celeste, enriqueciendo la escena con detalles tenues que escapan en encuadres más cerrados. Ideal para quienes buscan capturar tanto brillo como estructura."
   },
   {
     "id": 93,
