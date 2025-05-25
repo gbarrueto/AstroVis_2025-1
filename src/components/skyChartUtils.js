@@ -12,6 +12,13 @@ export const fovFiles = {
   ">= 3.5 AND < 7 deg": j4,
 };
 
+const fovMultipliers = {
+  "< 0.7 deg": 1,
+  ">= 0.7 AND < 1.5 deg": 3,
+  ">= 1.5 AND < 3.5 deg": 6,
+  ">= 3.5 AND < 7 deg": 10,
+};
+
 export const fovColors = {
   "< 0.7 deg": "#1f78b4",
   ">= 0.7 AND < 1.5 deg": "#33a02c",
@@ -112,11 +119,10 @@ export const procesar = (
     marker: {
       size: data.map((d) => {
         const scaled = Math.pow(d.frecuencia, 1.2) * 100;
-        const final =
-          d.fovCategory === "< 0.7 deg"
-            ? Math.max(scaled, 6)
-            : Math.max(scaled * 1.5, 6 + (scaled - 6) * 1.5); // solo amplía lo que está por encima del mínimo
-        return final;
+        const minSize = 10;
+        const multiplier = fovMultipliers[d.fovCategory] || 1;
+
+        return Math.max(minSize, minSize + (scaled - minSize) * multiplier);
       }),
 
       sizemode: "area",
