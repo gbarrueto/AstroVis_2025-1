@@ -74,7 +74,7 @@ export default function Home() {
               <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
               <PageRouter />
               <RightPanel hemisphereSelected={hemisphere} setHemisphereSelected={setHemisphere} fovSelected={fov} setFovSelected={setFov} />
-              { displayModalInfo ? <ModalInfo /> : null }
+              { displayModalInfo ? <ModalInfo setDisplayModal={setDisplayModalInfo} /> : null }
             </div>
           </main>
         </Router>

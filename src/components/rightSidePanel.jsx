@@ -27,8 +27,10 @@ const gearImages = {
 }
 
 const gearDesc = {
-  "07": "Equipo: Celestron Edge HD 8. Focal: 2032mm"
-  "15": "Equipo: "
+  "07": "Equipo: Celestron Edge HD 8. Focal: 2032mm",
+  "15": "Equipo: William Optics FLT-132. Focal: 925mm",
+  "35": "Equipo: Redcat 51. Focal 250mm",
+  "70": "Equipo: Rokinon 135. Focal 135mm"
 }
 
 export default function RightPanel({ hemisphereSelected, setHemisphereSelected, fovSelected, setFovSelected }) {
@@ -76,6 +78,7 @@ export default function RightPanel({ hemisphereSelected, setHemisphereSelected, 
           <img
             src={gearImages[hoveredFov || fovSelected]}
             className="extraInfoImage"
+            alt={gearDesc[hoveredFov || fovSelected]}
           />
         </div>
       </section>
