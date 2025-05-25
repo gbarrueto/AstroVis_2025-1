@@ -87,7 +87,7 @@ export const obtenerTopPorFOV = (listasPorFov) => {
     // Ordenar por frecuencia descendente
     const ordenados = objetos.sort((a, b) => b.frecuencia - a.frecuencia);
 
-    // Mantener solo los primeros 5 con nombres únicos
+    // Mantener solo los primeros 1 con nombres únicos
     const vistos = new Set();
     const topUnicos = [];
 
@@ -96,7 +96,7 @@ export const obtenerTopPorFOV = (listasPorFov) => {
         vistos.add(obj.object);
         topUnicos.push(obj);
       }
-      if (topUnicos.length === 5) break;
+      if (topUnicos.length === 1) break;
     }
 
     topPorFov[fovKey] = topUnicos;
