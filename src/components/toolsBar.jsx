@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { Link } from "wouter";
 import "../styles/toolsBarStyle.css";
+import { BsFillQuestionCircleFill } from "react-icons/bs";
 
 
 const fovColors = {
@@ -23,6 +24,13 @@ export default function ToolsBar({ hemisphereSelected, onHemisphereSelected, fov
   
   return (
     <section className="toolsBarContainer">
+      
+      {/* More info button */}
+      <div className="moreInfoButtonContainer">
+        <BsFillQuestionCircleFill />
+      </div>
+      
+      
       <section className="hemisphereSelectorContainer">
         <Link
           to={`/N/${fovSelected || '07'}`}

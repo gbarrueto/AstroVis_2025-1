@@ -12,6 +12,10 @@ body {
   height: inherit;
 }
 
+.modebar {
+  display: none !important;
+}
+
 main.wrapper {
   background: url(https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/StarsBk.jpg?v=1747819884331);
   background-size: 100%;

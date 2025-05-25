@@ -6,6 +6,7 @@
   text-align: center;
   height: fit-content;
   margin: 1em 0;
+  position: relative;
 }
 
 /* HEMISPHERE SELECTOR */
