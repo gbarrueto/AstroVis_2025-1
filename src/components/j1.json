@@ -60,12 +60,10 @@
       "69.065295"
     ],
     "fov": "< 0.7 deg",
-    "neighbours": [
-      "m 82"
-    ],
+    "neighbours": [],
     "hemisphere": "N",
-    "repr_name": "Galaxia de Bode y Cigarro",
-    "description": "La Galaxia de Bode (M81) y la Galaxia del Cigarro (M82) forman un par de galaxias espectaculares en la constelación de la Osa Mayor, situadas a unos 12 millones de años luz de la Tierra. M81 es una elegante galaxia espiral, mientras que M82, su vecina más pequeña, es una galaxia con intensa actividad de formación estelar, probablemente influenciada por la interacción gravitacional entre ambas."
+    "repr_name": "Galaxia de Bode",
+    "description": "La Galaxia de Bode (M81), ubicada en la constelación de la Osa Mayor, es una galaxia espiral clásica, con brazos bien definidos y un núcleo brillante. Su orientación casi frontal permite capturar una estructura detallada en campos visuales pequeños, destacando sus franjas de polvo y simetría. Es una de las galaxias más fotogénicas del cielo boreal y, junto a M82, forma un par ideal para fotografía de alta resolución. En encuadres cerrados, M81 se impone como un objeto elegante y nítido, ideal para revelar texturas galácticas."
   },
   {
     "id": 4,
@@ -814,5 +812,19 @@
     "hemisphere": "N",
     "repr_name": "Nebulosa Cabeza de mono",
     "description": "La Nebulosa Cabeza de Mono, o NGC 2174, es una región de formación estelar situada en la constelación de Orión, donde el gas y el polvo se combinan para crear nuevas estrellas y darle su característica apariencia que recuerda a la cabeza de un mono. Su vibrante resplandor es resultado de la radiación de estrellas jóvenes que energizan los gases circundantes."
+  },
+    {
+    "id": 109,
+    "object": "M82",
+    "frequency": 0.65,
+    "coords": [
+      "149.4917",
+      "69.5642"
+    ],
+    "fov": "< 0.7 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Galaxia del cigarro",
+    "description": "La Galaxia del Cigarro (M82), en la constelación de la Osa Mayor, es una galaxia irregular vista de perfil que muestra una intensa actividad de formación estelar. Su núcleo turbulento emite chorros de gas y polvo que se extienden más allá del disco galáctico, visibles en exposiciones prolongadas. En campos pequeños, su estructura alargada y brillante ocupa una buena porción del encuadre, permitiendo destacar detalles internos y su característico núcleo rojizo. Ideal para astrofotografía de alto aumento, especialmente cuando se busca resaltar la energía dinámica de galaxias activas."
   }
 ]
