@@ -8,6 +8,7 @@ import Seo from './components/seo.jsx';
 import ToolsBar from './components/toolsBar.jsx';
 import LeftPanel from './components/leftSidePanel.jsx';
 import RightPanel from './components/rightSidePanel.jsx';
+import ModalInfo from './components/modalInfo.jsx';
 
 
 export const Context = createContext(null);
@@ -29,6 +30,7 @@ export default function Home() {
   const [listasPorFovNorth, setListasPorFovNorth] = useState({});
   const [listasPorFovSouth, setListasPorFovSouth] = useState({});
   const [objectsByHemisphereFov, setObjectsByHemisphereFov] = useState({})
+  const [displayModalInfo, setDisplayModalInfo] = useState(false);
 
   // Añadir estados de Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -56,6 +58,11 @@ export default function Home() {
     ambientSound.play();
   }, [])
   
+  
+  function toggleModalInfo() {
+    setDisplayModalInfo(!displayModalInfo);
+  }
+  
 
   return (
     <Context.Provider value={context}>
@@ -66,6 +73,7 @@ export default function Home() {
               <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
               <PageRouter />
               <RightPanel hemisphereSelected={hemisphere} setHemisphereSelected={setHemisphere} fovSelected={fov} setFovSelected={setFov} />
+              <ModalInfo displayModal={displayModalInfo} />
             </div>
           </main>
         </Router>
