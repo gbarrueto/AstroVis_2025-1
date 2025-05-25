@@ -52,6 +52,7 @@ export default function Home() {
   
   useEffect(() => {
     ambientSound.loop = true;
+    ambientSound.volume = 0.8;
     ambientSound.play();
   }, [])
   
