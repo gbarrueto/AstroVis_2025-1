@@ -37,7 +37,7 @@
       "ldn 1375"
     ],
     "hemisphere": "N",
-    "repr_name": "Nebulosa del Corazón",
+    "repr_name": "Nebulosas del Corazón",
     "description": "La Nebulosa del Corazón, también conocida como IC 1805, es una impresionante región de formación estelar ubicada en la constelación de Casiopea, famosa por su forma que recuerda a un corazón humano. Esta nebulosa resplandece principalmente debido a la radiación de un cúmulo abierto de estrellas jóvenes en su interior, que ilumina los gases y polvo circundantes."
   },
   {
@@ -171,7 +171,7 @@
       "m 29"
     ],
     "hemisphere": "N",
-    "repr_name": "Sadr region",
+    "repr_name": "Región de Sadr",
     "description": "La región de Sadr, también conocida como NGC 6910, es un cúmulo estelar abierto ubicado en la constelación del Cisne, cerca de la brillante estrella Sadr. Este cúmulo es un área rica en estrellas jóvenes y gas interestelar, ofreciendo un espectacular panorama de nebulosidad y formación estelar."
   },
   {
@@ -187,8 +187,8 @@
       "ngc 7510"
     ],
     "hemisphere": "N",
-    "repr_name": "Nebulosa de la Burbuja",
-    "description": "La Nebulosa de la Burbuja, o NGC 7538, es una nube interestelar de gas y polvo situada en la constelación de Casiopea, famosa por su forma esférica que se asemeja a una burbuja soplada en el espacio. Esta peculiar forma es creada por el viento estelar de una estrella masiva que se encuentra en su interior, iluminando y empujando el material circundante."
+    "repr_name": "Nebulosas de la Burbuja y Garra de Langosta",
+    "description": "Las nebulosas de la Burbuja y la Garra de Langosta forman un conjunto visualmente impactante en una región rica en gas y polvo. Son ideales para astrofotografía de campo medio por sus formas complejas, contrastes marcados y colores intensos. Capturarlas juntas permite destacar la interacción del viento estelar con el entorno, ofreciendo una imagen estética y científicamente interesante."
   },
   {
     "id": 92,
