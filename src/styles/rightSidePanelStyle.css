@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
+  padding-bottom: 1em;
 }
 
 .objectInfoContainer {
@@ -14,6 +15,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  padding: 1em 0;
 }
 
 .extraInfoContainer {

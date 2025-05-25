@@ -63,11 +63,11 @@ const Modal = ({ isOpen, objectData, onClose }) => {
         <p className="loading-text">Cargando..</p>
       ) : (
         <>
-          <div className="modal-header">
-            <h3>{objectData.object}</h3>
-            <button className="close-button" onClick={onClose}>
+          <button className="close-button" onClick={onClose}>
               ×
             </button>
+          <div className="modal-header">
+            <h3>{objectData.object}</h3>
           </div>
 
           <img
