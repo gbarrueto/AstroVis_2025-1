@@ -145,7 +145,7 @@
       "32.4"
     ],
     "fov": ">= 3.5 AND < 7 deg",
-    "neighbours": [],
+    "neighbours": ["ic 354"],
     "hemisphere": "N",
     "repr_name": "Pléyades campo amplio",
     "description": "El objeto \"Pléyades campo amplio\", también conocido como IC 353, es una nebulosa de reflexión que rodea el famoso cúmulo estelar de las Pléyades, situado en la constelación de Tauro. La nebulosa brilla porque refleja la luz azulada de las jóvenes estrellas calientes del cúmulo, creando un paisaje celeste impresionante."
@@ -248,19 +248,5 @@
     "hemisphere": "N",
     "repr_name": "Cumulo de galaxias en Virgo",
     "description": "El Cúmulo de Virgo es un vasto conjunto de galaxias que se encuentra a unos 55 millones de años luz de la Tierra, en la dirección de la constelación de Virgo. Es el cúmulo galáctico más cercano a nuestro Grupo Local y contiene miles de galaxias, brindando una fascinante oportunidad para estudiar la estructura y evolución del universo."
-  },
-  {
-    "id": 108,
-    "object": "ic 354",
-    "frequency": 0.07,
-    "coords": [
-      "58.2",
-      "23"
-    ],
-    "fov": ">= 3.5 AND < 7 deg",
-    "neighbours": [],
-    "hemisphere": "N",
-    "repr_name": "Pléyades",
-    "description": "Las Pléyades, también conocidas como M45, son un cúmulo estelar abierto situado a unos 440 años luz de la Tierra en la constelación de Tauro. Este grupo de estrellas jóvenes y brillantes es fácilmente visible a simple vista y a menudo se le llama \"las Siete Hermanas\" debido a sus estrellas más notables."
   }
 ]

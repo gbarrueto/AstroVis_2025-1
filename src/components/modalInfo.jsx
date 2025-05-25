@@ -6,17 +6,25 @@ export default function ModalInfo({ displayModal, setDisplayModal }) {
   
   function hideModal() {
     setDisplayModal('hideModalInfo');
-    setTimeout(() => {
+  }
+  
+  useEffect(() => {
+    if (displayModal === 'showModalInfo') {
+      setHideStyle({});
+    }
+    else {
+      setTimeout(() => {
       setHideStyle({
         zIndex: -1
       })
     }, 500);
-  }
+    }
+  }, [displayModal])
   
   return (
     <div className={`modalInfoOverlay ${displayModal}`} style={hideStyle} onClick={hideModal}>
       <div className="modalInfoWrapper">
-        <h1>QUE PASAAAAAAAA QUE ANDAI SAPEANDO OEEEEEE SALE DE AQUI ANDA A VER LOS PUNTITOS ESOS</h1>
+        <h1>QUE PASAAAAAAAA QUE ANDAI SAPEANDO OEEEEEE SALE DE AQUI ANDA A VER LOS PUNTITOS ESOS. Que agresivo</h1>
       </div>
     </div>
   )
