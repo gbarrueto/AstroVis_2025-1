@@ -245,7 +245,7 @@ export const estrellaPolarTrace = {
 export const cruzPolarTrace = [
   {
     type: "scatterpolar",
-    mode: "markers+text",
+    mode: "markers",
     r: [26.7557],
     theta: [187.0083],
     marker: {
@@ -286,6 +286,7 @@ export const cruzPolarTrace = [
       size: 12,
       color: "#ffd700",
     },
+    hovertext: ["Gacrux"],
     hoverinfo: "text",
     hoveron: false,
     selected: {
@@ -296,7 +297,7 @@ export const cruzPolarTrace = [
   },
   {
     type: "scatterpolar",
-    mode: "markers+text",
+    mode: "markers",
     r: [30.1683],
     theta: [192.0583],
     marker: {
@@ -324,7 +325,7 @@ export const cruzPolarTrace = [
   },
   {
     type: "scatterpolar",
-    mode: "markers+text",
+    mode: "markers",
     r: [31.1053],
     theta: [184.125],
     marker: {
@@ -337,11 +338,6 @@ export const cruzPolarTrace = [
       symbol: "star",
     },
     text: ["Imai"],
-    textposition: "bottom center",
-    textfont: {
-      size: 12,
-      color: "#ffd700",
-    },
     hoverinfo: "text",
     hoveron: false,
     selected: {

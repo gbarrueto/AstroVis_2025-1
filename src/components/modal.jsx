@@ -16,6 +16,9 @@ const Modal = ({ isOpen, objectData, onClose }) => {
     ambientSound,
     ambientShouldSound
   } = useContext(Context);
+  
+  
+  const [oldAmbientSoundValue] = useState(ambientSound);
 
   useEffect(() => {
     if (isOpen && objectData) {
@@ -96,7 +99,8 @@ const Modal = ({ isOpen, objectData, onClose }) => {
             console.error("Error playing sound:", err);
           });
       }
-    } else {
+    } 
+    else {
       sound.pause();
       setPlayingSound(false);
       if (ambientShouldSound) ambientSound.volume = 0.1;
