@@ -1,5 +1,5 @@
 // Home.jsx
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext, useEffect, useRef } from "react";
 import { Router, useLocation, useRoute } from "wouter";
 
 import "./styles/styles.css";
@@ -15,9 +15,7 @@ export const Context = createContext(null);
 
 
 export default function Home() {
-  const [ambientSound] = useState(
-    new Audio('https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/02%20Cornfield%20Chase.mp3?v=1748135392471')
-  );
+  const ambientSound = useRef(null);
   
   const [location, setLocation] = useLocation();
   const [match, params] = useRoute("/:hemisphere/:fov");
@@ -51,14 +49,20 @@ export default function Home() {
     hoveredTableObject, setHoveredTableObject,
     objectsByHemisphereFov, setObjectsByHemisphereFov,
     displayModalInfo, setDisplayModalInfo,
-    ambientSound
+    ambientSound: ambientSound.current
   };
   
   
   useEffect(() => {
-    ambientSound.loop = true;
-    ambientSound.volume = 0.1;
-    ambientSound.play();
+    ambientSound.current = new Audio('https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/02%20Cornfield%20Chase.mp3?v=1748135392471')
+    ambientSound.current.loop = true;
+    ambientSound.current.volume = 0.1;
+    ambientSound.current.play();
+    
+    return () => {
+      ambientSound.current.pause();
+      ambientSound.current = null;
+    };
   }, [])
   
 
