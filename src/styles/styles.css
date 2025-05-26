@@ -45,6 +45,7 @@ div.wrapper {
   flex-grow: 1;
   background-color: #000000b2;
   height: inherit;
+  position: relative;
 }
 
 /* Contenedor del gráfico */
@@ -54,4 +55,20 @@ div.wrapper {
   /* background-color: #000000b2; */
   border-radius: 10px;
   position: relative; /* Asegura que el gráfico se mantenga en su lugar */
+}
+
+
+.muteButton {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  background: white;
+  border-radius: 1em;
+}
+
+.muteButton svg {
+  width: 100%;
+  height: 100%;
 }

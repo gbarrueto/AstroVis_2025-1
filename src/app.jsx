@@ -10,6 +10,8 @@ import LeftPanel from './components/leftSidePanel.jsx';
 import RightPanel from './components/rightSidePanel.jsx';
 import ModalInfo from './components/modalInfo.jsx';
 
+import { IoVolumeMuteOutline, IoVolumeLowOutline } from "react-icons/io5";
+
 
 export const Context = createContext(null);
 
@@ -72,6 +74,9 @@ export default function Home() {
           <Seo />
           <main role="main" className="wrapper">
             <div className="content">
+              <div className="muteButton">
+                { ambientSound.current?.volume ? <IoVolumeLowOutline /> : <IoVolumeMuteOutline /> }
+              </div>
               <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
               <PageRouter />
               <RightPanel hemisphereSelected={hemisphere} setHemisphereSelected={setHemisphere} fovSelected={fov} setFovSelected={setFov} />
