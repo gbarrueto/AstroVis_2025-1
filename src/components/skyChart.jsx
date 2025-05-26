@@ -91,7 +91,7 @@ const handlePointClick = (event) => {
     ];
     if (includePolar) {
       if (hemisphere === "N") data.push(estrellaPolarTrace);
-      if (hemisphere === "S") data.push(cruzPolarTrace);
+      if (hemisphere === "S") data.push(...cruzPolarTrace);
     }
     return (
       <Plot

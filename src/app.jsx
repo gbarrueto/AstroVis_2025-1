@@ -52,7 +52,8 @@ export default function Home() {
     hoveredTableObject, setHoveredTableObject,
     objectsByHemisphereFov, setObjectsByHemisphereFov,
     displayModalInfo, setDisplayModalInfo,
-    ambientSound: ambientSound.current
+    ambientSound: ambientSound.current,
+    ambientShouldSound
   };
   
   
@@ -70,14 +71,14 @@ export default function Home() {
   
   
   function handleMuteAudio() {
-    console.log(`Playing audio ? ${ambientSound.current?.volume ? true : false}`)
+    console.log(`Playing audio ? ${ambientShouldSound}`)
     if (ambientShouldSound) {
       ambientSound.current.volume = 0;
       setAmbientShouldSound(false);
     }
     else {
       ambientSound.current.volume = 0.1;
-      setAmbientShouldSound(false);
+      setAmbientShouldSound(true);
     }
   }
   

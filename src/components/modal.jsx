@@ -13,7 +13,8 @@ const Modal = ({ isOpen, objectData, onClose }) => {
   const [sound, setSound] = useState(null);
   
   const {
-    ambientSound
+    ambientSound,
+    ambientShouldSound
   } = useContext(Context);
 
   useEffect(() => {
@@ -38,7 +39,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
       sound?.pause();
       setSound(null);
       setPlayingSound(false);
-      if (ambientSound) {
+      if (ambientShouldSound) {
         ambientSound.volume = 0.1;
       }
     }
@@ -54,7 +55,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
       newSound.loop = false;
       newSound.onended = () => {
         setPlayingSound(false); 
-        if (ambientSound) {
+        if (ambientShouldSound) {
           ambientSound.volume = 0.1;
         }
       };
@@ -88,7 +89,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
         sound
           .play()
           .then(() => {
-            ambientSound.volume = 0;
+            if (ambientShouldSound) ambientSound.volume = 0;
             setPlayingSound(true);
           })
           .catch((err) => {
@@ -98,7 +99,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
     } else {
       sound.pause();
       setPlayingSound(false);
-      ambientSound.volume = 0.1;
+      if (ambientShouldSound) ambientSound.volume = 0.1;
     }
   }
 

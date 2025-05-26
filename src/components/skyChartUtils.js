@@ -213,33 +213,169 @@ export const estrellaPolarTrace = {
   hoveron: false,
 };
 
-export const cruzPolarTrace = {
-  type: "scatterpolar",
-  mode: "markers+text",
-  r: [0],
-  theta: [0],
-  marker: {
-    color: "#ffffff",
-    size: 10,
+// export const cruzPolarTrace = {
+//   type: "scatterpolar",
+//   mode: "markers+text",
+//   r: [0],
+//   theta: [0],
+//   marker: {
+//     color: "#ffffff",
+//     size: 10,
+//     line: {
+//       color: "#ffd700",
+//       width: 2,
+//     },
+//     symbol: "star",
+//   },
+//   text: ["Cruz del Sur"],
+//   textposition: "bottom center",
+//   textfont: {
+//     size: 12,
+//     color: "#ffd700",
+//   },
+//   hoverinfo: "text",
+//   hoveron: false,
+//   selected: {
+//     marker: {
+//       opacity: 0.5,
+//     },
+//   },
+// };
+
+export const cruzPolarTrace = [
+  {
+    type: "scatterpolar",
+    mode: "markers+text",
+    r: [26.7557],
+    theta: [187.0083],
+    marker: {
+      color: "#ffffff",
+      size: 10,
+      line: {
+        color: "#ffd700",
+        width: 2,
+      },
+      symbol: "star",
+    },
+    text: ["Acrux"],
+    hoverinfo: "text",
+    hoveron: false,
+    selected: {
+      marker: {
+        opacity: 0.5,
+      },
+    },
+  },
+  {
+    type: "scatterpolar",
+    mode: "markers+text",
+    r: [32.74],
+    theta: [188.1458],
+    marker: {
+      color: "#ffffff",
+      size: 10,
+      line: {
+        color: "#ffd700",
+        width: 2,
+      },
+      symbol: "star",
+    },
+    text: ["Cruz del sur"],
+    textposition: "bottom center",
+    textfont: {
+      size: 12,
+      color: "#ffd700",
+    },
+    hoverinfo: "text",
+    hoveron: false,
+    selected: {
+      marker: {
+        opacity: 0.5,
+      },
+    },
+  },
+  {
+    type: "scatterpolar",
+    mode: "markers+text",
+    r: [30.1683],
+    theta: [192.0583],
+    marker: {
+      color: "#ffffff",
+      size: 10,
+      line: {
+        color: "#ffd700",
+        width: 2,
+      },
+      symbol: "star",
+    },
+    text: ["Mimosa"],
+    textposition: "bottom center",
+    textfont: {
+      size: 12,
+      color: "#ffd700",
+    },
+    hoverinfo: "text",
+    hoveron: false,
+    selected: {
+      marker: {
+        opacity: 0.5,
+      },
+    },
+  },
+  {
+    type: "scatterpolar",
+    mode: "markers+text",
+    r: [31.1053],
+    theta: [184.125],
+    marker: {
+      color: "#ffffff",
+      size: 10,
+      line: {
+        color: "#ffd700",
+        width: 2,
+      },
+      symbol: "star",
+    },
+    text: ["Imai"],
+    textposition: "bottom center",
+    textfont: {
+      size: 12,
+      color: "#ffd700",
+    },
+    hoverinfo: "text",
+    hoveron: false,
+    selected: {
+      marker: {
+        opacity: 0.5,
+      },
+    },
+  },
+    // Conexión Acrux ↔ Gacrux
+  {
+    type: "scatterpolar",
+    mode: "lines",
+    r: [26.7557, 32.74],
+    theta: [187.0083, 188.1458],
     line: {
       color: "#ffd700",
-      width: 2,
+      width: 1,
+      dash: "solid",
     },
-    symbol: "star",
+    hoverinfo: "none",
   },
-  text: ["Cruz del Sur"],
-  textposition: "bottom center",
-  textfont: {
-    size: 12,
-    color: "#ffd700",
-  },
-  hoverinfo: "text",
-  hoveron: false,
-  selected: {
-    marker: {
-      opacity: 0.5,
+  // Conexión Mimosa ↔ Imai
+  {
+    type: "scatterpolar",
+    mode: "lines",
+    r: [30.1683, 31.1053],
+    theta: [192.0583, 184.125],
+    line: {
+      color: "#ffd700",
+      width: 1,
+      dash: "solid",
     },
-  },
-};
+    hoverinfo: "none",
+  }
+];
 
-// Zzzzzzz
+
