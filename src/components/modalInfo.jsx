@@ -24,8 +24,8 @@ export default function ModalInfo({ displayModal, setDisplayModal }) {
   return (
     <div className={`modalInfoOverlay ${displayModal}`} style={hideStyle} onClick={hideModal}>
       <div className="modalInfoWrapper">
-        <h1>QUE PASAAAAAAAA QUE ANDAI SAPEANDO OEEEEEE SALE DE AQUI ANDA A VER LOS PUNTITOS ESOS. Que agresivo</h1>
-        <h6>*voz hormiga* Perdón.</h6>
+        <h1>TRABAJO EN PROCESO.</h1>
+        <h2>Aqui deberian ir los textos explicativos de cada área que tienden a confundir su significado</h2>
       </div>
     </div>
   )

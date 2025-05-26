@@ -60,7 +60,7 @@ export default function Home() {
   useEffect(() => {
     ambientSound.current = new Audio('https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/02%20Cornfield%20Chase.mp3?v=1748135392471')
     ambientSound.current.loop = true;
-    ambientSound.current.volume = 0.1;
+    ambientSound.current.volume = ambientShouldSound ? 0.1 : 0;
     ambientSound.current.play();
     
     return () => {

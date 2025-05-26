@@ -204,6 +204,7 @@ export const estrellaPolarTrace = {
     size: 12,
     color: "#ffd700",
   },
+  hovertext: ["Polaris"],
   hoverinfo: "text",
   selected: {
     marker: {

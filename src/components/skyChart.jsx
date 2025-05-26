@@ -83,7 +83,6 @@ const handlePointClick = (event) => {
   }
 };
 
-
   // Función para renderizar el gráfico dependiendo del hemisferio
   const renderChart = (listas, top, includePolar = true) => {
     const data = [
@@ -92,6 +91,7 @@ const handlePointClick = (event) => {
     if (includePolar) {
       if (hemisphere === "N") data.push(estrellaPolarTrace);
       if (hemisphere === "S") data.push(...cruzPolarTrace);
+      // if (hemisphere == "S") data.push(cruzPolarTrace);
     }
     return (
       <Plot
