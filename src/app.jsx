@@ -53,7 +53,7 @@ export default function Home() {
     objectsByHemisphereFov, setObjectsByHemisphereFov,
     displayModalInfo, setDisplayModalInfo,
     ambientSound: ambientSound.current,
-    ambientShouldSound
+    ambientShouldSound, setAmbientShouldSound
   };
   
   

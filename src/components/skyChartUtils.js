@@ -250,7 +250,7 @@ export const cruzPolarTrace = [
     theta: [187.0083],
     marker: {
       color: "#ffffff",
-      size: 10,
+      size: 7,
       line: {
         color: "#ffd700",
         width: 2,
@@ -273,7 +273,7 @@ export const cruzPolarTrace = [
     theta: [188.1458],
     marker: {
       color: "#ffffff",
-      size: 10,
+      size: 7,
       line: {
         color: "#ffd700",
         width: 2,
@@ -302,7 +302,7 @@ export const cruzPolarTrace = [
     theta: [192.0583],
     marker: {
       color: "#ffffff",
-      size: 10,
+      size: 7,
       line: {
         color: "#ffd700",
         width: 2,
@@ -330,7 +330,7 @@ export const cruzPolarTrace = [
     theta: [184.125],
     marker: {
       color: "#ffffff",
-      size: 10,
+      size: 7,
       line: {
         color: "#ffd700",
         width: 2,

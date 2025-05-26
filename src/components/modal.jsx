@@ -16,9 +16,6 @@ const Modal = ({ isOpen, objectData, onClose }) => {
     ambientSound,
     ambientShouldSound
   } = useContext(Context);
-  
-  
-  const [oldAmbientSoundValue] = useState(ambientSound);
 
   useEffect(() => {
     if (isOpen && objectData) {
