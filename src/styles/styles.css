@@ -64,8 +64,12 @@ div.wrapper {
   left: 1em;
   width: 1.5em;
   height: 1.5em;
-  background: white;
+  background: #a8e6ff;
   border-radius: 1em;
+}
+
+.muteButton:hover {
+  background: #c7a4ff;
 }
 
 .muteButton svg {

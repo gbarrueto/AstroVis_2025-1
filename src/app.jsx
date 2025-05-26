@@ -18,6 +18,7 @@ export const Context = createContext(null);
 
 export default function Home() {
   const ambientSound = useRef(null);
+  const [ambientShouldSound, setAmbientShouldSound] = useState(true);
   
   const [location, setLocation] = useLocation();
   const [match, params] = useRoute("/:hemisphere/:fov");
@@ -67,6 +68,19 @@ export default function Home() {
     };
   }, [])
   
+  
+  function handleMuteAudio() {
+    console.log(`Playing audio ? ${ambientSound.current?.volume ? true : false}`)
+    if (ambientShouldSound) {
+      ambientSound.current.volume = 0;
+      setAmbientShouldSound(false);
+    }
+    else {
+      ambientSound.current.volume = 0.1;
+      setAmbientShouldSound(false);
+    }
+  }
+  
 
   return (
     <Context.Provider value={context}>
@@ -74,8 +88,8 @@ export default function Home() {
           <Seo />
           <main role="main" className="wrapper">
             <div className="content">
-              <div className="muteButton">
-                { ambientSound.current?.volume ? <IoVolumeLowOutline /> : <IoVolumeMuteOutline /> }
+              <div className="muteButton" onClick={handleMuteAudio}>
+                { ambientShouldSound ? <IoVolumeLowOutline /> : <IoVolumeMuteOutline /> }
               </div>
               <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
               <PageRouter />
