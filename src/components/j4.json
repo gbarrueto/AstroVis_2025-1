@@ -34,8 +34,8 @@
       "sh2-276"
     ],
     "hemisphere": "S",
-    "repr_name": "Constelación de Orion",
-    "description": "La Constelación de Orión es una de las más reconocibles en el cielo nocturno, caracterizada por sus brillantes estrellas que forman una figura similar a un cazador. Orión es conocido por albergar maravillas como la Nebulosa de Orión, un vivero estelar donde nacen nuevas estrellas."
+    "repr_name": "Región de Orión",
+    "description": "Un encuadre de gran campo en esta región permite capturar algunas de las nebulosas más icónicas del cielo: la brillante Nebulosa de Orión (M42), la tenue pero fascinante Cabeza de Caballo (B33), la Nebulosa de la Llama (NGC 2024) y la brillante estrella Alnitak. Esta combinación de polvo, gas y estrellas jóvenes hace que sea una de las zonas más fotogénicas e interesantes para la astrofotografía."
   },
   {
     "id": 56,
@@ -147,7 +147,7 @@
     "fov": ">= 3.5 AND < 7 deg",
     "neighbours": ["ic 354"],
     "hemisphere": "N",
-    "repr_name": "Pléyades",
+    "repr_name": "Región de las Pléyades",
     "description": "Esta imagen de campo amplio captura el cúmulo abierto de las Pléyades (M45), en la constelación de Tauro. Lo más llamativo es el contraste entre las brillantes estrellas azules del cúmulo y las delicadas nebulosas de reflexión que las envuelven. Además, el amplio encuadre permite apreciar las nubes oscuras circundantes, como Barnard 353 y Barnard 354, que añaden textura y profundidad al fondo celeste, enriqueciendo la escena con detalles tenues que escapan en encuadres más cerrados. Ideal para quienes buscan capturar tanto brillo como estructura."
   },
   {
