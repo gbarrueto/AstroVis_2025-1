@@ -33,6 +33,16 @@ const Modal = ({ isOpen, objectData, onClose }) => {
   }, [isOpen, objectData]);
   
   useEffect(() => {
+    if (sound) {
+      console.log('Unmounting modal', sound)
+      sound?.pause();
+      setSound(null);
+      setPlayingSound(false);
+      if (ambientSound) {
+        ambientSound.volume = 0.1;
+      }
+    }
+    
     console.log(`https://gbarrueto.github.io/infovis-assets/snd/${objectData?.id}.wav`);
     console.log(`objectData: ${objectData}. id: ${objectData?.id}`)
     if (objectData) {
@@ -49,12 +59,6 @@ const Modal = ({ isOpen, objectData, onClose }) => {
         }
       };
       setSound(newSound);
-    }
-    
-    return () => {
-      console.log('Unmounting modal')
-      sound.pause();
-      setSound(null);
     }
   }, [objectData?.id]);
   
