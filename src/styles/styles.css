@@ -5,70 +5,92 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  width: 100vw;
+  /* Elimina scroll, pero permite que el contenido se escale en lugar de cortarse */
   overflow: hidden;
 }
 
 #root {
-  height: inherit;
+  height: 100%;
+  width: 100%;
 }
-
 .modebar {
   display: none !important;
-}
 
 main.wrapper {
   background: url(https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/StarsBk.jpg?v=1747819884331);
-  background-size: 100%;
-  height: inherit;
-}
-
-/* Contenedor principal del gráfico y modal */
-div.wrapper {
-  height: 100vh;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center; /* Centra el contenido */
   align-items: center;
-  padding: 0;
-  margin: 0;
-  /* background-color: black; */
-  position: relative; /* Asegura que el modal se posicione sobre el wrapper */
+  justify-content: center;
 }
 
-/* Contenedor de contenido para centrar el gráfico */
+/* Contenedor principal */
 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
+  height: 100%;
   max-width: 100vw;
-  flex-grow: 1;
+  max-height: 100vh;
   background-color: #000000b2;
-  height: inherit;
   position: relative;
+  box-sizing: border-box;
 }
 
-/* Contenedor del gráfico */
+/* Ajusta los paneles laterales */
+.leftPanel, .rightPanel {
+  flex: 1;
+  max-width: 20vw;
+  height: 90%;
+  overflow: hidden;
+}
+
+/* Gráfico escalable */
 .skyChart {
+  flex: 2;
+  max-width: 60vw;
+  max-height: 90vh;
   aspect-ratio: 1 / 1;
-  height: calc(100vh - 60px); /* Mantén la altura consistente */
-  /* background-color: #000000b2; */
   border-radius: 10px;
-  position: relative; /* Asegura que el gráfico se mantenga en su lugar */
+  position: relative;
+  box-sizing: border-box;
 }
 
+/* Modal responsive dentro de pantalla sin scroll */
+.modalInfo {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  max-width: 800px;
+  height: auto;
+  max-height: 80vh;
+  background-color: white;
+  border-radius: 10px;
+  overflow-y: auto;
+  z-index: 100;
+  box-sizing: border-box;
+}
 
+/* Mute button */
 .muteButton {
   position: absolute;
   top: 1em;
   left: 1em;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2.5em;
+  height: 2.5em;
   background: #a8e6ff;
-  border-radius: 1em;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 200;
 }
 
 .muteButton:hover {
@@ -76,6 +98,6 @@ div.wrapper {
 }
 
 .muteButton svg {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
 }
