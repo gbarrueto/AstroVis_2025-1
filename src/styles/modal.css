@@ -103,7 +103,9 @@
 
 /* Imagen */
 .modal-image-container {
-  height: 15em;
+  /* Puedes poner un max-height o min-height si quieres */
+  min-height: 15em;
+  max-height: 40vh; /* opcional, para limitar altura visible */
   width: 100%;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -112,6 +114,7 @@
   align-items: center;
   justify-content: center;
 }
+
 
 .modal-image {
   height: 100%;
@@ -149,3 +152,19 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.modal-panel::-webkit-scrollbar {
+  width: 6px; /* delgada */
+}
+
+.modal-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-panel::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4); /* blanco translúcido */
+  border-radius: 10px;
+}
+
+.modal-panel::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* blanco más opaco al pasar */
+}
