@@ -26,6 +26,7 @@ export default function ModalInfo({ displayModal, setDisplayModal }) {
       <div className="modalInfoWrapper">
         <h1>TRABAJO EN PROCESO.</h1>
         <h2>Aqui deberian ir los textos explicativos de cada área que tienden a confundir su significado</h2>
+        <h6><i>Deje de revisar esta información y vaya a apreciar los objetos mostrados.</i></h6>
       </div>
     </div>
   )
