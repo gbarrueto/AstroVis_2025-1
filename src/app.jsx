@@ -50,13 +50,14 @@ export default function Home() {
     selectedObject, setSelectedObject,
     hoveredTableObject, setHoveredTableObject,
     objectsByHemisphereFov, setObjectsByHemisphereFov,
-    displayModalInfo, setDisplayModalInfo
+    displayModalInfo, setDisplayModalInfo,
+    ambientSound
   };
   
   
   useEffect(() => {
     ambientSound.loop = true;
-    ambientSound.volume = 0.2;
+    ambientSound.volume = 0.1;
     ambientSound.play();
   }, [])
   

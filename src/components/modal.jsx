@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { IoPlay, IoPause } from "react-icons/io5";
 import "../styles/modal.css";
+import { Context } from '../app.jsx';
 
 const Modal = ({ isOpen, objectData, onClose }) => {
   const [shouldRender, setShouldRender] = useState(false);
@@ -9,12 +10,11 @@ const Modal = ({ isOpen, objectData, onClose }) => {
   const [rotateImage, setRotateImage] = useState(false);
   const [loadingImage, setLoadingImage] = useState(true);
 
-  const [sound] = useState(
-    new Audio(
-      `https://gbarrueto.github.io/infovis-assets/snd/${objectData?.id}.wav`
-    )
-  );
-  sound.loop = false;
+  const [sound, setSound] = useState(null);
+  
+  const {
+    ambientSound
+  } = useContext(Context);
 
   useEffect(() => {
     console.log(`https://gbarrueto.github.io/infovis-assets/snd/${objectData?.id}.wav`);
@@ -34,11 +34,24 @@ const Modal = ({ isOpen, objectData, onClose }) => {
   }, [isOpen, objectData]);
   
   useEffect(() => {
+    if (objectData?.id) {
+      const newSound = new Audio(
+        `https://gbarrueto.github.io/infovis-assets/snd/${objectData.id}.wav`
+      );
+      newSound.loop = false;
+      newSound.onended = () => setPlayingSound(false);
+      setSound(newSound);
+    }
+  }, [objectData?.id]);
+  
+  /* 
+  useEffect(() => {
     if (sound.ended) {
       setPlayingSound(false);
       sound.currentTime = 0;
     }
   }, [sound?.ended])
+  */
 
   if (!shouldRender || !objectData) return null;
 
@@ -51,16 +64,23 @@ const Modal = ({ isOpen, objectData, onClose }) => {
   };
 
   function handleSoundButtonClick() {
+    console.log(`PlayingSound? ${playingSound}. sound? ${sound}`)
     if (!playingSound) {
       if (sound) {
-        sound.play();
-        setPlayingSound(true);
+        sound
+          .play()
+          .then(() => {
+            ambientSound.volume = 0;
+            setPlayingSound(true);
+          })
+          .catch((err) => {
+            console.error("Error playing sound:", err);
+          });
       }
     } else {
-      if (sound) {
-        sound.pause();
-        setPlayingSound(false);
-      }
+      sound.pause();
+      setPlayingSound(false);
+      ambientSound.volume = 0.1;
     }
   }
 
