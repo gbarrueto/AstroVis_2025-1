@@ -11,12 +11,13 @@ const Modal = ({ isOpen, objectData, onClose }) => {
 
   const [sound] = useState(
     new Audio(
-      "https://cdn.glitch.global/0c0b1603-f7b0-4ebf-bfd7-4c26ddf6d810/y2mate_5gbydy1.mp3?v=1747860004222"
+      `https://gbarrueto.github.io/infovis-assets/snd/${objectData?.id}.wav`
     )
   );
-  sound.loop = true;
+  sound.loop = false;
 
   useEffect(() => {
+    console.log(`https://gbarrueto.github.io/infovis-assets/snd/${objectData?.id}.wav`);
     if (isOpen && objectData) {
       setShouldRender(true);
       setClosing(false);
@@ -31,6 +32,13 @@ const Modal = ({ isOpen, objectData, onClose }) => {
       return () => clearTimeout(timeout);
     }
   }, [isOpen, objectData]);
+  
+  useEffect(() => {
+    if (sound.ended) {
+      setPlayingSound(false);
+      sound.currentTime = 0;
+    }
+  }, [sound?.ended])
 
   if (!shouldRender || !objectData) return null;
 
@@ -44,11 +52,15 @@ const Modal = ({ isOpen, objectData, onClose }) => {
 
   function handleSoundButtonClick() {
     if (!playingSound) {
-      sound.play();
-      setPlayingSound(true);
+      if (sound) {
+        sound.play();
+        setPlayingSound(true);
+      }
     } else {
-      sound.pause();
-      setPlayingSound(false);
+      if (sound) {
+        sound.pause();
+        setPlayingSound(false);
+      }
     }
   }
 
