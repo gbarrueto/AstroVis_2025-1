@@ -75,7 +75,7 @@
     ],
     "hemisphere": "N",
     "repr_name": "Nebulosas Norteamerica y Pelícano",
-    "description": "La Constelación del Cisne, también conocida como NGC 7039, es un cúmulo estelar abierto en el cielo que brilla con una colección de estrellas jóvenes y calientes. Este cúmulo se encuentra en la Vía Láctea y es un excelente ejemplo de cómo las estrellas pueden agruparse en regiones activas de formación estelar."
+    "description": "Este campo amplio revela la impresionante escala de las nebulosas Norteamérica (NGC 7000) y Pelícano (IC 5070), cuya silueta distintiva solo puede apreciarse completamente a gran escala. Sus formas nebulosas y brillantes regiones de hidrógeno se extienden por varios grados del cielo, ofreciendo un espectáculo de textura y contraste enmarcado en la constelación del Cisne."
   },
   {
     "id": 73,
@@ -133,7 +133,7 @@
       "ngc 1907"
     ],
     "hemisphere": "N",
-    "repr_name": "Cumulo del molinillo",
+    "repr_name": "Región en Auriga",
     "description": "El Cúmulo del Molinillo, también conocido como M36, es un cúmulo abierto en la constelación de Auriga, ubicado a unos 4,100 años luz de la Tierra. Este cúmulo está compuesto por varias decenas de estrellas jóvenes y brillantes, ofreciendo una visión fascinante para los observadores del cielo con telescopios pequeños."
   },
   {
@@ -204,8 +204,8 @@
     "fov": ">= 3.5 AND < 7 deg",
     "neighbours": [],
     "hemisphere": "N",
-    "repr_name": "Cumulo hebilla de zapato",
-    "description": "El Cúmulo Hebilla de Zapato, también conocido como M35, es un cúmulo abierto de estrellas ubicado en la constelación de Géminis, a unos 2,800 años luz de distancia de la Tierra. Este brillante conjunto estelar, visible a simple vista bajo cielos oscuros, se compone de cientos de estrellas jóvenes que ofrecen un espectáculo deslumbrante a través de telescopios modestos."
+    "repr_name": "Región de la Nebulosa de la Medusa",
+    "description": "Este campo amplio abarca una zona rica y diversa del cielo invernal, donde destaca la Nebulosa de la Medusa (IC 443), un remanente de supernova con formas ondulantes. A su alrededor se encuentran también la Nebulosa Cabeza de Mono (NGC 2174) y el cúmulo abierto M35, todos repartidos en la frontera entre Orión, Géminis y Tauro. Una región ideal para capturar variedad de formas y colores en una sola imagen."
   },
   {
     "id": 104,
