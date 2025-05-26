@@ -17,7 +17,6 @@ const Modal = ({ isOpen, objectData, onClose }) => {
   } = useContext(Context);
 
   useEffect(() => {
-    console.log(`https://gbarrueto.github.io/infovis-assets/snd/${objectData?.id}.wav`);
     if (isOpen && objectData) {
       setShouldRender(true);
       setClosing(false);
@@ -34,10 +33,14 @@ const Modal = ({ isOpen, objectData, onClose }) => {
   }, [isOpen, objectData]);
   
   useEffect(() => {
-    if (objectData?.id) {
+    console.log(`https://gbarrueto.github.io/infovis-assets/snd/${objectData?.id}.wav`);
+    console.log(`objectData: ${objectData}. id: ${objectData?.id}`)
+    if (objectData) {
+      console.log('New sound')
       const newSound = new Audio(
         `https://gbarrueto.github.io/infovis-assets/snd/${objectData.id}.wav`
       );
+      console.log(newSound)
       newSound.loop = false;
       newSound.onended = () => {
         setPlayingSound(false); 
@@ -46,6 +49,12 @@ const Modal = ({ isOpen, objectData, onClose }) => {
         }
       };
       setSound(newSound);
+    }
+    
+    return () => {
+      console.log('Unmounting modal')
+      sound.pause();
+      setSound(null);
     }
   }, [objectData?.id]);
   
