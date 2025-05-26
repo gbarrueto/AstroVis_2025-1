@@ -22,8 +22,12 @@
 
 .modalInfoWrapper {
   background-color: #c7a4ff;
-  width: 50%;
-  height: 80%;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  max-height: 80vh;
   border-radius: 1em;
-  overflow-y: scroll;
+  overflow: hidden; /* esto impide doble scroll */
+  display: flex;
+  flex-direction: column;
 }
