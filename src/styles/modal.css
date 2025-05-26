@@ -63,28 +63,25 @@
 }
 
 .close-button {
-  /* 
-  margin-bottom: 5px;
-  line-height: 1; 
-  */
-  background-color: rgba(255, 50, 50, 0.15);
+  background-color: rgba(0, 0, 0, 0.85); /* negro opaco */
   border: none;
   border-radius: 8px;
   font-size: 1.2em;
   font-weight: bold;
-  color: rgba(255, 50, 50, 0.9);
+  color: #ffffff; /* blanco */
   cursor: pointer;
   padding: 4px 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
   position: absolute;
-  top: 0.5em;
-  right: 0.3em;
+  top: 1em;
+  right: 1em;
 }
 
 .close-button:hover {
-  background-color: rgba(255, 0, 0, 0.25); /* rojo más vivo al pasar el mouse */
-  color: rgba(255, 0, 0, 1); /* texto completamente rojo */
+  background-color: rgba(50, 50, 50, 0.9); /* gris oscuro un poco más claro */
+  color: #ffffff;
 }
+
 
 
 
@@ -105,10 +102,8 @@
 .modal-image-container {
   /* Puedes poner un max-height o min-height si quieres */
   min-height: 15em;
-  max-height: 40vh; /* opcional, para limitar altura visible */
+  max-height: 20vh; /* opcional, para limitar altura visible */
   width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   display: flex;
   align-items: center;
