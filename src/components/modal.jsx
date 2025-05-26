@@ -39,7 +39,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
         `https://gbarrueto.github.io/infovis-assets/snd/${objectData.id}.wav`
       );
       newSound.loop = false;
-      newSound.onended = () => setPlayingSound(false);
+      newSound.onended = () => {setPlayingSound(false); ambientSound.volume = 0.1};
       setSound(newSound);
     }
   }, [objectData?.id]);
