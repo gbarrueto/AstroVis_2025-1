@@ -44,6 +44,29 @@ const hoveredObjectColor = 'yellow';
 //  return signFactor * (Math.abs(d) + m / 60 + s / 3600);
 //};
 
+// Genera un shape (box de enfoque) alrededor del objeto hovered
+export const getFocusBoxShape = (hoveredObject) => {
+  if (!hoveredObject) return null;
+
+  const radius = 5; // Ajustá este valor para cambiar el tamaño del box
+
+  return {
+    type: "circle",
+    xref: "x",
+    yref: "y",
+    x0: hoveredObject.theta - radius,
+    x1: hoveredObject.theta + radius,
+    y0: hoveredObject.r - radius,
+    y1: hoveredObject.r + radius,
+    line: {
+      color: "yellow",
+      width: 2,
+      dash: "dot"
+    },
+  };
+};
+
+
 export const cargar = async () => {
   const listasNorte = {};
   const listasSur = {};

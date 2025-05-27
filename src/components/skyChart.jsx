@@ -11,6 +11,7 @@ import {
   cruzPolarTrace,
 } from "./skyChartUtils";
 import { Context } from "../app.jsx";
+import { getFocusBoxShape } from "./skyChartUtils"
 
 const fovListEntries = {
   "07": "< 0.7 deg",

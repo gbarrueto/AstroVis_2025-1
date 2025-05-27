@@ -9,7 +9,6 @@ const fovLabels = {
   ">= 3.5 AND < 7 deg": "3.5° - 7°",
 };
 
-
 const fovColors = {
   "< 0.7 deg": "#1f78b4", // azul fuerte
   ">= 0.7 AND < 1.5 deg": "#33a02c", // verde accesible
@@ -22,14 +21,14 @@ const tableTitleByFov = {
   "15": "0.7° - 1.5°",
   "35": "1.5° - 3.5°",
   "70": "3.5° - 7°"
-}
+};
 
 const fovListEntries = {
   "07": "< 0.7 deg",
   "15": ">= 0.7 AND < 1.5 deg",
   "35": ">= 1.5 AND < 3.5 deg",
   "70": ">= 3.5 AND < 7 deg"
-}
+};
 
 const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) => {
   const {
@@ -40,38 +39,42 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
     setHoveredTableObject,
     setIsModalOpen
   } = useContext(Context);
-  
+
   const rowRefs = useRef({});
-  
+
   function handleTableClick(object) {
     setSelectedObject(object);
     setIsModalOpen(true);
   }
-  
+
   function handleMouseEnter(object) {
     setHoveredTableObject(object);
   }
-  
+
   function handleMouseLeave() {
     setHoveredTableObject(null);
   }
-  
+
+  // Scroll automático al objeto seleccionado
   useEffect(() => {
-  if (selectedObject && rowRefs.current[selectedObject.id]) {
-    rowRefs.current[selectedObject.id].scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
-  }
-}, [selectedObject]);
-  
-  
+    if (selectedObject && rowRefs.current[selectedObject.id]) {
+      rowRefs.current[selectedObject.id].scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [selectedObject]);
+
+  const currentList = hemisphereSelected === 'N'
+    ? listasPorFovNorth[fovListEntries[fovSelected]]
+    : listasPorFovSouth[fovListEntries[fovSelected]];
+
   return (
     <div className="tableWrapper">
       <section id="topTitleContainer">
         <h3 style={{ color: "#c7a4ff" }}>Campo visual {tableTitleByFov[fovSelected]}</h3>
       </section>
-      
+
       <section id="fovTopContainer">
         <table className="objectsTable">
           <thead>
@@ -79,61 +82,27 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
               <th>Objeto</th>
               <th>Frecuencia</th>
             </tr>
-          </thead> 
+          </thead>
           <tbody>
-            {hemisphereSelected === 'N' ? (listasPorFovNorth[fovListEntries[fovSelected]] ? listasPorFovNorth[fovListEntries[fovSelected]].map((obj, i) => (
-              <tr key={i} 
-                onClick={() => handleTableClick(obj)} 
+            {currentList ? currentList.map((obj, i) => (
+              <tr
+                key={i}
+                ref={(el) => rowRefs.current[obj.id] = el}
+                onClick={() => handleTableClick(obj)}
                 onMouseEnter={() => handleMouseEnter(obj)}
                 onMouseLeave={handleMouseLeave}
-                style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
+                style={(selectedObject && selectedObject.id === obj.id)
+                  ? { backgroundColor: 'aqua' }
+                  : {}}
+              >
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
                 <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
                   {obj.frecuencia.toFixed(2)}%
                 </td>
               </tr>
-            )) : <></>) : (listasPorFovSouth[fovListEntries[fovSelected]] ? listasPorFovSouth[fovListEntries[fovSelected]].map((obj, i) => (
-              <tr key={i} 
-                onClick={() => handleTableClick(obj)} 
-                onMouseEnter={() => handleMouseEnter(obj)}
-                onMouseLeave={handleMouseLeave}
-                style={(selectedObject && selectedObject.id === obj.id) ? { backgroundColor: 'aqua' } : {}}>
-                <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>{obj.object}</td>
-                <td style={{ color: fovColors[fovListEntries[fovSelected]] }}>
-                  {obj.frecuencia.toFixed(2)}%
-                </td>
-              </tr>
-            )) : <></>)}
+            )) : null}
           </tbody>
         </table>
-          {/* 
-          Object.entries(objectsByHemisphereFov).map(([fovLabel, objects], index) => (
-            <section key={fovLabel} id={`deg${index}`} className="tableContainer"> 
-              <table className="objectsTable">
-                { 
-                  index === 0 ? (
-                    <thead>
-                      <tr>
-                        <th>Objeto</th>
-                        <th>Frecuencia</th>
-                      </tr>
-                    </thead> 
-                  ) : null
-                }
-                <tbody>
-                  {objects.map((obj, i) => (
-                    <tr key={i}>
-                      <td style={{ color: fovColors[fovLabel] }}>{obj.object}</td>
-                      <td style={{ color: fovColors[fovLabel] }}>
-                        {obj.frecuencia.toFixed(2)}%
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </section>
-          ))
-          */}
       </section>
     </div>
   );
