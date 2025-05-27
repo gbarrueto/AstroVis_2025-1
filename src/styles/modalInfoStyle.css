@@ -23,20 +23,38 @@
 
 .modalInfoWrapper {
   background-color: #c7a4ff;
-  width: 50%;
+  width: 40%;
   height: 80%;
   border-radius: 1em;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   position: relative;
   text-align: center;
+  padding: 1em 2em;
 }
 
 .closeButton {
-  position: sticky;
+  position: absolute;
   top: 1em;
   right: 1em;
+  
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  align-self: end;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.closeButton:hover {
+  background-color: rgba(50, 50, 50, 0.9);
+  color: #ffffff;
 }
 
 .modalInfoContent {
-  
+  overflow-y: scroll;
+  height: 100%;
 }
