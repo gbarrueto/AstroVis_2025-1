@@ -9,9 +9,9 @@ import {
   layout,
   estrellaPolarTrace,
   cruzPolarTrace,
+  getFocusBoxShape,
 } from "./skyChartUtils";
 import { Context } from "../app.jsx";
-import { getFocusBoxShape } from "./skyChartUtils"
 
 const fovListEntries = {
   "07": "< 0.7 deg",
@@ -21,7 +21,6 @@ const fovListEntries = {
 };
 
 const SkyChart = ({ hemisphere, fov }) => {
-  // Acceder al contexto de los estados globales y del Modal
   const {
     loading,
     setLoading,
@@ -34,15 +33,14 @@ const SkyChart = ({ hemisphere, fov }) => {
     listasPorFovSouth,
     setListasPorFovSouth,
     isModalOpen,
-    setIsModalOpen, // Estado del modal
+    setIsModalOpen,
     selectedObject,
-    setSelectedObject, // Objeto seleccionado
+    setSelectedObject,
     objectsByHemisphereFov,
     setObjectsByHemisphereFov,
-    hoveredTableObject
+    hoveredTableObject,
   } = useContext(Context);
 
-  // Efecto para cargar los datos al montar el componente
   useEffect(() => {
     const graficar = async () => {
       try {
@@ -67,38 +65,44 @@ const SkyChart = ({ hemisphere, fov }) => {
     setListasPorFovSouth,
   ]);
 
-const handlePointClick = (event) => {
-  // Verificar que haya puntos en el evento
-  if (!event.points || event.points.length === 0) return;
+  const handlePointClick = (event) => {
+    if (!event.points || event.points.length === 0) return;
 
-  const point = event.points[0];
+    const point = event.points[0];
+    if (point.curveNumber > 0) return;
 
-  if (point.curveNumber > 0) return;
+    const pointData = point.customdata;
 
-  // Obtener el objeto completo desde customdata
-  const pointData = point.customdata;
+    if (pointData) {
+      setSelectedObject(pointData);
+      setIsModalOpen(true);
+    }
+  };
 
-  if (pointData) {
-    setSelectedObject(pointData); // Actualizar objeto seleccionado
-    setIsModalOpen(true); // Abrir modal
-  }
-};
-
-  // Función para renderizar el gráfico dependiendo del hemisferio
   const renderChart = (listas, top, includePolar = true) => {
+    const flatList = Object.values(listas).flat();
+    const flatTop = Object.values(top).flat();
+
     const data = [
-      procesar(selectedObject, hoveredTableObject, Object.values(listas).flat(), Object.values(top).flat()),
+      procesar(selectedObject, hoveredTableObject, flatList, flatTop),
     ];
+
     if (includePolar) {
       if (hemisphere === "N") data.push(estrellaPolarTrace);
       if (hemisphere === "S") data.push(...cruzPolarTrace);
-      // if (hemisphere == "S") data.push(cruzPolarTrace);
     }
+
+    const focusShape = getFocusBoxShape(hoveredTableObject);
+    const layoutWithFocus = {
+      ...layout,
+      shapes: focusShape ? [focusShape] : [],
+    };
+
     return (
       <Plot
         data={data}
-        layout={layout}
-        onClick={(e) => handlePointClick(e, listas)} // Control de clic en los puntos
+        layout={layoutWithFocus}
+        onClick={(e) => handlePointClick(e, listas)}
         useResizeHandler={true}
         style={{ width: "100%", height: "100%" }}
       />
@@ -111,16 +115,11 @@ const handlePointClick = (event) => {
         {loading || !fov ? (
           <p>Loading...</p>
         ) : hemisphere === "N" ? (
-          renderChart(
-            listasPorFovNorth[fovListEntries[fov]],
-            topPorFovNorth,
-            true
-          ) // Gráfico del hemisferio norte
+          renderChart(listasPorFovNorth[fovListEntries[fov]], topPorFovNorth)
         ) : (
-          renderChart(listasPorFovSouth[fovListEntries[fov]], topPorFovSouth) // Gráfico del hemisferio sur
+          renderChart(listasPorFovSouth[fovListEntries[fov]], topPorFovSouth)
         )}
       </div>
-      {/* Modal que se controla desde DataContext */}
     </div>
   );
 };

@@ -44,27 +44,55 @@ const hoveredObjectColor = 'yellow';
 //  return signFactor * (Math.abs(d) + m / 60 + s / 3600);
 //};
 
+// Convierte coordenadas polares a cartesianas normalizadas (0-1 en paper coords)
+function polarToCartesian(r, thetaDeg) {
+  const thetaRad = (thetaDeg * Math.PI) / 180;
+  const x = 0.5 + (r / 100) * Math.cos(thetaRad);
+  const y = 0.5 + (r / 100) * Math.sin(thetaRad);
+  return [x, y];
+}
+
+// Crea un arco "visual" en coordenadas de paper (como una elipse)
+function createPolarArcPath(r0, r1, theta0, theta1) {
+  const [x0, y0] = polarToCartesian(r0, theta0);
+  const [x1, y1] = polarToCartesian(r1, theta0);
+  const [x2, y2] = polarToCartesian(r1, theta1);
+  const [x3, y3] = polarToCartesian(r0, theta1);
+
+  return `
+    M ${x0},${y0}
+    L ${x1},${y1}
+    L ${x2},${y2}
+    L ${x3},${y3}
+    Z
+  `;
+}
+
+
 // Genera un shape (box de enfoque) alrededor del objeto hovered
 export const getFocusBoxShape = (hoveredObject) => {
   if (!hoveredObject) return null;
 
-  const radius = 5; // Ajustá este valor para cambiar el tamaño del box
+  const radius = hoveredObject.r;
+  const angle = hoveredObject.theta;
+
+  const rMargin = 3;     // tamaño del círculo (ajustable)
+  const thetaMargin = 2; // ángulo de abertura (en grados)
 
   return {
-    type: "circle",
-    xref: "x",
-    yref: "y",
-    x0: hoveredObject.theta - radius,
-    x1: hoveredObject.theta + radius,
-    y0: hoveredObject.r - radius,
-    y1: hoveredObject.r + radius,
+    type: "path",
+    path: createPolarArcPath(radius - rMargin, radius + rMargin, angle - thetaMargin, angle + thetaMargin),
+    xref: "paper",
+    yref: "paper",
     line: {
       color: "yellow",
       width: 2,
-      dash: "dot"
+      dash: "dot",
     },
+    layer: "above"
   };
 };
+
 
 
 export const cargar = async () => {
