@@ -47,21 +47,24 @@
   animation: slideFadeOut 0.3s ease-out forwards;
 }
 
-/* Header con botón de cerrar */
-.modal-header {
-  /* 
-  padding-bottom: 4px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+
+.modal-header-container {
+  position: relative; /* para que el botón absolute se posicione aquí */
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* título a la izquierda, botón a la derecha */
   align-items: center;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1em;
 }
 
-.modal-header h3 {
-  /* margin: 0;
+.modal-header-container h3 {
+  margin: 0;
   font-size: 1.3em;
-  font-weight: 600; */
+  font-weight: 600;
+  color: inherit;
 }
+
 
 .close-button {
   background-color: rgba(0, 0, 0, 0.85); /* negro opaco */
@@ -71,7 +74,7 @@
   padding: 8px 16px;
   border-radius: 20px;
   cursor: pointer;
-  align-self: right;
+  align-self: end;
   font-size: 0.9em;
   font-weight: 500;
   top: 1em;

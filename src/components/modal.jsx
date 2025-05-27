@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { IoPlay, IoPause } from "react-icons/io5";
 import "../styles/modal.css";
-import { Context } from '../app.jsx';
+import { Context } from "../app.jsx";
 
 const Modal = ({ isOpen, objectData, onClose }) => {
   const [shouldRender, setShouldRender] = useState(false);
@@ -11,11 +11,8 @@ const Modal = ({ isOpen, objectData, onClose }) => {
   const [loadingImage, setLoadingImage] = useState(true);
 
   const [sound, setSound] = useState(null);
-  
-  const {
-    ambientSound,
-    ambientShouldSound
-  } = useContext(Context);
+
+  const { ambientSound, ambientShouldSound } = useContext(Context);
 
   useEffect(() => {
     if (isOpen && objectData) {
@@ -32,10 +29,10 @@ const Modal = ({ isOpen, objectData, onClose }) => {
       return () => clearTimeout(timeout);
     }
   }, [isOpen, objectData]);
-  
+
   useEffect(() => {
     if (sound) {
-      console.log('Unmounting modal', sound)
+      console.log("Unmounting modal", sound);
       sound?.pause();
       setSound(null);
       setPlayingSound(false);
@@ -43,18 +40,20 @@ const Modal = ({ isOpen, objectData, onClose }) => {
         ambientSound.volume = ambientShouldSound ? 0.1 : 0;
       }
     }
-    
-    console.log(`https://gbarrueto.github.io/infovis-assets/snd/${objectData?.id}.wav`);
-    console.log(`objectData: ${objectData}. id: ${objectData?.id}`)
+
+    console.log(
+      `https://gbarrueto.github.io/infovis-assets/snd/${objectData?.id}.wav`
+    );
+    console.log(`objectData: ${objectData}. id: ${objectData?.id}`);
     if (objectData) {
-      console.log('New sound')
+      console.log("New sound");
       const newSound = new Audio(
         `https://gbarrueto.github.io/infovis-assets/snd/${objectData.id}.wav`
       );
-      console.log(newSound)
+      console.log(newSound);
       newSound.loop = false;
       newSound.onended = () => {
-        setPlayingSound(false); 
+        setPlayingSound(false);
         if (ambientSound) {
           ambientSound.volume = ambientShouldSound ? 0.1 : 0;
         }
@@ -62,7 +61,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
       setSound(newSound);
     }
   }, [objectData?.id]);
-  
+
   /* 
   useEffect(() => {
     if (sound.ended) {
@@ -83,7 +82,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
   };
 
   function handleSoundButtonClick() {
-    console.log(`PlayingSound? ${playingSound}. sound? ${sound}`)
+    console.log(`PlayingSound? ${playingSound}. sound? ${sound}`);
     if (!playingSound) {
       if (sound) {
         sound
@@ -96,8 +95,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
             console.error("Error playing sound:", err);
           });
       }
-    } 
-    else {
+    } else {
       sound.pause();
       setPlayingSound(false);
       if (ambientSound) {
@@ -117,11 +115,11 @@ const Modal = ({ isOpen, objectData, onClose }) => {
         <p className="loading-text">Cargando..</p>
       ) : (
         <>
-          <button className="close-button" onClick={onClose}>
+          <div className="modal-header-container">
+            <h3>{objectData.object}</h3>
+            <button className="close-button" onClick={onClose}>
               ×
             </button>
-          <div className="modal-header">
-            <h3>{objectData.object}</h3>
           </div>
 
           <div className="modal-image-container">
