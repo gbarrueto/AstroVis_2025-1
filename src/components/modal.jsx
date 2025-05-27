@@ -20,6 +20,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
       setShouldRender(true);
       setClosing(false);
       setLoadingImage(true);
+      setProgress(0);
     } else if (shouldRender) {
       setClosing(true);
       const timeout = setTimeout(() => {
@@ -158,6 +159,13 @@ const Modal = ({ isOpen, objectData, onClose }) => {
               alt={objectData.object}
               className={`modal-image ${rotateImage ? "rotate-image" : ""}`}
             />
+            {/* Línea vertical de progreso */}
+            <div
+              className="vertical-progress-line"
+              style={{
+                left: `${progress}%`,
+              }}
+            ></div>
           </div>
 
           <p className="modal-description">
@@ -181,12 +189,6 @@ const Modal = ({ isOpen, objectData, onClose }) => {
           setRotateImage(img.naturalHeight > img.naturalWidth);
         }}
       />
-      <div className="progress-bar-container">
-        <div
-          className="progress-bar-fill"
-          style={{ width: `${progress}%` }}
-        ></div>
-      </div>
     </div>
   );
 };

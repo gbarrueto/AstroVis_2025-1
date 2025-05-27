@@ -105,6 +105,7 @@
 /* Imagen */
 .modal-image-container {
   /* Puedes poner un max-height o min-height si quieres */
+  position: relative;
   min-height: 15em;
   max-height: 20vh; /* opcional, para limitar altura visible */
   width: 100%;
@@ -130,6 +131,18 @@
   width: 15em;
   height: 24em;
 }
+
+.vertical-progress-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.9); /* puedes cambiarlo si es muy claro */
+  pointer-events: none; /* permite hacer clic a través de la línea */
+  transition: left 0.1s linear;
+  z-index: 2; /* asegura que esté sobre la imagen */
+}
+
 
 .modal-panel button:not(.close-button) {
   background-color: rgba(255, 255, 255, 0.15);
@@ -162,7 +175,7 @@
 
 .progress-bar-fill {
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   width: 0%;
   transition: width 0.1s linear;
 }
