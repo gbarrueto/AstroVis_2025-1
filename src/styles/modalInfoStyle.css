@@ -1,16 +1,15 @@
 .modalInfoOverlay {
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: #000000a6;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2em;
-  box-sizing: border-box;
-  overflow-y: auto;
-  z-index: 999999;
-  transition: opacity 0.5s ease-in-out;
-}
+  transition: opacity .5s ease-in-out;
+}z
+
 .showModalInfo {
   opacity: 1;
   z-index: 999999;
