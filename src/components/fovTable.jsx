@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import "../styles/fovTable.css";
 import { Context } from "../app.jsx";
 
@@ -41,6 +41,8 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
     setIsModalOpen
   } = useContext(Context);
   
+  const rowRefs = useRef({});
+  
   function handleTableClick(object) {
     setSelectedObject(object);
     setIsModalOpen(true);
@@ -53,6 +55,15 @@ const FovTable = ({ objectsByHemisphereFov, fovSelected, hemisphereSelected }) =
   function handleMouseLeave() {
     setHoveredTableObject(null);
   }
+  
+  useEffect(() => {
+  if (selectedObject && rowRefs.current[selectedObject.id]) {
+    rowRefs.current[selectedObject.id].scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  }
+}, [selectedObject]);
   
   
   return (
