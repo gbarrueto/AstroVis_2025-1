@@ -20,10 +20,18 @@
   /* z-index: -1; */
 }
 
+
 .modalInfoWrapper {
   background-color: #c7a4ff;
   width: 50%;
   height: 80%;
   border-radius: 1em;
   overflow-y: scroll;
+  position: relative;
+}
+
+.closeButton {
+  position: sticky;
+  top: 1em;
+  right: 1em;
 }
