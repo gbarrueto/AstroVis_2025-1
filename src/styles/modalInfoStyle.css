@@ -21,9 +21,9 @@
 }
 
 .modalInfoWrapper {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  background-color: #c7a4ff;
+  width: 50%;
+  height: 80%;
+  border-radius: 1em;
+  overflow-y: scroll;
 }

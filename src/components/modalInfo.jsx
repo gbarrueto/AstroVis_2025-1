@@ -23,10 +23,16 @@ export default function ModalInfo({ displayModal, setDisplayModal }) {
   
   return (
     <div className={`modalInfoOverlay ${displayModal}`} style={hideStyle} onClick={hideModal}>
-      <div className="modalInfoWrapper">
-        <h1>TRABAJO EN PROCESO.</h1>
-        <h2>Aqui deberian ir los textos explicativos de cada área que tienden a confundir su significado</h2>
-        <h6><i>Deje de revisar esta información y vaya a apreciar los objetos mostrados.</i></h6>
+      <div className="modalInfoWrapper" onClick={e => e.stopPropagation()}>
+        <h1>¿Qué es esto?</h1>
+        <p>
+          Esta visualización muestra cuáles son los objetos o regiones del cielo nocturno más fotografiados por astrofotógrafos de todo el mundo.
+
+          Cada punto en el gráfico representa uno de estos objetos. Su posición corresponde a sus coordenadas reales en el cielo, y su tamaño indica qué tan frecuentemente aparece en fotografías.
+
+          Dado que las imágenes provienen de muchas fuentes distintas, los datos están organizados mediante dos filtros clave: el hemisferio y el campo visual. A continuación te daremos la información necesaria para entender esto:
+
+        </p>
       </div>
     </div>
   )
