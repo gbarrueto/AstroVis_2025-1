@@ -9,6 +9,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
   const [playingSound, setPlayingSound] = useState(false);
   const [rotateImage, setRotateImage] = useState(false);
   const [loadingImage, setLoadingImage] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   const [sound, setSound] = useState(null);
 
@@ -61,6 +62,35 @@ const Modal = ({ isOpen, objectData, onClose }) => {
       setSound(newSound);
     }
   }, [objectData?.id]);
+
+  useEffect(() => {
+    let interval;
+
+    if (playingSound && sound) {
+      interval = setInterval(() => {
+        const current = sound.currentTime;
+        const duration = sound.duration || 1; // evita división por cero
+        const percent = (current / duration) * 100;
+        setProgress(percent);
+      }, 100);
+    }
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [playingSound, sound]);
+
+  useEffect(() => {
+    if (sound) {
+      sound.onended = () => {
+        setPlayingSound(false);
+        setProgress(0); // <-- resetea
+        if (ambientSound) {
+          ambientSound.volume = ambientShouldSound ? 0.1 : 0;
+        }
+      };
+    }
+  }, [sound]);
 
   /* 
   useEffect(() => {
@@ -151,6 +181,12 @@ const Modal = ({ isOpen, objectData, onClose }) => {
           setRotateImage(img.naturalHeight > img.naturalWidth);
         }}
       />
+      <div className="progress-bar-container">
+        <div
+          className="progress-bar-fill"
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
     </div>
   );
 };
