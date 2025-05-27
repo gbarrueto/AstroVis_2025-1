@@ -64,7 +64,7 @@ main.wrapper {
 /* Gráfico escalable */
 .skyChart {
   flex: 2;
-  min-width: 50vw;
+  min-width: 45vw;
   min-height: 70vh;
   aspect-ratio: 1 / 1;
   border-radius: 10px;
