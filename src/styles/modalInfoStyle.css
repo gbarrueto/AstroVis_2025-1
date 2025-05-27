@@ -58,4 +58,23 @@
 .modalInfoContent {
   overflow-y: scroll;
   height: 100%;
+  padding-right: 16px;
+  box-sizing: content-box; 
+}
+
+.modalInfoContent::-webkit-scrollbar {
+  width: 6px; /* delgada */
+}
+
+.modalInfoContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modalInfoContent::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4); /* blanco translúcido */
+  border-radius: 10px;
+}
+
+.modalInfoContent::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* blanco más opaco al pasar */
 }
