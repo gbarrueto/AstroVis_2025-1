@@ -35,9 +35,8 @@ export default function ModalInfo({ displayModal, setDisplayModal }) {
             Dado que las imágenes provienen de muchas fuentes distintas, los datos están organizados mediante dos filtros clave: el hemisferio y el campo visual. A continuación te daremos la información necesaria para entender esto:
           </p>
 
-          <h3>🔭 Los datos</h3>
+          <h3>🔭 Los datos: objetos en el cielo</h3>
           <p>
-            objetos en el cielo
             Cada punto visible representa un objeto o área del cielo. La ubicación de cada uno se basa en sus coordenadas astronómicas reales (ascensión recta y declinación), por lo que su posición en el gráfico refleja su posición aparente en el cielo nocturno.
 
             El tamaño del area indica su frecuencia relativa dentro de su conjunto de imágenes. A mayor frecuencia, más veces aparece ese objeto en fotografías dentro de ese grupo.
