@@ -1,5 +1,5 @@
-// src/components/ArduinoReceiver.jsx
 import React, { useEffect } from "react";
+import { setupProtobject } from "../protobjectConfig";
 
 const ArduinoReceiver = () => {
   useEffect(() => {
@@ -7,9 +7,7 @@ const ArduinoReceiver = () => {
     script.src = "https://app.protobject.com/framework/p.js";
     script.async = true;
     script.onload = () => {
-      window.Protobject.Core.init({
-        app: "TU_APP_ID", // igual que antes
-      });
+      setupProtobject();
 
       window.Protobject.Arduino.start();
 

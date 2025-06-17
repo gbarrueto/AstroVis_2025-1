@@ -1,6 +1,6 @@
 // Home.jsx
 import React, { useState, createContext, useEffect, useRef } from "react";
-import { Router, useLocation, useRoute } from "wouter";
+import { Router, useLocation, useRoute, Link } from "wouter";
 
 import "./styles/styles.css";
 import PageRouter from "./components/router.jsx";
@@ -92,6 +92,9 @@ export default function Home() {
               <div className="muteButton" onClick={handleMuteAudio}>
                 { ambientShouldSound ? <IoVolumeLowOutline /> : <IoVolumeMuteOutline /> }
               </div>
+              <Link href="/control">
+    <button className="go-to-knob">Ir al control del servo</button>
+  </Link>
               <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
               <PageRouter />
               <RightPanel hemisphereSelected={hemisphere} setHemisphereSelected={setHemisphere} fovSelected={fov} setFovSelected={setFov} />

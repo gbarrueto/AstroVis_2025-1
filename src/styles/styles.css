@@ -113,3 +113,16 @@ main.wrapper {
   width: 80%;
   height: 80%;
 }
+
+.go-to-knob {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
