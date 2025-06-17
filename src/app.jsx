@@ -9,7 +9,6 @@ import ToolsBar from "./components/toolsBar.jsx";
 import LeftPanel from "./components/leftSidePanel.jsx";
 import RightPanel from "./components/rightSidePanel.jsx";
 import ModalInfo from "./components/modalInfo.jsx";
-import KnobControl from "./components/KnobControl.jsx";
 
 import { IoVolumeMuteOutline, IoVolumeLowOutline } from "react-icons/io5";
 
@@ -104,9 +103,6 @@ export default function Home() {
                 <IoVolumeMuteOutline />
               )}
               
-            </div>
-            <KnobControl/>
-            <div>
             </div>
             <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
             <PageRouter />
