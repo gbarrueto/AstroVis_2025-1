@@ -1,22 +1,21 @@
 import * as React from "react";
-import { Switch, Route, Router, Redirect } from "wouter";
+import { Switch, Route, Redirect } from "wouter";
+
 import NorthHemisphere from "../pages/northHemisphere";
 import SouthHemisphere from "../pages/southHemisphere";
-
-/**
-* The router is imported in app.jsx
-*
-* Our site just has two routes in it–Home and About
-* Each one is defined as a component in /pages
-* We use Switch to only render one route at a time https://github.com/molefrog/wouter#switch-
-*/
+import ControlKnob from "../pages/ControlKnob";
+import ArduinoReceiver from "../pages/ArduinoReceiver";
 
 export default () => (
-    <Switch>
-      <Route path="/">
-        <Redirect to="/N/07" />
-      </Route>
-      <Route path="/N/:fov" component={NorthHemisphere} />
-      <Route path="/S/:fov" component={SouthHemisphere} />
-    </Switch>
+  <Switch>
+    <Route path="/">
+      <Redirect to="/N/07" />
+    </Route>
+    <Route path="/N/:fov" component={NorthHemisphere} />
+    <Route path="/S/:fov" component={SouthHemisphere} />
+
+    {/* Rutas nuevas */}
+    <Route path="/control" component={ControlKnob} />
+    <Route path="/arduino" component={ArduinoReceiver} />
+  </Switch>
 );

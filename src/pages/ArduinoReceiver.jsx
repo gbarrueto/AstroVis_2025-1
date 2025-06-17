@@ -1,15 +1,22 @@
-// src/ArduinoPage.js
+// src/components/ArduinoReceiver.jsx
 import React, { useEffect } from "react";
 
-const ArduinoPage = () => {
+const ArduinoReceiver = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://app.protobject.com/framework/p.js";
     script.async = true;
     script.onload = () => {
+      window.Protobject.Core.init({
+        app: "TU_APP_ID", // igual que antes
+      });
+
       window.Protobject.Arduino.start();
+
       window.Protobject.Core.onReceived((data) => {
-        window.Protobject.Arduino.servoWrite({ pin: 5, value: data.speed });
+        if (data.speed !== undefined) {
+          window.Protobject.Arduino.servoWrite({ pin: 5, value: data.speed });
+        }
       });
     };
     document.body.appendChild(script);
@@ -17,10 +24,10 @@ const ArduinoPage = () => {
 
   return (
     <div>
-      <h1>Arduino conectado</h1>
+      <h2>Arduino conectado</h2>
       <div id="ProtobjectPlusButton"></div>
     </div>
   );
 };
 
-export default ArduinoPage;
+export default ArduinoReceiver;

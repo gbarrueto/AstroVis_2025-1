@@ -1,7 +1,7 @@
-// src/ControlPage.js
+// src/components/ControlKnob.jsx
 import React, { useEffect } from "react";
 
-const ControlPage = () => {
+const ControlKnob = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://app.protobject.com/framework/p.js";
@@ -9,7 +9,11 @@ const ControlPage = () => {
     script.onload = () => {
       const perilla = new window.Protobject.Knob({ min: -1500, max: 1500 });
       perilla.onChange((value) => {
-        window.Protobject.Core.send({ speed: value }).to("arduino.html");
+        window.Protobject.Core.send({ speed: value }).to("arduino");
+      });
+
+      window.Protobject.Core.init({
+        app: "TU_APP_ID", // reemplaza esto con tu App ID real
       });
     };
     document.body.appendChild(script);
@@ -17,10 +21,10 @@ const ControlPage = () => {
 
   return (
     <div>
-      <h1>Control del Servo</h1>
+      <h2>Control del Servo</h2>
       <div id="ProtobjectPlusButton"></div>
     </div>
   );
 };
 
-export default ControlPage;
+export default ControlKnob;
