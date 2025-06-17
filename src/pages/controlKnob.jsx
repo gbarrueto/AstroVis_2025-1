@@ -1,34 +1,20 @@
-// src/pages/ControlKnob.jsx
 import React, { useEffect } from "react";
-import { setupProtobject } from "../protobjectConfig"; // Este archivo debe definir Protobject.initialize()
+import { setupProtobject } from "../protobjectConfig";
 
 const ControlKnob = () => {
   useEffect(() => {
-    // Cargar la librería de Protobject
+    // Cargar Protobject
     const script = document.createElement("script");
     script.src = "https://app.protobject.com/framework/p.js";
     script.async = true;
-
     script.onload = () => {
-      // Configurar como en el antiguo config.js
-      window.Protobject.setProduction(true);
-      window.Protobject.initialize([
-        {
-          name: "Servo",
-          page: "/arduino",
-        },
-        {
-          name: "Knob",
-          page: "/control",
-          main: true,
-        },
-      ]);
+      setupProtobject(); // aquí usamos tu misma estructura
 
       // Crear la perilla
-      const perilla = new window.Protobject.Knob({ min: -1500, max: 1500 });
+      const knob = new window.Protobject.Knob({ min: -1500, max: 1500 });
 
-      // Enviar el valor cuando cambie
-      perilla.onChange((value) => {
+      // Enviar los datos cuando cambie
+      knob.onChange((value) => {
         window.Protobject.Core.send({ speed: value }).to("/arduino");
       });
     };
@@ -36,7 +22,6 @@ const ControlKnob = () => {
     document.body.appendChild(script);
 
     return () => {
-      // Limpieza del script si el componente se desmonta
       document.body.removeChild(script);
     };
   }, []);
@@ -44,7 +29,8 @@ const ControlKnob = () => {
   return (
     <div style={styles.container}>
       <h2>Control del Servo</h2>
-      <div id="ProtobjectPlusButton" style={styles.connectButton}></div>
+      {/* El botón "Connect" será autoinyectado por Protobject usando este ID */}
+      <div id="ProtobjectPlusButton" style={styles.connect}></div>
     </div>
   );
 };
@@ -53,17 +39,17 @@ export default ControlKnob;
 
 const styles = {
   container: {
-    textAlign: "center",
-    paddingTop: "40px",
     fontFamily: "sans-serif",
+    padding: "40px",
+    textAlign: "center",
   },
-  connectButton: {
+  connect: {
     width: "80px",
+    height: "40px",
     margin: "20px auto",
-    padding: "10px",
     backgroundColor: "#007bff",
+    borderRadius: "20px",
     color: "#fff",
-    borderRadius: "6px",
     cursor: "pointer",
   },
 };
