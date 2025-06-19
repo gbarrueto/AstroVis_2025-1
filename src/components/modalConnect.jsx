@@ -35,18 +35,9 @@ export default function ModalConnect({ displayModal, setDisplayModal }) {
             Usa el control deslizante para mover los servos en tiempo real. Asegúrate de tener tu placa conectada a través del sistema Protobject.
           </p>
 
-          <div style={{ display: 'flex', gap: '2rem', marginTop: '1rem' }}>
-            {/* Iframe del control */}
-            <iframe
-              title="Controlador"
-              src="/index.html"
-              width="400"
-              height="300"
-              style={{ border: '1px solid #ccc' }}
-            />
+          <ProtobjectPanel/>
 
-            
-          </div>
+
         </section>
       </div>
     </div>

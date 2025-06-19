@@ -38,6 +38,8 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedObject, setSelectedObject] = useState(null);
   const [hoveredTableObject, setHoveredTableObject] = useState(null);
+  
+  const [iframeRef, setIframeRef] = useState(null);
 
   const context = {
     loading,
@@ -62,6 +64,8 @@ export default function Home() {
     setDisplayModalInfo,
     displayModalConnect,
     setDisplayModalConnect,
+    iframeRef,
+  setIframeRef,
     ambientSound: ambientSound.current,
     ambientShouldSound,
     setAmbientShouldSound,

@@ -9,12 +9,20 @@
     <script src="https://app.protobject.com/framework/p.js"></script>
     <script src="config.js"></script>
     <script>
-      const perilla = new Protobject.Knob({ min: -1500, max: 1500 });
+  const perilla = new Protobject.Knob({ min: -1500, max: 1500 });
 
-      perilla.onChange((value) => {
-        Protobject.Core.send({ speed: value }).to("placa.html");
-      });
-    </script>
+  perilla.onChange((value) => {
+    Protobject.Core.send({ speed: value }).to("placa.html");
+  });
+
+  // Recibe mensaje del padre
+  window.addEventListener("message", (event) => {
+    if (event.data?.type === "knob-move") {
+      const newValue = event.data.value;
+      perilla.setValue(newValue); // Simula mover la perilla
+    }
+  });
+</script>
   </body>
   <style>
     #ProtobjectPlusButton {

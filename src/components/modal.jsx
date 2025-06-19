@@ -134,6 +134,22 @@ const Modal = ({ isOpen, objectData, onClose }) => {
       }
     }
   }
+  
+  function sendRandomToHardware(iframeRef) {
+  if (!iframeRef?.current) {
+    console.warn("Iframe no disponible.");
+    return;
+  }
+
+  const randomValue = Math.floor(Math.random() * 3001) - 1500; // -1500 a 1500
+
+  iframeRef.current.contentWindow.postMessage(
+    { speed: randomValue },
+    "*" // o el dominio exacto si quieres restringirlo
+  );
+
+  console.log(`Enviado: ${randomValue}`);
+}
 
   return (
     <div
