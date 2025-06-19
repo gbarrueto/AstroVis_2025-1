@@ -10,7 +10,6 @@ import LeftPanel from "./components/leftSidePanel.jsx";
 import RightPanel from "./components/rightSidePanel.jsx";
 import ModalInfo from "./components/modalInfo.jsx";
 import ModalConnect from "./components/modalConnect.jsx";
-import ProtobjectPanel from "./components/ProtobjectPanel.jsx"
 
 import { IoVolumeMuteOutline, IoVolumeLowOutline } from "react-icons/io5";
 
@@ -39,12 +38,8 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedObject, setSelectedObject] = useState(null);
   const [hoveredTableObject, setHoveredTableObject] = useState(null);
-  
-  const iframeRef = useRef(null);
-  
-  const setIframeRef = (ref) => {
-  iframeRef.current = ref;
-};
+
+  const [iframeRef, setIframeRef] = useState(null);
 
   const context = {
     loading,
@@ -130,7 +125,7 @@ export default function Home() {
             />
 
             <div style={{ display: "none" }}>
-              <ProtobjectPanel iframeRef={iframeRef} />
+              <ProtobjectPanel />
             </div>
 
             <ModalConnect
