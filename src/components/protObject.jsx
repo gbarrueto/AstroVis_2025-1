@@ -6,7 +6,7 @@ export default function ProtobjectPanel() {
       {/* Controlador: index.html */}
       <iframe
         title="Controlador"
-        src="index.html"
+        src="/index.html"
         width="400"
         height="300"
         style={{ border: "1px solid #ccc" }}
@@ -15,7 +15,7 @@ export default function ProtobjectPanel() {
       {/* Arduino receptor: arduino.html */}
       <iframe
         title="Arduino"
-        src="arduino.html"
+        src="/arduino.html"
         width="400"
         height="300"
         style={{ border: "1px solid #ccc" }}
