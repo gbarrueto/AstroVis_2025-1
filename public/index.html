@@ -17,9 +17,11 @@
 
       // Recibe mensaje del padre
       window.addEventListener("message", (event) => {
+        console.log("Mensaje recibido", event.data); // 🟡 Añade esto para verificar
+
         if (event.data?.type === "knob-move") {
           const newValue = event.data.value;
-          perilla.setValue(newValue); // Simula mover la perilla
+          perilla.setValue(newValue);
         }
       });
     </script>

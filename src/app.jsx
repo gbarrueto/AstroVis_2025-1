@@ -124,10 +124,6 @@ export default function Home() {
               setDisplayModal={setDisplayModalInfo}
             />
 
-            <div style={{ display: "none" }}>
-              <ProtobjectPanel />
-            </div>
-
             <ModalConnect
               displayModal={displayModalConnect}
               setDisplayModal={setDisplayModalConnect}
