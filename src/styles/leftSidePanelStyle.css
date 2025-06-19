@@ -1,0 +1,39 @@
+.leftPanel {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+}
+
+#pageTitleContainer {
+  /* width: 100%; */
+  /* height: 120px; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* flex: 1; */
+  transition: opacity 0.3s ease, width 0.3s ease, flex 0.3s ease;
+  /* justify-content: center; */
+  /* padding: 10px; */
+  margin: 1em 0;
+  /* gap: 0.5em; */
+  /* height: 30%; */
+}
+#pageTitleContainer > * {
+  margin: 0;
+}
+
+#pageTextTitle {
+  color: #a8e6ff; /* Nebulosa lila suave, etéreo pero legible */
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#pageSubTextTitle {
+  color: #e0b3ff; /* Gris azulado, tipo niebla cósmica */
+  font-size: 16px;
+}
+
+.highlightText {
+  color: #c7a4ff; /* Amarillo estrella tipo supernova */
+}

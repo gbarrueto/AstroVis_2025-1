@@ -1,0 +1,444 @@
+[
+  {
+    "id": 13,
+    "object": "m 32",
+    "frequency": 0.79,
+    "coords": [
+      "10.674271",
+      "40.865169"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "m 110",
+      "ngc 206"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Galaxia de Andrómeda",
+    "description": "La Galaxia de Andrómeda, también conocida como M31, es la galaxia espiral más cercana a la Vía Láctea y se encuentra a unos 2.5 millones de años luz de distancia. Es visible a simple vista desde la Tierra en cielos oscuros y es un objeto de estudio importante para comprender la estructura y evolución de las galaxias."
+  },
+  {
+    "id": 17,
+    "object": "ngc 2246",
+    "frequency": 0.57,
+    "coords": [
+      "97.66475",
+      "4.98531"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "sh2-275",
+      "ngc 2238",
+      "ngc 2252",
+      "lbn 948",
+      "lbn 949"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Roseta",
+    "description": "La Nebulosa Roseta, también conocida como NGC 2244, es una vasta nube de gas y polvo situada en la constelación de Monoceros, a unos 5,000 años luz de la Tierra, que alberga un cúmulo abierto de estrellas jóvenes. Su forma distintiva y colores brillantes son el resultado de la intensa radiación de estas estrellas, que ioniza el gas circundante y lo hace brillar."
+  },
+  {
+    "id": 18,
+    "object": "ngc 1980",
+    "frequency": 0.55,
+    "coords": [
+      "83.85",
+      "-5.915"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ngc 1981",
+      "sh2-281",
+      "sh2-279",
+      "lbn 974",
+      "ldn 1640"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa de Orión",
+    "description": "La Nebulosa de Orión, también conocida como M42, es una vasta nube de gas y polvo donde nacen nuevas estrellas, situada a unos 1,344 años luz de la Tierra en la constelación de Orión. Visible a simple vista como una mancha difusa en el cielo, es una de las regiones de formación estelar más cercanas y estudiadas por los astrónomos."
+  },
+  {
+    "id": 27,
+    "object": "maia nebula",
+    "frequency": 0.69,
+    "coords": [
+      "56.5",
+      "23.9"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ic 349",
+      "m 45",
+      "merope nebula"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Pléyades",
+    "description": "Las Pléyades, también conocidas como las Siete Hermanas, son un cúmulo estelar abierto en la constelación de Tauro, fácilmente visible a simple vista desde la Tierra. Este grupo de estrellas jóvenes, se encuentra aproximadamente a 440 años luz de distancia y es un fascinante ejemplo de formación estelar."
+  },
+  {
+    "id": 28,
+    "object": "ic 435",
+    "frequency": 0.34,
+    "coords": [
+      "85.7521",
+      "-2.3125"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ic 432",
+      "ic 431",
+      "sh2-277",
+      "Barnard 33",
+      "lbn 953",
+      "lbn 954"
+    ],
+    "hemisphere": "S",
+    "repr_name": "Nebulosas cabeza de caballo y flama",
+    "description": "Ubicadas en la constelación de Orión, estas nebulosas conforman una de las escenas más icónicas del cielo invernal. La Cabeza de Caballo (Barnard 33) destaca por su silueta oscura recortada sobre la nebulosa brillante IC 434, mientras que la Nebulosa de la Flama (NGC 2024) muestra estructuras turbulentas y complejas cerca de la brillante estrella Alnitak. En este campo, ambas nebulosas pueden capturarse juntas, revelando contrastes dramáticos entre polvo oscuro y emisión resplandeciente, ideales para composiciones ricas en textura y color."
+  },
+  {
+    "id": 30,
+    "object": "ngc 7000",
+    "frequency": 0.32,
+    "coords": [
+      "314.696",
+      "44.33"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ngc 6997"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Norteamericana y pelícano",
+    "description": "La Nebulosa Norteamericana y Pelícano (NGC 7000) es una vasta región de gas y polvo en la constelación de Cygnus, cuya forma recuerda a un mapa de América del Norte y a un pelícano. Este objeto brillante y colorido es una fábrica estelar donde nacen nuevas estrellas, iluminando el gas circundante y creando un espectáculo celestial fascinante."
+  },
+  {
+    "id": 35,
+    "object": "m 52",
+    "frequency": 0.27,
+    "coords": [
+      "351.2",
+      "61.593"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa de la Burbuja",
+    "description": "La Nebulosa de la Burbuja, también conocida como NGC 7635, es una estructura cósmica en la constelación de Casiopea que se asemeja a una burbuja gigante inflada por el intenso viento estelar de una estrella caliente y masiva en su interior. Este fenómeno crea un espectáculo visual impresionante, con la nebulosa brillando entre el gas y el polvo interestelar circundante."
+  },
+  {
+    "id": 36,
+    "object": "ic 443",
+    "frequency": 0.27,
+    "coords": [
+      "94.5113",
+      "22.66"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ic 444"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Medusa",
+    "description": "La Nebulosa Medusa, o IC 443, es un remanente de supernova situado en la constelación de Géminis, a unos 5.000 años luz de la Tierra. Se formó a partir de una estrella masiva que explotó hace miles de años, y su estructura filamentosas recuerda a los tentáculos de una medusa."
+  },
+  {
+    "id": 40,
+    "object": "ic 1396",
+    "frequency": 0.24,
+    "coords": [
+      "324.75",
+      "57.49"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Trompa de Elefante",
+    "description": "La Nebulosa Trompa de Elefante, también conocida como IC 1396, es una espectacular región de formación estelar situada en la constelación de Cefeo, que presenta una columna oscura de gas y polvo que se asemeja a la trompa de un elefante. Esta nebulosa combina cúmulos de estrellas jóvenes y brillantes con nubes de material interestelar, donde nuevas estrellas están naciendo."
+  },
+  {
+    "id": 41,
+    "object": "ngc 869",
+    "frequency": 0.24,
+    "coords": [
+      "34.75",
+      "57.128"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Cumulo Doble",
+    "description": "El Cúmulo Doble, compuesto por NGC 869 y NGC 884, es un par de brillantes cúmulos estelares abiertos situados en la constelación de Perseo, visible a simple vista desde el hemisferio norte. Estos cúmulos, separados por unos pocos cientos de años luz, son ricos en estrellas jóvenes y ofrecen una impresionante vista a través de telescopios pequeños."
+  },
+  {
+    "id": 42,
+    "object": "ngc 6992",
+    "frequency": 0.24,
+    "coords": [
+      "314.079",
+      "31.743"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ngc 6995"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa Velo del Este",
+    "description": "La Nebulosa Velo del Este, parte del remanente de supernova conocido como el Bucle del Cisne, es una estructura de filamentos brillantes y coloridos de gas y polvo situada a unos 2,400 años luz de la Tierra en la constelación del Cisne. Se formó a partir de la explosión de una estrella masiva hace miles de años, y su belleza radica en los intrincados patrones de luz que resultan de las ondas de choque interactuando con el material interestelar."
+  },
+  {
+    "id": 51,
+    "object": "m 86",
+    "frequency": 0.22,
+    "coords": [
+      "186.549225",
+      "12.945969"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "m 84",
+      "ngc 4413",
+      "ngc 4438",
+      "ngc 4435",
+      "ngc 4425",
+      "ngc 4402",
+      "ngc 4388",
+      "ngc 4443"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Cadena de Markarian",
+    "description": "La Cadena de Markarian es un impresionante conjunto de galaxias ubicado en el cúmulo de Virgo, a unos 50 millones de años luz de distancia, que parece formar una línea curva en el cielo. Este notable agrupamiento incluye varias galaxias prominentes, como M86 y M84, y es un espectáculo fascinante para los astrónomos aficionados y profesionales."
+  },
+  {
+    "id": 57,
+    "object": "ngc 1499",
+    "frequency": 0.21,
+    "coords": [
+      "60.825",
+      "36.422"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa California",
+    "description": "La Nebulosa California, también conocida como NGC 1499, es una extensa nube de gas y polvo en la constelación de Perseo, que brilla con un resplandor rojizo debido a la radiación ultravioleta de estrellas cercanas. Su forma alargada y curvada se asemeja al perfil del estado de California, lo que le da su nombre."
+  },
+  {
+    "id": 59,
+    "object": "ic 1848",
+    "frequency": 0.2,
+    "coords": [
+      "42.777",
+      "60.41"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ic 1871"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa del alma",
+    "description": "La Nebulosa del Alma, también conocida como IC 1848, es una vasta nube de gas y polvo ubicada a unos 6,500 años luz de la Tierra en la constelación de Casiopea. Esta nebulosa brilla intensamente debido a la radiación de estrellas jóvenes en su interior, que ionizan el gas circundante y crean impresionantes formas y colores."
+  },
+  {
+    "id": 62,
+    "object": "m 44",
+    "frequency": 0.19,
+    "coords": [
+      "130.1",
+      "19.667"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Cumulo de la Colmena",
+    "description": "El Cúmulo de la Colmena, también conocido como M44 o Praesepe, es un brillante cúmulo abierto de estrellas situado en la constelación de Cáncer, visible a simple vista en cielos oscuros. Este cúmulo, que se encuentra a unos 577 años luz de distancia, está compuesto por cientos de estrellas que se formaron juntas y ofrece una espectacular vista a través de telescopios pequeños o binoculares."
+  },
+  {
+    "id": 67,
+    "object": "ngc 5473",
+    "frequency": 0.18,
+    "coords": [
+      "211.180175",
+      "54.892619"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ngc 5474",
+      "ngc 5422"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Galaxia del Molinillo",
+    "description": "La Galaxia del Molinillo es una galaxia espiral situada a unos 210 millones de años luz de distancia en la constelación de la Osa Mayor. Se caracteriza por sus brazos espirales bien definidos, que le dan una apariencia similar a un molinillo de viento, y es un ejemplo fascinante de las estructuras complejas que pueden formarse en el universo."
+  },
+  {
+    "id": 74,
+    "object": "m 21",
+    "frequency": 0.16,
+    "coords": [
+      "271.054",
+      "-22.49"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa de la Trifida",
+    "description": "La Nebulosa de la Trifida, también conocida como M20, es una espectacular nube de gas y polvo situada en la constelación de Sagitario, famosa por su brillante combinación de colores y sus tres lóbulos oscuros que la dividen. Esta nebulosa es un vivero estelar donde nacen nuevas estrellas, y su diversidad de colores se debe a la presencia de diferentes tipos de gases que emiten luz al ser excitados por la radiación de las estrellas cercanas."
+  },
+  {
+    "id": 75,
+    "object": "ic 1795",
+    "frequency": 0.16,
+    "coords": [
+      "36.4313",
+      "62.1036"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ngc 896"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa del Corazón",
+    "description": "La Nebulosa del Corazón es una impresionante región de formación estelar situada en la constelación de Casiopea, a unos 7,500 años luz de distancia de la Tierra. Su forma distintiva, que recuerda a un corazón, es esculpida por los vientos y la radiación de estrellas jóvenes y masivas en su interior."
+  },
+  {
+    "id": 85,
+    "object": "ngc 3077",
+    "frequency": 0.13,
+    "coords": [
+      "150.829467",
+      "68.733956"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Galaxia de Bode y Cigarro",
+    "description": "La Galaxia de Bode (M81) y la Galaxia del Cigarro (M82) son dos galaxias cercanas en la constelación de la Osa Mayor que forman parte de un grupo galáctico. Estas galaxias interactúan gravitacionalmente, lo que provoca intensos brotes de formación estelar, especialmente en M82, dándole su apariencia alargada y turbulenta."
+  },
+  {
+    "id": 86,
+    "object": "ngc 5198",
+    "frequency": 0.13,
+    "coords": [
+      "202.547546",
+      "46.670831"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ngc 5169"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Galaxia del remolino",
+    "description": "La Galaxia del Remolino, también conocida como M51, es una impresionante galaxia espiral ubicada a unos 31 millones de años luz de distancia en la constelación de Canes Venatici. Se caracteriza por sus bien definidas estructuras en espiral y es famosa por su interacción con una galaxia más pequeña, NGC 5195, que le da su distintivo aspecto \"remolinado\"."
+  },
+  {
+    "id": 87,
+    "object": "ic 136",
+    "frequency": 0.13,
+    "coords": [
+      "23.3",
+      "30.5"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ngc 592",
+      "ngc 588",
+      "ic 131",
+      "ic 142",
+      "ic 132",
+      "ic 137",
+      "ic 135",
+      "ic 143",
+      "ic 133"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Galaxia del Triángulo",
+    "description": "La Galaxia del Triángulo, también conocida como Messier 33, es una galaxia espiral ubicada a unos 3 millones de años luz de la Tierra, en la constelación del Triángulo. Es la tercera galaxia más grande del Grupo Local, después de la Vía Láctea y la Galaxia de Andrómeda, y se caracteriza por sus prominentes brazos espirales llenos de regiones de formación estelar."
+  },
+  {
+    "id": 89,
+    "object": "ic 63",
+    "frequency": 0.12,
+    "coords": [
+      "14.75571",
+      "60.88828"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ic 59"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Gamma Cassiopeiae",
+    "description": "Gamma Cassiopeiae, también conocida como IC 63, es una nebulosa de emisión y reflexión localizada a unos 610 años luz de la Tierra en la constelación de Casiopea. Esta nebulosa está siendo iluminada por la estrella cercana Gamma Cassiopeiae, cuyo intenso viento estelar crea formas espectaculares de gas y polvo en el espacio."
+  },
+  {
+    "id": 90,
+    "object": "ngc 1893",
+    "frequency": 0.12,
+    "coords": [
+      "80.683",
+      "33.412"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [
+      "ic 410"
+    ],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa de la los renacuajos",
+    "description": "La Nebulosa de los Renacuajos (IC 410) se encuentra en la constelación Auriga y es ideal para campos medios-bajos. Esta nebulosa de emisión destaca por sus filamentos de gas y dos estructuras alargadas que recuerdan renacuajos nadando en el espacio. Es un objetivo atractivo por sus colores intensos y detalles únicos, resultado de la interacción entre el gas y el cúmulo estelar abierto NGC 1893 que la ilumina."
+  },
+  {
+    "id": 96,
+    "object": "ngc 7822",
+    "frequency": 0.1,
+    "coords": [
+      "0.28575",
+      "67.42139"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "NGC7822",
+    "description": "NGC 7822 es una nebulosa de emisión situada en la constelación de Cefeo, conocida por sus brillantes regiones de formación estelar y estructuras de polvo oscuro. Es un vivero estelar donde nuevas estrellas se están formando, iluminando y esculpiendo las nubes de gas a su alrededor."
+  },
+  {
+    "id": 97,
+    "object": "ngc 4217",
+    "frequency": 0.1,
+    "coords": [
+      "183.962083",
+      "47.091789"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "M106",
+    "description": "M106, también conocida como NGC 4258, es una galaxia espiral ubicada a unos 23 millones de años luz de la Tierra en la constelación de Canes Venatici. Es notable por sus brazos espirales adicionales, generados por emisiones de radio y rayos X, que sugieren la presencia de un agujero negro supermasivo en su centro."
+  },
+  {
+    "id": 98,
+    "object": "ngc 3372",
+    "frequency": 0.1,
+    "coords": [
+      "161.0792",
+      "-59.8892"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "S",
+    "repr_name": "Nebulosa Carina",
+    "description": "La Nebulosa Carina, o NGC 3372, es una vasta región de formación estelar en la Vía Láctea, situada a unos 7,500 años luz de distancia en la constelación de Carina. Esta nebulosa es conocida por albergar estrellas masivas y activas, como la famosa Eta Carinae, y es un espectáculo impresionante de nubes de gas y polvo iluminadas por la radiación estelar."
+  },
+  {
+    "id": 103,
+    "object": "m 108",
+    "frequency": 0.09,
+    "coords": [
+      "167.879029",
+      "55.674122"
+    ],
+    "fov": ">= 0.7 AND < 1.5 deg",
+    "neighbours": [],
+    "hemisphere": "N",
+    "repr_name": "Nebulosa del Buho y Galaxia Tabla de Surf",
+    "description": "La Nebulosa del Búho (M97) y la Galaxia Tabla de Surf (M108) se ubican en la constelación de la Osa Mayor. Esta pareja forma una escena ideal para campos intermedios, contrastando una nebulosa planetaria cercana con una galaxia espiral vista de canto. Su proximidad aparente permite capturarlas juntas, revelando estructuras internas y diferencias morfológicas en una sola imagen."
+  }
+]
