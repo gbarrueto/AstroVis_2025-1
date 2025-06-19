@@ -39,8 +39,8 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedObject, setSelectedObject] = useState(null);
   const [hoveredTableObject, setHoveredTableObject] = useState(null);
-
-  const [iframeRef, setIframeRef] = useState(null);
+  
+  const iframeRef = useRef(null);
 
   const context = {
     loading,
@@ -66,7 +66,6 @@ export default function Home() {
     displayModalConnect,
     setDisplayModalConnect,
     iframeRef,
-    setIframeRef,
     ambientSound: ambientSound.current,
     ambientShouldSound,
     setAmbientShouldSound,
@@ -126,7 +125,7 @@ export default function Home() {
             />
 
             <div style={{ display: "none" }}>
-              <ProtobjectPanel />
+              <ProtobjectPanel iframeRef={iframeRef} />
             </div>
 
             <ModalConnect
