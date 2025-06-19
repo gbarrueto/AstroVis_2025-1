@@ -15,6 +15,8 @@ const Modal = ({ isOpen, objectData, onClose }) => {
 
   const { ambientSound, ambientShouldSound } = useContext(Context);
 
+  const { iframeRef } = useContext(Context);
+
   useEffect(() => {
     if (isOpen && objectData) {
       setShouldRender(true);
@@ -134,22 +136,22 @@ const Modal = ({ isOpen, objectData, onClose }) => {
       }
     }
   }
-  
+
   function sendRandomToHardware(iframeRef) {
-  if (!iframeRef?.current) {
-    console.warn("Iframe no disponible.");
-    return;
+    if (!iframeRef?.current) {
+      console.warn("Iframe no disponible.");
+      return;
+    }
+
+    const randomValue = Math.floor(Math.random() * 3001) - 1500; // -1500 a 1500
+
+    iframeRef.current.contentWindow.postMessage(
+      { speed: randomValue },
+      "*" // o el dominio exacto si quieres restringirlo
+    );
+
+    console.log(`Enviado: ${randomValue}`);
   }
-
-  const randomValue = Math.floor(Math.random() * 3001) - 1500; // -1500 a 1500
-
-  iframeRef.current.contentWindow.postMessage(
-    { speed: randomValue },
-    "*" // o el dominio exacto si quieres restringirlo
-  );
-
-  console.log(`Enviado: ${randomValue}`);
-}
 
   return (
     <div
@@ -191,6 +193,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
           <button onClick={handleSoundButtonClick}>
             {!playingSound ? <IoPlay /> : <IoPause />}
           </button>
+          <button onClick={() => sendRandomToHardware(iframeRef)}>Mover</button>
         </>
       )}
 
