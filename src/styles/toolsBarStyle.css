@@ -1,3 +1,12 @@
+@keyframes loopRotation {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
 .toolsBarContainer {
   display: flex;
   flex-direction: column;
@@ -9,44 +18,47 @@
   position: relative;
 }
 
-.moreInfoButtonContainer {
-  /* background-color: white; */
+/* COMMON BUTTON STYLES */
+.moreInfoButtonContainer,
+.connectButtonContainer {
   position: absolute;
   width: 2em;
   height: 2em;
-  top: 25%;
-  left: -4em;
   display: flex;
   align-items: center;
   justify-content: center;
-
-}
-
-@keyframes loopRotation {
-  0% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(-45deg);
-  }
-}
-
-.moreInfoButtonContainer svg {
-  width: 100%;
-  height: 100%;
-  color: #a8e6ff;
   animation: loopRotation 0.5s infinite alternate ease-in-out;
 }
 
-.moreInfoButtonContainer svg:hover {
+.moreInfoButtonContainer {
+  top: 25%;
+  left: -4em;
+}
+
+.connectButtonContainer {
+  top: 100%;
+  left: -4em;
+}
+
+.moreInfoButtonContainer svg,
+.connectButtonContainer svg {
+  width: 100%;
+  height: 100%;
+  color: #a8e6ff;
+  
+}
+
+.moreInfoButtonContainer svg:hover,
+.connectButtonContainer svg:hover {
   color: #c7a4ff;
 }
 
+/* Disable animation if class is added */
 .noAnimation svg {
-  animation: none;
+  animation-name: none;
 }
 
-/* HEMISPHERE SELECTOR */
+/* Hemisphere Selector */
 .hemisphereSelectorContainer {
   display: flex;
   width: 100%;
@@ -57,12 +69,10 @@
   flex: 1;
   padding: 10px;
   font-size: 0.9em;
-  text-wrap: wrap;
-  overflow: hidden;
   cursor: pointer;
   text-decoration: none;
   color: #04dbf1;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .hemisphereSelector:hover:not(.activeSelector) {
@@ -73,8 +83,7 @@
   background-color: #56299f;
 }
 
-
-/* FOV SELECTOR */
+/* FOV Selector */
 .fovSelectorContainer {
   display: flex;
 }
@@ -88,4 +97,3 @@
 .fovSelector:hover:not(.activeFovSelector) {
   background-color: rgba(73, 54, 113, 0.5);
 }
-
