@@ -9,6 +9,7 @@ import ToolsBar from "./components/toolsBar.jsx";
 import LeftPanel from "./components/leftSidePanel.jsx";
 import RightPanel from "./components/rightSidePanel.jsx";
 import ModalInfo from "./components/modalInfo.jsx";
+import ModalConnect from "./components/modalConnect.jsx";
 
 import { IoVolumeMuteOutline, IoVolumeLowOutline } from "react-icons/io5";
 
@@ -34,10 +35,8 @@ export default function Home() {
   const [displayModalConnect, setDisplayModalConnect] =
     useState("hideModalConnect");
 
-  // Añadir estados de Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedObject, setSelectedObject] = useState(null);
-
   const [hoveredTableObject, setHoveredTableObject] = useState(null);
 
   const context = {
@@ -51,7 +50,6 @@ export default function Home() {
     setListasPorFovNorth,
     listasPorFovSouth,
     setListasPorFovSouth,
-    // Estados del Modal
     isModalOpen,
     setIsModalOpen,
     selectedObject,
@@ -84,7 +82,6 @@ export default function Home() {
   }, []);
 
   function handleMuteAudio() {
-    console.log(`Playing audio ? ${ambientShouldSound}`);
     if (ambientShouldSound) {
       ambientSound.current.volume = 0;
       setAmbientShouldSound(false);
@@ -107,6 +104,7 @@ export default function Home() {
                 <IoVolumeMuteOutline />
               )}
             </div>
+
             <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
             <PageRouter />
             <RightPanel
@@ -115,9 +113,16 @@ export default function Home() {
               fovSelected={fov}
               setFovSelected={setFov}
             />
+
+            {/* Mostrar modales */}
             <ModalInfo
               displayModal={displayModalInfo}
               setDisplayModal={setDisplayModalInfo}
+            />
+
+            <ModalConnect
+              displayModal={displayModalConnect}
+              setDisplayModal={setDisplayModalConnect}
             />
           </div>
         </main>

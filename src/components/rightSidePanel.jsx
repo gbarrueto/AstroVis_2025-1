@@ -2,7 +2,6 @@ import { useContext, useState, useEffect } from "react";
 import ToolsBar from "./toolsBar";
 import Modal from "./modal";
 import { Context } from "../app.jsx";
-import ProtobjectPanel from "./protObject";
 import "../styles/rightSidePanelStyle.css";
 
 const fovImages = {
