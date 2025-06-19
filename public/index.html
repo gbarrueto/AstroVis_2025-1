@@ -12,7 +12,7 @@
       const perilla = new Protobject.Knob({ min: -1500, max: 1500 });
 
       perilla.onChange((value) => {
-        Protobject.Core.send({ speed: value }).to("arduino.html");
+        Protobject.Core.send({ speed: value }).to("placa.html");
       });
     </script>
   </body>
