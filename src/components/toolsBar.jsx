@@ -5,10 +5,10 @@ import { BsFillQuestionCircleFill, BsPlugFill } from "react-icons/bs";
 import { Context } from "../app.jsx";
 
 const fovColors = {
-  "07": "#1f78b4", // azul fuerte
-  15: "#33a02c", // verde accesible
-  35: "#ff7f00", // naranja accesible
-  70: "#ff6ec7", // violeta fuerte
+  "07": "#1f78b4",
+  15: "#33a02c",
+  35: "#ff7f00",
+  70: "#ff6ec7",
 };
 
 export default function ToolsBar({
@@ -18,18 +18,30 @@ export default function ToolsBar({
   onFovSelected,
   setHoveredFov,
 }) {
-  const { displayModalInfo, setDisplayModalInfo } = useContext(Context);
+  const {
+    displayModalInfo,
+    setDisplayModalInfo,
+    displayModalConnect,
+    setDisplayModalConnect,
+  } = useContext(Context);
 
-  const [endAnimation, setEndAnimation] = useState("");
-
-  let timeout;
+  const [infoAnimation, setInfoAnimation] = useState("");
+  const [connectAnimation, setConnectAnimation] = useState("");
 
   useEffect(() => {
-    timeout = setTimeout(() => {
-      setEndAnimation("noAnimation");
+    const infoTimeout = setTimeout(() => {
+      setInfoAnimation("noAnimation");
     }, 10000);
 
-    return () => clearTimeout(timeout);
+    return () => clearTimeout(infoTimeout);
+  }, []);
+
+  useEffect(() => {
+    const connectTimeout = setTimeout(() => {
+      setConnectAnimation("noAnimation");
+    }, 10000);
+
+    return () => clearTimeout(connectTimeout);
   }, []);
 
   function handleMouseEnter(fov) {
@@ -41,21 +53,25 @@ export default function ToolsBar({
   }
 
   function onMoreInfoClick() {
-    clearTimeout(timeout);
-    setEndAnimation("noAnimation");
+    setInfoAnimation("noAnimation");
     setDisplayModalInfo("showModalInfo");
+  }
+
+  function onClickConnect() {
+    setConnectAnimation("noAnimation");
+    setDisplayModalConnect("showModalConnect");
   }
 
   return (
     <section className="toolsBarContainer">
-      {/* More info button */}
-      <div className={`moreInfoButtonContainer ${endAnimation}`}>
+      {/* Botón de información */}
+      <div className={`moreInfoButtonContainer ${infoAnimation}`}>
         <BsFillQuestionCircleFill onClick={onMoreInfoClick} />
       </div>
 
-      {/* Nuevo botón de conectar */}
-      <div className="connectButtonContainer">
-        <BsPlugFill onClick={onMoreInfoClick} />
+      {/* Botón de conectar */}
+      <div className={`connectButtonContainer ${connectAnimation}`}>
+        <BsPlugFill onClick={onClickConnect} />
       </div>
 
       <section className="hemisphereSelectorContainer">
@@ -66,7 +82,6 @@ export default function ToolsBar({
           }`}
           onClick={() => onHemisphereSelected("N")}
         >
-          {" "}
           Hemisferio Norte
         </Link>
         <Link
@@ -76,7 +91,6 @@ export default function ToolsBar({
           }`}
           onClick={() => onHemisphereSelected("S")}
         >
-          {" "}
           Hemisferio Sur
         </Link>
       </section>

@@ -31,6 +31,8 @@ export default function Home() {
   const [objectsByHemisphereFov, setObjectsByHemisphereFov] = useState({});
 
   const [displayModalInfo, setDisplayModalInfo] = useState("hideModalInfo");
+  const [displayModalConnect, setDisplayModalConnect] =
+    useState("hideModalConnect");
 
   // Añadir estados de Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,6 +62,8 @@ export default function Home() {
     setObjectsByHemisphereFov,
     displayModalInfo,
     setDisplayModalInfo,
+    displayModalConnect,
+    setDisplayModalConnect,
     ambientSound: ambientSound.current,
     ambientShouldSound,
     setAmbientShouldSound,
@@ -102,7 +106,6 @@ export default function Home() {
               ) : (
                 <IoVolumeMuteOutline />
               )}
-              
             </div>
             <LeftPanel hemisphereSelected={hemisphere} fovSelected={fov} />
             <PageRouter />

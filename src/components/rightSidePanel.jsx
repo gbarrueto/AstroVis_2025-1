@@ -95,8 +95,6 @@ export default function RightPanel({
           />
         </div>
       </section>
-      
-      <ProtobjectPanel/>
 
       <Modal
         isOpen={isModalOpen} // Determina si el modal está abierto
