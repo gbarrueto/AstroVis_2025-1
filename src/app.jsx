@@ -41,6 +41,10 @@ export default function Home() {
   const [hoveredTableObject, setHoveredTableObject] = useState(null);
   
   const iframeRef = useRef(null);
+  
+  const setIframeRef = (ref) => {
+  iframeRef.current = ref;
+};
 
   const context = {
     loading,
@@ -66,6 +70,7 @@ export default function Home() {
     displayModalConnect,
     setDisplayModalConnect,
     iframeRef,
+    setIframeRef,
     ambientSound: ambientSound.current,
     ambientShouldSound,
     setAmbientShouldSound,

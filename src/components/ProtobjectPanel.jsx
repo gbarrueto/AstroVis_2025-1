@@ -3,9 +3,9 @@ import React from "react";
 export default function ProtobjectPanel({ iframeRef }) {
   const sendRandomValue = () => {
     const randomValue = Math.floor(Math.random() * 3001) - 1500; // entre -1500 y 1500
-    iframeRef?.current?.contentWindow.postMessage(
+    iframeRef.current?.contentWindow.postMessage(
       { type: "knob-move", value: randomValue },
-      "*" // Cambia por origen exacto si es externo
+      "*" // o dominio específico
     );
   };
 
