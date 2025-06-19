@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ProtobjectPanel from "./ProtobjectPanel"
 import '../styles/modalConnectStyle.css';
 
 export default function ModalConnect({ displayModal, setDisplayModal }) {
@@ -44,14 +45,7 @@ export default function ModalConnect({ displayModal, setDisplayModal }) {
               style={{ border: '1px solid #ccc' }}
             />
 
-            {/* Iframe del receptor */}
-            <iframe
-              title="Arduino"
-              src="/arduino.html"
-              width="400"
-              height="300"
-              style={{ border: '1px solid #ccc' }}
-            />
+            
           </div>
         </section>
       </div>
