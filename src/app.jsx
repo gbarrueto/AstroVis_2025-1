@@ -10,6 +10,7 @@ import LeftPanel from "./components/leftSidePanel.jsx";
 import RightPanel from "./components/rightSidePanel.jsx";
 import ModalInfo from "./components/modalInfo.jsx";
 import ModalConnect from "./components/modalConnect.jsx";
+import IframeManager from "./components/IframeManager.jsx";
 
 import { IoVolumeMuteOutline, IoVolumeLowOutline } from "react-icons/io5";
 
@@ -39,8 +40,11 @@ export default function Home() {
   const [selectedObject, setSelectedObject] = useState(null);
   const [hoveredTableObject, setHoveredTableObject] = useState(null);
 
-  const [iframeRef, setIframeRef] = useState(null);
+  const iframeManagerRef = useRef(null);
 
+  console.log("IframeManager:", IframeManager);
+
+  
   const context = {
     loading,
     setLoading,
@@ -64,8 +68,6 @@ export default function Home() {
     setDisplayModalInfo,
     displayModalConnect,
     setDisplayModalConnect,
-    iframeRef,
-    setIframeRef,
     ambientSound: ambientSound.current,
     ambientShouldSound,
     setAmbientShouldSound,
@@ -124,9 +126,12 @@ export default function Home() {
               setDisplayModal={setDisplayModalInfo}
             />
 
+            <IframeManager ref={iframeManagerRef} />
+
             <ModalConnect
               displayModal={displayModalConnect}
               setDisplayModal={setDisplayModalConnect}
+              iframeRef={iframeManagerRef}
             />
           </div>
         </main>
