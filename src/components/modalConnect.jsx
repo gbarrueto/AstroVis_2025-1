@@ -11,7 +11,7 @@ export default function ModalConnect({ displayModal, setDisplayModal }) {
   }
 
   function sendRandomToIframe() {
-    const randomValue = Math.floor(Math.random() * 3001) - 1500;
+    const randomValue = Math.floor(Math.random() * 2001) - 1000;
 
     if (iframeRef.current?.contentWindow) {
       console.log("Enviando mensaje al iframe", randomValue);

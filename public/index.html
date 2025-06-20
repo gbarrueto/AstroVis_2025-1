@@ -11,7 +11,7 @@
     <script>
       let lastCallback = null;
 
-      const perilla = new Protobject.Knob({ min: -1500, max: 1500 });
+      const perilla = new Protobject.Knob({ min: -1000, max: 1000 });
 
       perilla.onChange((value) => {
         lastCallback = (value) =>

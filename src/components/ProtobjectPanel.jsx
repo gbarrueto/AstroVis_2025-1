@@ -7,8 +7,8 @@ export default function ProtobjectPanel({ iframeRef }) {
         ref={iframeRef}
         title="Controlador"
         src="/index.html"
-        width="400"
-        height="300"
+        width="250"
+        height="350"
         style={{ border: "1px solid #ccc" }}
       />
     </div>
