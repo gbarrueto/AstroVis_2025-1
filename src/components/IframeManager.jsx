@@ -33,6 +33,7 @@ const IframeManager = forwardRef((props, ref) => {
         pointerEvents: "none",
         transition: "opacity 0.3s",
         zIndex: 1000,
+        
       }}
     />
   );

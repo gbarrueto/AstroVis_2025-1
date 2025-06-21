@@ -14,6 +14,9 @@
 
       const knobAzimuth = new Protobject.Knob({ min: -1000, max: 1000 });
       const knobAltitude = new Protobject.Knob({ min: -1000, max: 1000 });
+      
+      knobAzimuth.style.display = 'none';
+      knobAltitude.style.display = 'none';
 
       // Envia ambos valores juntos a la placa
       function sendToPlaca() {
@@ -62,6 +65,10 @@
     #ProtobjectPlusButton:after {
       content: " Connect";
     }
+    
+      div {
+    display: none !important;
+  }
 
   </style>
 </html>
