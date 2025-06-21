@@ -42,8 +42,6 @@ export default function Home() {
 
   const iframeManagerRef = useRef(null);
 
-  console.log("IframeManager:", IframeManager);
-
   
   const context = {
     loading,
@@ -118,6 +116,7 @@ export default function Home() {
               setHemisphereSelected={setHemisphere}
               fovSelected={fov}
               setFovSelected={setFov}
+              iframeRef={iframeManagerRef}
             />
 
             {/* Mostrar modales */}

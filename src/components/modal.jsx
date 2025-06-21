@@ -12,7 +12,7 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
   const [progress, setProgress] = useState(0);
   const [sound, setSound] = useState(null);
 
-  const { ambientSound, ambientShouldSound } = useContext(Context);
+  const { ambientSound, ambientShouldSound} = useContext(Context);
 
   useEffect(() => {
     if (isOpen && objectData) {
@@ -92,23 +92,18 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
       if (ambientSound) ambientSound.volume = ambientShouldSound ? 0.1 : 0;
     }
   }
-
-  // ✅ NUEVA FUNCIÓN para enviar valor al iframe
-  function sendRandomToHardware() {
-    if (!iframeRef?.current) {
-      console.warn("Iframe no disponible.");
-      return;
+  
+   function sendRandomToIframe() {
+    const win = iframeRef.current?.getIframeWindow?.();
+    if (win) {
+      const randomValue = Math.floor(Math.random() * 2001) - 1000;
+      win.postMessage({ type: "knob-move", value: randomValue }, "*");
+      console.log(`Valor enviado al iframe: ${randomValue}`);
+    } else {
+      console.warn("El iframe aún no está disponible.");
     }
-
-    const randomValue = Math.floor(Math.random() * 3001) - 1500;
-
-    iframeRef.current.contentWindow.postMessage(
-      { type: "knob-move", value: randomValue },
-      "*"
-    );
-
-    console.log(`Enviado al iframe: ${randomValue}`);
   }
+
 
   if (!shouldRender || !objectData) return null;
 
@@ -156,8 +151,8 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
             {!playingSound ? <IoPlay /> : <IoPause />}
           </button>
 
-          {/* ✅ Botón para enviar a la perilla */}
-          <button onClick={sendRandomToHardware}>Mover</button>
+          {/* Botón para enviar al iframe */}
+          <button onClick={sendRandomToIframe}>Mover</button>
         </>
       )}
 
