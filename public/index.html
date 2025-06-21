@@ -9,54 +9,21 @@
     <script src="https://app.protobject.com/framework/p.js"></script>
     <script src="config.js"></script>
     <script>
-      let currentAzimuth = 0;
-      let currentAltitude = 0;
-
-      const knobAzimuth = new Protobject.Knob({ min: -1000, max: 1000 });
-      const knobAltitude = new Protobject.Knob({ min: -1000, max: 1000 });
-      
-      knobAzimuth.style.display = 'none';
-      knobAltitude.style.display = 'none';
-
-      // Envia ambos valores juntos a la placa
-      function sendToPlaca() {
-        Protobject.Core.send({
-          azimuth: currentAzimuth,
-          altitude: currentAltitude,
-        }).to("placa.html");
-        console.log("Enviado a placa:", {
-          azimuth: currentAzimuth,
-          altitude: currentAltitude,
-        });
-      }
-
-      knobAzimuth.onChange((az) => {
-        currentAzimuth = az;
-        sendToPlaca();
-      });
-
-      knobAltitude.onChange((alt) => {
-        currentAltitude = alt;
-        sendToPlaca();
-      });
-
       window.addEventListener("message", (event) => {
         const { type, azimuth, altitude } = event.data || {};
-        if (type === "knob-move") {
-          if (typeof azimuth === "number") {
-            knobAzimuth.setValue(azimuth);
-            currentAzimuth = azimuth;
-          }
-          if (typeof altitude === "number") {
-            knobAltitude.setValue(altitude);
-            currentAltitude = altitude;
-          }
-          sendToPlaca(); // Enviar ambos siempre que llegue un mensaje
+
+        if (type === "knob-move" && typeof azimuth === "number" && typeof altitude === "number") {
+          Protobject.Core.send({
+            azimuth,
+            altitude,
+          }).to("placa.html");
+          console.log("Enviado a placa:", { azimuth, altitude });
+        } else {
+          console.warn("Datos incompletos o formato incorrecto", event.data);
         }
       });
     </script>
   </body>
-
   <style>
     #ProtobjectPlusButton {
       width: 80px !important;
@@ -65,10 +32,5 @@
     #ProtobjectPlusButton:after {
       content: " Connect";
     }
-    
-      div {
-    display: none !important;
-  }
-
   </style>
 </html>
