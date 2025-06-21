@@ -77,3 +77,7 @@
 .modalConnectContent::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.8); /* blanco más opaco al pasar */
 }
+
+.modalConnectContent iframe div {
+  display: none;
+}
