@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { IoPlay, IoPause } from "react-icons/io5";
+import { IoPlay, IoPause, IoTelescope } from "react-icons/io5";
 import "../styles/modal.css";
 import { Context } from "../app.jsx";
 
@@ -12,7 +12,7 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
   const [progress, setProgress] = useState(0);
   const [sound, setSound] = useState(null);
 
-  const { ambientSound, ambientShouldSound} = useContext(Context);
+  const { ambientSound, ambientShouldSound } = useContext(Context);
 
   useEffect(() => {
     if (isOpen && objectData) {
@@ -92,8 +92,8 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
       if (ambientSound) ambientSound.volume = ambientShouldSound ? 0.1 : 0;
     }
   }
-  
-   function sendRandomToIframe() {
+
+  function sendRandomToIframe() {
     const win = iframeRef.current?.getIframeWindow?.();
     if (win) {
       const randomValue = Math.floor(Math.random() * 2001) - 1000;
@@ -103,7 +103,6 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
       console.warn("El iframe aún no está disponible.");
     }
   }
-
 
   if (!shouldRender || !objectData) return null;
 
@@ -128,7 +127,9 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
         <>
           <div className="modal-header-container">
             <h3>{objectData.object}</h3>
-            <button className="close-button" onClick={onClose}>×</button>
+            <button className="close-button" onClick={onClose}>
+              ×
+            </button>
           </div>
 
           <div className="modal-image-container">
@@ -147,12 +148,14 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
             {objectData.description || "Descripción no disponible."}
           </p>
 
-          <button onClick={handleSoundButtonClick}>
-            {!playingSound ? <IoPlay /> : <IoPause />}
-          </button>
-
-          {/* Botón para enviar al iframe */}
-          <button onClick={sendRandomToIframe}>Mover</button>
+          <div className="modal-button-group">
+            <button onClick={handleSoundButtonClick}>
+              {!playingSound ? <IoPlay /> : <IoPause />}
+            </button>
+            <button onClick={sendRandomToIframe}>
+              <IoTelescope />
+            </button>
+          </div>
         </>
       )}
 
