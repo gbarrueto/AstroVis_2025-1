@@ -53,6 +53,7 @@ export default function RightPanel({
     setIsModalOpen, // Estado del modal
     selectedObject,
     setSelectedObject, // Objeto seleccionado
+    iframeRef,
   } = useContext(Context);
 
   const [hoveredFov, setHoveredFov] = useState(null);
@@ -98,7 +99,8 @@ export default function RightPanel({
       <Modal
         isOpen={isModalOpen} // Determina si el modal está abierto
         objectData={selectedObject} // Pasa el objeto seleccionado al modal
-        onClose={() => setIsModalOpen(false)} // Cierra el modal
+        onClose={() => setIsModalOpen(false)}// Cierra el modal
+        iframeRef={iframeRef}
       />
     </aside>
   );

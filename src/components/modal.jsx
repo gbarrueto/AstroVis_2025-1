@@ -3,19 +3,16 @@ import { IoPlay, IoPause } from "react-icons/io5";
 import "../styles/modal.css";
 import { Context } from "../app.jsx";
 
-const Modal = ({ isOpen, objectData, onClose }) => {
+const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
   const [shouldRender, setShouldRender] = useState(false);
   const [closing, setClosing] = useState(false);
   const [playingSound, setPlayingSound] = useState(false);
   const [rotateImage, setRotateImage] = useState(false);
   const [loadingImage, setLoadingImage] = useState(true);
   const [progress, setProgress] = useState(0);
-
   const [sound, setSound] = useState(null);
 
   const { ambientSound, ambientShouldSound } = useContext(Context);
-
-  const { iframeRef } = useContext(Context);
 
   useEffect(() => {
     if (isOpen && objectData) {
@@ -36,31 +33,20 @@ const Modal = ({ isOpen, objectData, onClose }) => {
 
   useEffect(() => {
     if (sound) {
-      console.log("Unmounting modal", sound);
-      sound?.pause();
+      sound.pause();
       setSound(null);
       setPlayingSound(false);
-      if (ambientSound) {
-        ambientSound.volume = ambientShouldSound ? 0.1 : 0;
-      }
+      if (ambientSound) ambientSound.volume = ambientShouldSound ? 0.1 : 0;
     }
 
-    console.log(
-      `https://gbarrueto.github.io/infovis-assets/snd/${objectData?.id}.wav`
-    );
-    console.log(`objectData: ${objectData}. id: ${objectData?.id}`);
     if (objectData) {
-      console.log("New sound");
       const newSound = new Audio(
         `https://gbarrueto.github.io/infovis-assets/snd/${objectData.id}.wav`
       );
-      console.log(newSound);
       newSound.loop = false;
       newSound.onended = () => {
         setPlayingSound(false);
-        if (ambientSound) {
-          ambientSound.volume = ambientShouldSound ? 0.1 : 0;
-        }
+        if (ambientSound) ambientSound.volume = ambientShouldSound ? 0.1 : 0;
       };
       setSound(newSound);
     }
@@ -68,41 +54,61 @@ const Modal = ({ isOpen, objectData, onClose }) => {
 
   useEffect(() => {
     let interval;
-
     if (playingSound && sound) {
       interval = setInterval(() => {
         const current = sound.currentTime;
-        const duration = sound.duration || 1; // evita división por cero
+        const duration = sound.duration || 1;
         const percent = (current / duration) * 100;
         setProgress(percent);
       }, 100);
     }
-
-    return () => {
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, [playingSound, sound]);
 
   useEffect(() => {
     if (sound) {
       sound.onended = () => {
         setPlayingSound(false);
-        setProgress(0); // <-- resetea
-        if (ambientSound) {
-          ambientSound.volume = ambientShouldSound ? 0.1 : 0;
-        }
+        setProgress(0);
+        if (ambientSound) ambientSound.volume = ambientShouldSound ? 0.1 : 0;
       };
     }
   }, [sound]);
 
-  /* 
-  useEffect(() => {
-    if (sound.ended) {
+  function handleSoundButtonClick() {
+    if (!playingSound && sound) {
+      sound
+        .play()
+        .then(() => {
+          if (ambientSound) ambientSound.volume = 0;
+          setPlayingSound(true);
+        })
+        .catch((err) => {
+          console.error("Error playing sound:", err);
+        });
+    } else if (sound) {
+      sound.pause();
       setPlayingSound(false);
-      sound.currentTime = 0;
+      if (ambientSound) ambientSound.volume = ambientShouldSound ? 0.1 : 0;
     }
-  }, [sound?.ended])
-  */
+  }
+
+  // ✅ NUEVA FUNCIÓN para enviar valor al iframe
+  function sendRandomToHardware() {
+    if (!iframeRef?.current) {
+      console.warn("Iframe no disponible.");
+      return;
+    }
+
+    const randomValue = Math.floor(Math.random() * 3001) - 1500;
+
+    iframeRef.current.contentWindow.postMessage(
+      { type: "knob-move", value: randomValue },
+      "*"
+    );
+
+    console.log(`Enviado al iframe: ${randomValue}`);
+  }
 
   if (!shouldRender || !objectData) return null;
 
@@ -113,45 +119,6 @@ const Modal = ({ isOpen, objectData, onClose }) => {
     backgroundColor,
     color: textColor,
   };
-
-  function handleSoundButtonClick() {
-    console.log(`PlayingSound? ${playingSound}. sound? ${sound}`);
-    if (!playingSound) {
-      if (sound) {
-        sound
-          .play()
-          .then(() => {
-            if (ambientSound) ambientSound.volume = 0;
-            setPlayingSound(true);
-          })
-          .catch((err) => {
-            console.error("Error playing sound:", err);
-          });
-      }
-    } else {
-      sound.pause();
-      setPlayingSound(false);
-      if (ambientSound) {
-        ambientSound.volume = ambientShouldSound ? 0.1 : 0;
-      }
-    }
-  }
-
-  function sendRandomToHardware() {
-  if (!iframeRef?.current) {
-    console.warn("Iframe no disponible.");
-    return;
-  }
-
-  const randomValue = Math.floor(Math.random() * 3001) - 1500; // -1500 a 1500
-
-  iframeRef.current.contentWindow.postMessage(
-    { speed: randomValue },
-    "*" // o el dominio exacto
-  );
-
-  console.log(`Enviado: ${randomValue}`);
-}
 
   return (
     <div
@@ -166,9 +133,7 @@ const Modal = ({ isOpen, objectData, onClose }) => {
         <>
           <div className="modal-header-container">
             <h3>{objectData.object}</h3>
-            <button className="close-button" onClick={onClose}>
-              ×
-            </button>
+            <button className="close-button" onClick={onClose}>×</button>
           </div>
 
           <div className="modal-image-container">
@@ -177,12 +142,9 @@ const Modal = ({ isOpen, objectData, onClose }) => {
               alt={objectData.object}
               className={`modal-image ${rotateImage ? "rotate-image" : ""}`}
             />
-            {/* Línea vertical de progreso */}
             <div
               className="vertical-progress-line"
-              style={{
-                left: `${progress}%`,
-              }}
+              style={{ left: `${progress}%` }}
             ></div>
           </div>
 
@@ -193,11 +155,12 @@ const Modal = ({ isOpen, objectData, onClose }) => {
           <button onClick={handleSoundButtonClick}>
             {!playingSound ? <IoPlay /> : <IoPause />}
           </button>
-          <button onClick={() => sendRandomToHardware(iframeRef)}>Mover</button>
+
+          {/* ✅ Botón para enviar a la perilla */}
+          <button onClick={sendRandomToHardware}>Mover</button>
         </>
       )}
 
-      {/* Imagen se carga incluso cuando loading, pero invisible al usuario */}
       <img
         src={`https://gbarrueto.github.io/infovis-assets/img/${objectData.id}.jpg`}
         alt=""
