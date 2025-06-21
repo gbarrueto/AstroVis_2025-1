@@ -9,38 +9,46 @@
     <script src="https://app.protobject.com/framework/p.js"></script>
     <script src="config.js"></script>
     <script>
-      let lastAzimuthCallback = null;
-      let lastAltitudeCallback = null;
+      let currentAzimuth = 0;
+      let currentAltitude = 0;
 
-      // Crear perillas invisibles para azimut y altitud
       const knobAzimuth = new Protobject.Knob({ min: -1000, max: 1000 });
       const knobAltitude = new Protobject.Knob({ min: -1000, max: 1000 });
 
+      // Envia ambos valores juntos a la placa
+      function sendToPlaca() {
+        Protobject.Core.send({
+          azimuth: currentAzimuth,
+          altitude: currentAltitude,
+        }).to("placa.html");
+        console.log("Enviado a placa:", {
+          azimuth: currentAzimuth,
+          altitude: currentAltitude,
+        });
+      }
+
       knobAzimuth.onChange((az) => {
-        lastAzimuthCallback = (v) =>
-          Protobject.Core.send({ azimuth: v }).to("placa.html");
-        lastAzimuthCallback(az);
+        currentAzimuth = az;
+        sendToPlaca();
       });
 
       knobAltitude.onChange((alt) => {
-        lastAltitudeCallback = (v) =>
-          Protobject.Core.send({ altitude: v }).to("placa.html");
-        lastAltitudeCallback(alt);
+        currentAltitude = alt;
+        sendToPlaca();
       });
 
-      // Escuchar mensajes externos
       window.addEventListener("message", (event) => {
         const { type, azimuth, altitude } = event.data || {};
-
         if (type === "knob-move") {
           if (typeof azimuth === "number") {
             knobAzimuth.setValue(azimuth);
-            if (lastAzimuthCallback) lastAzimuthCallback(azimuth);
+            currentAzimuth = azimuth;
           }
           if (typeof altitude === "number") {
             knobAltitude.setValue(altitude);
-            if (lastAltitudeCallback) lastAltitudeCallback(altitude);
+            currentAltitude = altitude;
           }
+          sendToPlaca(); // Enviar ambos siempre que llegue un mensaje
         }
       });
     </script>

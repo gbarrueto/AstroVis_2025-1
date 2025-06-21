@@ -161,7 +161,7 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
 
           <div className="modal-button-group">
             <button onClick={handleSoundButtonClick}>
-              {!playingSound ? <IoPlay /> : <IoPause />}
+              {!playingSound ? <IoPlay size={24} /> : <IoPause size={24} />}
             </button>
             <button onClick={sendRandomToIframe} disabled={hasSentMove} title={hasSentMove ? "Ya enviado" : "Mover"}>
               <IoTelescope size={24} />

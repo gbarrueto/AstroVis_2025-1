@@ -146,8 +146,9 @@
 .modal-button-group {
   display: flex;
   gap: 1em;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 1em;
+  
 }
 
 
