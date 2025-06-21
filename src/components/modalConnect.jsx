@@ -1,37 +1,44 @@
+// ModalConnect.jsx
 import React, { useEffect, useState } from "react";
 import "../styles/modalConnectStyle.css";
 
 export default function ModalConnect({ displayModal, setDisplayModal, iframeRef }) {
   const [hideStyle, setHideStyle] = useState({ zIndex: -1 });
 
+  // Cierra el modal y oculta el iframe visualmente
   function hideModal() {
+    iframeRef.current?.hideIframe();
     setDisplayModal("hideModalConnect");
 
-    // Esperar que termine animación para ocultar iframe y bajar zIndex
+    // Espera a que termine animación de salida para bajar z-index
     setTimeout(() => {
-      iframeRef.current?.hideIframe();
       setHideStyle({ zIndex: -1 });
-    }, 500); // Igual que modalInfo (CSS transition debe ser 0.5s)
+    }, 300); // Ajusta según tu animación CSS
   }
 
+  // Cuando el modal se abre, se muestra el iframe visualmente
   useEffect(() => {
     if (displayModal === "showModalConnect") {
-      setHideStyle({});
+      setHideStyle({}); // Vuelve a poner el zIndex para que sea clickeable
       iframeRef.current?.showIframe();
     }
   }, [displayModal]);
 
+
   return (
     <div
-      className={`modalInfoOverlay ${displayModal}`}
+      className={`modalConnectOverlay ${displayModal}`}
       style={hideStyle}
       onClick={hideModal}
     >
-      <div className="modalInfoWrapper" onClick={(e) => e.stopPropagation()}>
-        <button className="closeButton" onClick={hideModal}>X</button>
-        <section className="modalInfoContent">
+      <div className="modalConnectWrapper" onClick={(e) => e.stopPropagation()}>
+        <button className="closeButton" onClick={hideModal}>
+          X
+        </button>
+        <section className="modalConnectContent">
           <h2>🔌 Conectar con Protobject</h2>
           <p>Escanea el código QR con tu celular.</p>
+
         </section>
       </div>
     </div>
