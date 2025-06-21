@@ -3,31 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lamp</title>
+    <title>Control Angular</title>
   </head>
   <body>
     <script src="https://app.protobject.com/framework/p.js"></script>
     <script src="config.js"></script>
     <script>
-      let lastCallback = null;
+      let lastAzimuthCallback = null;
+      let lastAltitudeCallback = null;
 
-      const perilla = new Protobject.Knob({ min: -1000, max: 1000 });
+      // Crear perillas invisibles para azimut y altitud
+      const knobAzimuth = new Protobject.Knob({ min: -1000, max: 1000 });
+      const knobAltitude = new Protobject.Knob({ min: -1000, max: 1000 });
 
-      perilla.onChange((value) => {
-        lastCallback = (value) =>
-          Protobject.Core.send({ speed: value }).to("placa.html");
-        lastCallback(value);
+      knobAzimuth.onChange((az) => {
+        lastAzimuthCallback = (v) =>
+          Protobject.Core.send({ azimuth: v }).to("placa.html");
+        lastAzimuthCallback(az);
       });
 
+      knobAltitude.onChange((alt) => {
+        lastAltitudeCallback = (v) =>
+          Protobject.Core.send({ altitude: v }).to("placa.html");
+        lastAltitudeCallback(alt);
+      });
+
+      // Escuchar mensajes externos
       window.addEventListener("message", (event) => {
-        if (event.data?.type === "knob-move") {
-          const newValue = event.data.value;
-          perilla.setValue(newValue);
-          if (lastCallback) lastCallback(newValue);
+        const { type, azimuth, altitude } = event.data || {};
+
+        if (type === "knob-move") {
+          if (typeof azimuth === "number") {
+            knobAzimuth.setValue(azimuth);
+            if (lastAzimuthCallback) lastAzimuthCallback(azimuth);
+          }
+          if (typeof altitude === "number") {
+            knobAltitude.setValue(altitude);
+            if (lastAltitudeCallback) lastAltitudeCallback(altitude);
+          }
         }
       });
     </script>
   </body>
+
   <style>
     #ProtobjectPlusButton {
       width: 80px !important;
@@ -35,10 +53,6 @@
 
     #ProtobjectPlusButton:after {
       content: " Connect";
-    }
-
-    .ProtobjectKnob {
-      display: none !important;
     }
   </style>
 </html>

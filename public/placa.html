@@ -3,19 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arduino servo</title>
+    <title>Arduino Servo Control</title>
   </head>
   <body>
     <script src="https://app.protobject.com/framework/p.js"></script>
     <script src="config.js"></script>
+
     <h1>Arduino servo control</h1>
+
     <script>
       Protobject.Arduino.start();
 
       Protobject.Core.onReceived((data) => {
-        Protobject.Arduino.servoWrite({ pin: 5, value: data.speed });
-        Protobject.Arduino.servoWrite({ pin: 6, value: data.speed });
-        
+        const azimuth = data.azimuth;
+        const altitude = data.altitude;
+
+        if (typeof azimuth === "number") {
+          Protobject.Arduino.servoWrite({ pin: 5, value: azimuth }); // Azimuth → pin 5
+        }
+
+        if (typeof altitude === "number") {
+          Protobject.Arduino.servoWrite({ pin: 6, value: altitude }); // Altitude → pin 6
+        }
       });
     </script>
   </body>

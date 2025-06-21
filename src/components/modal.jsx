@@ -11,6 +11,7 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
   const [loadingImage, setLoadingImage] = useState(true);
   const [progress, setProgress] = useState(0);
   const [sound, setSound] = useState(null);
+  const [hasSentMove, setHasSentMove] = useState(false); // <-- nuevo estado para el botón
 
   const { ambientSound, ambientShouldSound } = useContext(Context);
 
@@ -20,6 +21,7 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
       setClosing(false);
       setLoadingImage(true);
       setProgress(0);
+      setHasSentMove(false); // resetear al abrir modal
     } else if (shouldRender) {
       setClosing(true);
       const timeout = setTimeout(() => {
@@ -94,11 +96,20 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
   }
 
   function sendRandomToIframe() {
+    if (hasSentMove) return; // ya enviado, no hacer nada más
+
     const win = iframeRef.current?.getIframeWindow?.();
     if (win) {
-      const randomValue = Math.floor(Math.random() * 2001) - 1000;
-      win.postMessage({ type: "knob-move", value: randomValue }, "*");
-      console.log(`Valor enviado al iframe: ${randomValue}`);
+      const azimuth = Math.floor(Math.random() * 2001) - 1000;
+      const altitude = Math.floor(Math.random() * 2001) - 1000;
+
+      win.postMessage(
+        { type: "knob-move", azimuth, altitude },
+        "*"
+      );
+
+      console.log(`Valores enviados al iframe - Azimuth: ${azimuth}, Altitude: ${altitude}`);
+      setHasSentMove(true);
     } else {
       console.warn("El iframe aún no está disponible.");
     }
@@ -152,8 +163,8 @@ const Modal = ({ isOpen, objectData, onClose, iframeRef }) => {
             <button onClick={handleSoundButtonClick}>
               {!playingSound ? <IoPlay /> : <IoPause />}
             </button>
-            <button onClick={sendRandomToIframe}>
-              <IoTelescope />
+            <button onClick={sendRandomToIframe} disabled={hasSentMove} title={hasSentMove ? "Ya enviado" : "Mover"}>
+              <IoTelescope size={24} />
             </button>
           </div>
         </>
