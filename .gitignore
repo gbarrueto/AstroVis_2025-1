@@ -4,3 +4,7 @@ web_modules
 .firebaserc
 .glitchdotcom.json
 build
+.env
+.bash_history
+.config
+.data
