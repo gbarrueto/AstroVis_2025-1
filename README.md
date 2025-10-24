@@ -2,7 +2,7 @@
 
 **Visualización interactiva de objetos de espacio profundo más fotografiados por astrofotógrafos amateurs**
 
-> 📍 **Proyecto migrado desde Glitch** (plataforma que discontinuó su servicio de hosting gratuito)
+> 📍 **Proyecto migrado desde Glitch**
 
 ![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-4.0.0-646CFF?logo=vite&logoColor=white)
@@ -193,9 +193,11 @@ Este proyecto está bajo la licencia especificada en el archivo `LICENSE`.
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
-**Guillermo Barrueto** - [@gbarrueto](https://github.com/gbarrueto)
+[@gbarrueto](https://github.com/gbarrueto)
+[@panchoclo3](https://github.com/panchoclo3)
+[@MystEdu](https://github.com/MystEdu)
 
 ---
 
